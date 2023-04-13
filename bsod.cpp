@@ -3,7 +3,6 @@
 #include <QTimer>
 
 #ifdef _WIN32
-const bool CAN_BSOD = true;
 #include <iostream>
 #include <Windows.h>
 #include <winternl.h>
@@ -23,9 +22,9 @@ void bsod()
 }
 #endif
 #ifndef _WIN32
-const bool CAN_BSOD = false;
 void bsod() {
-
+    int* ptr;
+    *ptr = 0;
 }
 #endif
 
@@ -40,15 +39,11 @@ Bsod::Bsod(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             [this] {
-                if (CAN_BSOD) {
-                    ui->stackedWidget->setCurrentWidget(ui->bsod);
-                    QTimer::singleShot(500, this, &bsod);
-                    QTimer::singleShot(3000, this, [this] {
-                        ui->stackedWidget->setCurrentWidget(ui->failedbsod);
-                    });
-                } else {
-                    ui->stackedWidget->setCurrentWidget(ui->cantbsod);
-                }
+                ui->stackedWidget->setCurrentWidget(ui->bsod);
+                QTimer::singleShot(500, this, &bsod);
+                QTimer::singleShot(3000, this, [this] {
+                    ui->stackedWidget->setCurrentWidget(ui->failedbsod);
+                });
             });
     connect(ui->confirmNo,
             &QPushButton::clicked,
@@ -58,10 +53,6 @@ Bsod::Bsod(MainWindow *parent) :
                 onSceneEnd();
             });
     connect(ui->cancelledFine,
-            &QPushButton::clicked,
-            this,
-            &Bsod::onSceneEnd);
-    connect(ui->cantFine,
             &QPushButton::clicked,
             this,
             &Bsod::onSceneEnd);
