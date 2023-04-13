@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "title.h"
 /**
  *
  *
@@ -14,10 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(ui->startButton,
-            &QPushButton::clicked,
-            this,
-            &MainWindow::startButtonClicked);
+    setCentralWidget(new Title(this));
 }
 
 /**
@@ -31,9 +29,8 @@ MainWindow::~MainWindow()
 /**
  * @brief MainWindow::startButtonClicked
  */
-void MainWindow::startButtonClicked(){
-    ui->stackedWidget->setCurrentIndex(1); // switch to second page
-
+void MainWindow::switchScene(QWidget *nextScene) {
+    setCentralWidget(nextScene);
 }
 
 

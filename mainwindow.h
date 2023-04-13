@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include <QMainWindow>
-#include "start.h"
 
 /**
  *
@@ -19,8 +18,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void switchScene(QWidget *nextScene);
+
 private:
     Ui::MainWindow *ui;
-    void startButtonClicked();
 };
 #endif // MAINWINDOW_H
