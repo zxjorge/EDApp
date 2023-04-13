@@ -24,8 +24,7 @@ HEADERS += \
     definition.h \
     fillableflag.h \
     mainwindow.h \
-    title.h \
-    box2d/include/box2d/
+    title.h
 
 FORMS += \
     bsod.ui \
