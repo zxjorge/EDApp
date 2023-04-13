@@ -17,14 +17,14 @@ SOURCES += \
     title.cpp
 
 VPATH += box2d/src/
+INCLUDEPATH += box2d/include/box2d
 
 HEADERS += \
     bsod.h \
     definition.h \
     fillableflag.h \
     mainwindow.h \
-    title.h \
-    box2d/include/box2d/
+    title.h
 
 FORMS += \
     bsod.ui \
