@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/Flags">
-        <file>Flags</file>
         <file>ae.png</file>
         <file>af.png</file>
         <file>ag.png</file>

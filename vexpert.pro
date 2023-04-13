@@ -23,6 +23,7 @@ HEADERS += \
     bsod.h \
     definition.h \
     fillableflag.h \
+    flagConstants.h \
     mainwindow.h \
     title.h
 
