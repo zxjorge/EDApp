@@ -17,6 +17,7 @@ SOURCES += \
     title.cpp
 
 VPATH += box2d/src/
+INCLUDEPATH += box2d/include/box2d
 
 HEADERS += \
     bsod.h \
