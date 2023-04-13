@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    basicquiz.cpp \
     bsod.cpp \
     definition.cpp \
     fillableflag.cpp \
@@ -20,6 +21,7 @@ VPATH += box2d/src/
 INCLUDEPATH += box2d/include/box2d
 
 HEADERS += \
+    basicquiz.h \
     bsod.h \
     definition.h \
     fillableflag.h \
@@ -27,6 +29,7 @@ HEADERS += \
     title.h
 
 FORMS += \
+    basicquiz.ui \
     bsod.ui \
     definition.ui \
     fillableflag.ui \
