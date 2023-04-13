@@ -18,6 +18,9 @@ public:
     explicit Start(QWidget *parent = nullptr);
     ~Start();
 
+private slots:
+    void backClicked();
+
 private:
     Ui::Start *ui;
 };
