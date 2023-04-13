@@ -7,27 +7,28 @@ BasicQuiz::BasicQuiz(
     QVector<QString> correctFlags,
     QVector<QString> wrongFlags,
     QWidget *successScene,
+    MainWindow *parent,
     int currentStreak,
-    int targetStreak,
-    MainWindow *parent
+    int targetStreak
 ) :
     QWidget(parent),
-    ui(new Ui::BasicQuiz),
-    successScene(successScene)
+    ui(new Ui::BasicQuiz)
 {
     ui->setupUi(this);
     ui->question->setText(question);
-    QRandomGenerator rng;
+    successScene->hide();
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
     auto onCorrect = [=] () mutable {
         currentStreak++;
         QWidget *tmp = successScene;
         successScene = nullptr;
         if (currentStreak >= targetStreak) {
+            tmp->show();
             parent->switchScene(tmp);
         } else {
             parent->switchScene(
-                new BasicQuiz(question, correctFlags, wrongFlags, tmp, currentStreak, targetStreak, parent)
+                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, currentStreak, targetStreak)
                 );
         }
     };
@@ -35,14 +36,14 @@ BasicQuiz::BasicQuiz(
         QWidget *tmp = successScene;
         successScene = nullptr;
         parent->switchScene(
-            new BasicQuiz(question, correctFlags, wrongFlags, tmp, 0, targetStreak, parent)
+            new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
         );
     };
 
-    if (rng.bounded(1) == 0) {
+    if (rng.bounded(2) == 0) {
         // flag1 is the right answer
-        ui->flag1->setIcon(QIcon(":/" + correctFlags.at(rng.bounded(correctFlags.length()))));
-        ui->flag2->setIcon(QIcon(":/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
+        ui->flag1->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag2->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,
@@ -53,8 +54,8 @@ BasicQuiz::BasicQuiz(
                 onWrong);
     } else {
         // flag2 is the right answer
-        ui->flag1->setIcon(QIcon(":/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
-        ui->flag2->setIcon(QIcon(":/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag1->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
+        ui->flag2->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,
@@ -69,7 +70,4 @@ BasicQuiz::BasicQuiz(
 BasicQuiz::~BasicQuiz()
 {
     delete ui;
-    if (successScene) {
-        delete successScene;
-    }
 }

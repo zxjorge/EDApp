@@ -18,14 +18,13 @@ public:
         QVector<QString> correctFlags,
         QVector<QString> wrongFlags,
         QWidget *successScene,
+        MainWindow *parent = nullptr,
         int currentStreak = 0,
-        int targetStreak = 5,
-        MainWindow *parent = nullptr
+        int targetStreak = 5
     );
     ~BasicQuiz();
 private:
     Ui::BasicQuiz *ui;
-    QWidget *successScene;
 };
 
 #endif // BASICQUIZ_H
