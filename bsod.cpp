@@ -42,8 +42,8 @@ Bsod::Bsod(MainWindow *parent) :
             [this] {
                 if (CAN_BSOD) {
                     ui->stackedWidget->setCurrentWidget(ui->bsod);
-                    QTimer::singleShot(800, this, &bsod);
-                    QTimer::singleShot(3300, this, [this] {
+                    QTimer::singleShot(500, this, &bsod);
+                    QTimer::singleShot(3000, this, [this] {
                         ui->stackedWidget->setCurrentWidget(ui->failedbsod);
                     });
                 } else {
