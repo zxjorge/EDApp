@@ -15,11 +15,14 @@ SOURCES += \
     mainwindow.cpp \
     title.cpp
 
+VPATH += box2d/src/
+
 HEADERS += \
     bsod.h \
     definition.h \
     mainwindow.h \
-    title.h
+    title.h \
+    box2d/include/box2d/
 
 FORMS += \
     bsod.ui \
