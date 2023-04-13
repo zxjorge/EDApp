@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     bsod.cpp \
     definition.cpp \
+    fillableflag.cpp \
     main.cpp \
     mainwindow.cpp \
     title.cpp
@@ -18,12 +19,14 @@ SOURCES += \
 HEADERS += \
     bsod.h \
     definition.h \
+    fillableflag.h \
     mainwindow.h \
     title.h
 
 FORMS += \
     bsod.ui \
     definition.ui \
+    fillableflag.ui \
     mainwindow.ui \
     title.ui
 

