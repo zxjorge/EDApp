@@ -36,7 +36,8 @@ HEADERS += \
     meaningfulsymbolismlesson.h \
     noletteringorsealslesson.h \
     title.h \
-    usebasiccolorslesson.h
+    usebasiccolorslesson.h \
+    flagconstants.h \
 
 FORMS += \
     bedistinctiveorrelatedlesson.ui \
