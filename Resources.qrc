@@ -255,4 +255,13 @@
         <file>vc.png</file>
         <file>ve.png</file>
     </qresource>
+    <qresource prefix="/FlagTemplates">
+        <file>circleMiddle.png</file>
+        <file>Flag Border.png</file>
+        <file>flowerMiddle.png</file>
+        <file>polygonMiddle.png</file>
+        <file>tigerMiddle.png</file>
+        <file>triangleMiddle.png</file>
+        <file>weirdShapeMiddle.png</file>
+    </qresource>
 </RCC>
