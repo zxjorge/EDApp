@@ -27,7 +27,7 @@ UseBasicColorsLesson::UseBasicColorsLesson(QWidget *parent) :
             this,
             &UseBasicColorsLesson::BackClicked);
 }
-}
+
 
 /**
  * @brief UseBasicColorsLesson::~UseBasicColorsLesson
