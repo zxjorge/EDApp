@@ -9,30 +9,47 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bedistinctiveorrelatedlesson.cpp \
+    basicquiz.cpp \
     bsod.cpp \
     definition.cpp \
     fillableflag.cpp \
+    keepsimplelesson.cpp \
     main.cpp \
     mainwindow.cpp \
-    title.cpp
+    meaningfulsymbolismlesson.cpp \
+    noletteringorsealslesson.cpp \
+    title.cpp \
+    usebasiccolorslesson.cpp
 
 VPATH += box2d/src/
 INCLUDEPATH += box2d/include/box2d
 
 HEADERS += \
+    bedistinctiveorrelatedlesson.h \
+    basicquiz.h \
     bsod.h \
     definition.h \
     fillableflag.h \
-    flagConstants.h \
+    keepsimplelesson.h \
     mainwindow.h \
-    title.h
+    meaningfulsymbolismlesson.h \
+    noletteringorsealslesson.h \
+    title.h \
+    usebasiccolorslesson.h
 
 FORMS += \
+    bedistinctiveorrelatedlesson.ui \
+    basicquiz.ui \
     bsod.ui \
     definition.ui \
     fillableflag.ui \
+    keepsimplelesson.ui \
     mainwindow.ui \
-    title.ui
+    meaningfulsymbolismlesson.ui \
+    noletteringorsealslesson.ui \
+    title.ui \
+    usebasiccolorslesson.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
