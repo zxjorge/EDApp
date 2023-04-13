@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     bsod.cpp \
     definition.cpp \
+    fillableflag.cpp \
     main.cpp \
     mainwindow.cpp \
     title.cpp
@@ -20,6 +21,7 @@ VPATH += box2d/src/
 HEADERS += \
     bsod.h \
     definition.h \
+    fillableflag.h \
     mainwindow.h \
     title.h \
     box2d/include/box2d/
@@ -27,6 +29,7 @@ HEADERS += \
 FORMS += \
     bsod.ui \
     definition.ui \
+    fillableflag.ui \
     mainwindow.ui \
     title.ui
 
