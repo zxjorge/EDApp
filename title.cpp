@@ -15,11 +15,11 @@ Title::Title(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    int y = ui->pushButton->y();
-    int y1 =  ui->label->y();
+//    int y = ui->pushButton->y();
+//    int y1 =  ui->label->y();
 
     //flagY = (ui->pushButton->y() - ui->label->y());
-    QRandomGenerator rng;
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
     QImage flagToAdd;
 
     for(int i = 0; i < numOfFlags; i++){
@@ -51,16 +51,15 @@ Title::Title(MainWindow *parent) :
 
 }
 
-void Title::paintEvent(QPaintEvent *event){
+void Title::paintEvent(QPaintEvent*){
     QPainter painter(this);
 
     QImage flagScaled;
     QImage flag;
-    QRandomGenerator rng;
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
     for(int i = 0; i < numOfFlags; i++){
         flagsX[i] = flagsX[i] + 1;
-        rng.seed(i+rand());
         if(flagsX[i] >= this->width() - flagWidth && flagsResX.at(i) != 0){
                 if(flagsResX.at(i) == -flagWidth){
 
@@ -77,7 +76,7 @@ void Title::paintEvent(QPaintEvent *event){
                     else
                         flag.load(":/Flags/" + FLAGCONSTANTS_H::letteredFlags.at(rng.bounded(letteredFlags.size())));
 
-                    flagScaled = flag.scaled(flagWidth, flagHeight, Qt::IgnoreAspectRatio);
+                    flagScaled = flag.scaled(flagWidth, flagHeight);
                     oldFlagsToDraw[i] = flagsToDraw[i];
                     flagsToDraw[i] = flagScaled;
                 }
@@ -99,7 +98,7 @@ void Title::onButtonpressed() {
     mainWindow->switchScene(new Definition(mainWindow));
 }
 
-void Title::timerEvent(QTimerEvent *event)
+void Title::timerEvent(QTimerEvent*)
 {
     update();
 }
