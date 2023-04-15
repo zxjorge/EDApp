@@ -15,10 +15,6 @@ Title::Title(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-//    int y = ui->pushButton->y();
-//    int y1 =  ui->label->y();
-
-    //flagY = (ui->pushButton->y() - ui->label->y());
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
     QImage flagToAdd;
 
@@ -59,7 +55,7 @@ void Title::paintEvent(QPaintEvent*){
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
     for(int i = 0; i < numOfFlags; i++){
-        flagsX[i] = flagsX[i] + 1;
+        flagsX[i] = flagsX[i] + sliderSpeed;
         if(flagsX[i] >= this->width() - flagWidth && flagsResX.at(i) != 0){
                 if(flagsResX.at(i) == -flagWidth){
 
@@ -82,7 +78,7 @@ void Title::paintEvent(QPaintEvent*){
                 }
                 painter.drawImage(flagsResX[i], flagY, flagsToDraw[i]);
                 painter.drawImage(flagsX[i] , flagY, oldFlagsToDraw[i]);
-                flagsResX[i]+=1;
+                flagsResX[i]+=sliderSpeed;
 
         }
         else if(flagsResX[i] == 0){

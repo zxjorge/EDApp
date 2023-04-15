@@ -22,15 +22,17 @@ private slots:
 private:
     Ui::Title *ui;
     MainWindow *mainWindow;
-    int flagWidth = 150;
-    int flagHeight = 75;
-    int flagSpacing = 200;
-    int flagY = 325;
+    const int numOfFlags = 4;
+    const int flagWidth = 150;
+    const int flagHeight = 75;
+    const int flagSpacing = 200;
+    const int flagY = 325;
+    const double sliderSpeed = 1;
     QVector<QImage> flagsToDraw;
     QVector<QImage> oldFlagsToDraw;
-    QVector<int> flagsX;
-    QVector<int> flagsResX;
-    const int numOfFlags = 4;
+    QVector<double> flagsX;
+    QVector<double> flagsResX;
+
 
 protected:
     void timerEvent(QTimerEvent *event);
