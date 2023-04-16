@@ -1,6 +1,6 @@
 #ifndef NOLETTERINGORSEALSLESSON_H
 #define NOLETTERINGORSEALSLESSON_H
-
+#include "mainmenu.h"
 #include <QStackedWidget>
 
 namespace Ui {
@@ -12,7 +12,7 @@ class NoLetteringOrSealsLesson : public QStackedWidget
     Q_OBJECT
 
 public:
-    explicit NoLetteringOrSealsLesson(QWidget *parent = nullptr);
+    explicit NoLetteringOrSealsLesson(MainWindow *parent = nullptr);
     ~NoLetteringOrSealsLesson();
 
 private slots:
@@ -21,6 +21,8 @@ private slots:
 
 private:
     Ui::NoLetteringOrSealsLesson *ui;
+    MainWindow *mainWindow;
+
 };
 
 #endif // NOLETTERINGORSEALSLESSON_H
