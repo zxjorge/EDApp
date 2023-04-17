@@ -71,6 +71,9 @@
       </widget>
      </item>
      <item>
+      <widget class="FlagWidget" name="flagWidget" native="true"/>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <spacer name="horizontalSpacer_5">
@@ -189,6 +192,14 @@
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FlagWidget</class>
+   <extends>QWidget</extends>
+   <header>flagwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

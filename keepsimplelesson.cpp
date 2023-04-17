@@ -2,6 +2,7 @@
 #include "ui_keepsimplelesson.h"
 #include <QPushButton>
 #include "Box2D/Box2D.h"
+#include "flagwidget.h"
 
 KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
     QStackedWidget(parent),
@@ -71,40 +72,14 @@ void KeepSimpleLesson::NextClicked(){
 void KeepSimpleLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
-    animateFlag();
-}
-
-void KeepSimpleLesson::animateFlag() {
-    // First, load your flag image into a QPixmap object
-    QPixmap flag_img(":/Flags/ae.png");
-
-    // Set the label's pixmap to the flag image
-    ui->label_6->setPixmap(flag_img);
-
-    // Create a Box2D world object
-    b2Vec2 gravity(0.0f, -9.81f);
-    b2World* world = new b2World(gravity);
-
-    // Create a static ground body
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, -10.0f);
-    b2Body* groundBody = world->CreateBody(&groundBodyDef);
-    b2PolygonShape groundBox;
-    groundBox.SetAsBox(50.0f, 10.0f);
-    groundBody->CreateFixture(&groundBox, 0.0f);
-
-    // Create a dynamic flag body
-    b2BodyDef flagBodyDef;
-    flagBodyDef.type = b2_dynamicBody;
-    flagBodyDef.position.Set(0.0f, 0.0f);
-    b2Body* flagBody = world->CreateBody(&flagBodyDef);
-    b2PolygonShape flagBox;
-    flagBox.SetAsBox(1.0f, 1.0f);
-    flagBody->CreateFixture(&flagBox, 1.0f);
-
-    // Apply a force to the flag body to make it fall
-    b2Vec2 force(0.0f, -100.0f);
-    b2Vec2 point(0.0f, 0.0f);
-    flagBody->ApplyForce(force, point, true);
+    ui->flagWidget->setFlagImage(QPixmap::fromImage(QImage(":/Flags/ae.png")));
+    ui->flagWidget->animateFlag(); // start the animation
 
 }
+
+
+
+
+
+
+

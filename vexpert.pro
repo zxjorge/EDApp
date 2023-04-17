@@ -60,6 +60,7 @@ SOURCES += \
     bsod.cpp \
     definition.cpp \
     fillableflag.cpp \
+    flagwidget.cpp \
     keepsimplelesson.cpp \
     main.cpp \
     mainmenu.cpp \
@@ -124,6 +125,7 @@ HEADERS += \
     bsod.h \
     definition.h \
     fillableflag.h \
+    flagwidget.h \
     keepsimplelesson.h \
     mainmenu.h \
     mainwindow.h \

@@ -22,7 +22,6 @@ private slots:
 private:
     Ui::KeepSimpleLesson *ui;
     MainWindow *mainWindow;
-    void animateFlag();
 };
 
 #endif // KEEPSIMPLELESSON_H
