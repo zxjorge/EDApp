@@ -1,6 +1,6 @@
 #ifndef KEEPSIMPLELESSON_H
 #define KEEPSIMPLELESSON_H
-
+#include "mainmenu.h"
 #include <QStackedWidget>
 
 namespace Ui {
@@ -12,7 +12,7 @@ class KeepSimpleLesson : public QStackedWidget
     Q_OBJECT
 
 public:
-    explicit KeepSimpleLesson(QWidget *parent = nullptr);
+    explicit KeepSimpleLesson(MainWindow *parent = nullptr);
     ~KeepSimpleLesson();
 
 private slots:
@@ -21,6 +21,7 @@ private slots:
 
 private:
     Ui::KeepSimpleLesson *ui;
+    MainWindow *mainWindow;
 };
 
 #endif // KEEPSIMPLELESSON_H
