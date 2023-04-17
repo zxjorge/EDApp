@@ -1,6 +1,6 @@
 #ifndef BEDISTINCTIVEORRELATEDLESSON_H
 #define BEDISTINCTIVEORRELATEDLESSON_H
-
+#include "mainmenu.h"
 #include <QStackedWidget>
 
 namespace Ui {
@@ -12,7 +12,7 @@ class BeDistinctiveOrRelatedLesson : public QStackedWidget
     Q_OBJECT
 
 public:
-    explicit BeDistinctiveOrRelatedLesson(QWidget *parent = nullptr);
+    explicit BeDistinctiveOrRelatedLesson(MainWindow *parent = nullptr);
     ~BeDistinctiveOrRelatedLesson();
 
 private slots:
@@ -22,6 +22,7 @@ private slots:
 
 private:
     Ui::BeDistinctiveOrRelatedLesson *ui;
+    MainWindow *mainWindow;
 };
 
 #endif // BEDISTINCTIVEORRELATEDLESSON_H

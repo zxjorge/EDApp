@@ -16,6 +16,7 @@ SOURCES += \
     fillableflag.cpp \
     keepsimplelesson.cpp \
     main.cpp \
+    mainmenu.cpp \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
     noletteringorsealslesson.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     definition.h \
     fillableflag.h \
     keepsimplelesson.h \
+    mainmenu.h \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
     noletteringorsealslesson.h \
@@ -46,6 +48,7 @@ FORMS += \
     definition.ui \
     fillableflag.ui \
     keepsimplelesson.ui \
+    mainmenu.ui \
     mainwindow.ui \
     meaningfulsymbolismlesson.ui \
     noletteringorsealslesson.ui \

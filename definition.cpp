@@ -1,6 +1,8 @@
 #include "definition.h"
 #include "ui_definition.h"
 #include "bsod.h"
+#include <QPushButton>
+#include "mainmenu.h"
 
 Definition::Definition(MainWindow *parent) :
     QWidget(parent),
@@ -14,9 +16,22 @@ Definition::Definition(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new Bsod(mainWindow));
             });
+
+    connect(ui->ok,
+            &QPushButton::clicked,
+            this,
+            &Definition::OkClicked);
+
+
 }
 
 Definition::~Definition()
 {
     delete ui;
 }
+
+void Definition::OkClicked()
+{
+    mainWindow->switchScene(new MainMenu(mainWindow));
+}
+
