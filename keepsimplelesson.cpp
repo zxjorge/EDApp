@@ -1,7 +1,7 @@
 #include "keepsimplelesson.h"
 #include "ui_keepsimplelesson.h"
 #include <QPushButton>
-#include "box2d.h"
+#include "Box2D/Box2D.h"
 
 KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
     QStackedWidget(parent),
@@ -71,11 +71,12 @@ void KeepSimpleLesson::NextClicked(){
 void KeepSimpleLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
+    animateFlag();
 }
 
 void KeepSimpleLesson::animateFlag() {
     // First, load your flag image into a QPixmap object
-    QPixmap flag_img("path/to/flag/image.png");
+    QPixmap flag_img(":/Flags/ae.png");
 
     // Set the label's pixmap to the flag image
     ui->label_6->setPixmap(flag_img);
