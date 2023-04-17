@@ -2,18 +2,14 @@
 #include "ui_noletteringorsealslesson.h"
 #include <QPushButton>
 
-NoLetteringOrSealsLesson::NoLetteringOrSealsLesson(MainWindow *parent) :
+NoLetteringOrSealsLesson::NoLetteringOrSealsLesson(QWidget *parent) :
     QStackedWidget(parent),
-    ui(new Ui::NoLetteringOrSealsLesson),
-    mainWindow(parent)
+    ui(new Ui::NoLetteringOrSealsLesson)
 {
     ui->setupUi(this);
     QPushButton* NextButton1 = qobject_cast<QPushButton*>(widget(0)->findChild<QPushButton*>("nextButton"));
-    QPushButton* NextButton2 = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("nextButton_2"));
+    QPushButton* NextButton2 = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("nextButton"));
     QPushButton* BackButton = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("backButton"));
-    QPushButton* mainMenuButton = qobject_cast<QPushButton*>(widget(0)->findChild<QPushButton*>("mainMenu"));
-    QPushButton* mainMenuButton2 = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("mainMenu_2"));
-
     connect(NextButton1,
             &QPushButton::clicked,
             this,
@@ -26,21 +22,6 @@ NoLetteringOrSealsLesson::NoLetteringOrSealsLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &NoLetteringOrSealsLesson::BackClicked);
-
-
-    connect(mainMenuButton,
-            &QPushButton::clicked,
-            this,
-            [this] {
-                mainWindow->switchScene(new MainMenu(mainWindow));
-            });
-
-    connect(mainMenuButton2,
-            &QPushButton::clicked,
-            this,
-            [this] {
-                mainWindow->switchScene(new MainMenu(mainWindow));
-            });
 }
 
 NoLetteringOrSealsLesson::~NoLetteringOrSealsLesson()

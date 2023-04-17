@@ -16,9 +16,6 @@ public:
     explicit Definition(MainWindow *parent = nullptr);
     ~Definition();
 
-private slots:
-    void OkClicked();
-
 private:
     Ui::Definition *ui;
     MainWindow *mainWindow;

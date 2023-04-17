@@ -6,195 +6,123 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
-    <height>437</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>
   <widget class="QWidget" name="page">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>601</width>
-      <height>391</height>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <family>Stencil</family>
-            </font>
-           </property>
-           <property name="text">
-            <string>Be Distinctive Or Be Related</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="mainMenu">
-           <property name="text">
-            <string>Back to Main Menu</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <spacer name="horizontalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="nextButton">
-           <property name="text">
-            <string>Next</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="font">
+     <font>
+      <family>Stencil</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Be Distinctive Or Be Related</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextButton_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>280</y>
+      <width>80</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
    </widget>
   </widget>
   <widget class="QWidget" name="page_2">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>291</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
+</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Stencil</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>Be Distinctive Or Be Related</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
-      <width>541</width>
-      <height>311</height>
+      <y>280</y>
+      <width>80</width>
+      <height>18</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_4">
-           <property name="font">
-            <font>
-             <family>Stencil</family>
-            </font>
-           </property>
-           <property name="text">
-            <string>Be Distinctive Or Be Related</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="mainMenu_2">
-           <property name="text">
-            <string>Back to Main Menu</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
-</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QPushButton" name="backButton">
-         <property name="text">
-          <string>Back</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="nextButton_3">
-         <property name="text">
-          <string>Next</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextButton">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>280</y>
+      <width>80</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
    </widget>
   </widget>
  </widget>
