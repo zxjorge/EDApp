@@ -263,7 +263,6 @@
         <file>tigerMiddle.png</file>
         <file>triangleMiddle.png</file>
         <file>weirdShapeMiddle.png</file>
-        <file>flowerMiddleRight.png</file>
         <file>pentagonBottomLeft.png</file>
         <file>pentagonBottomRight.png</file>
         <file>treeMiddleLeft.png</file>
@@ -272,5 +271,6 @@
         <file>circleMiddleBottom.png</file>
         <file>circleMiddleTop.png</file>
         <file>treeMiddleRight.png</file>
+        <file>flowerMiddleRight.png</file>
     </qresource>
 </RCC>

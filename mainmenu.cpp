@@ -34,6 +34,9 @@ MainMenu::MainMenu(MainWindow *parent) :
                 mainWindow->switchScene(new KeepSimpleLesson(mainWindow));
             });
 
+    ui->KISButton->setFixedSize(125, 100);
+
+
     connect(ui->NLSButton,
             &QPushButton::clicked,
             this,

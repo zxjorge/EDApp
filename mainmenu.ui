@@ -23,12 +23,12 @@
    <string notr="true">text-align: left;
     white-space: wrap;</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>671</width>
+     <width>855</width>
      <height>161</height>
     </rect>
    </property>
@@ -68,6 +68,15 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#KISButton {
+    border-image: url(:/Flags/jp.png);
+    color: blue;
+    font: bold 12pt Arial;
+    text-align: center;
+}
+</string>
+        </property>
         <property name="text">
          <string>Keep it simple</string>
         </property>
@@ -100,7 +109,10 @@
 qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
     white-space: wrap;
 
-}</string>
+}
+
+
+</string>
         </property>
         <property name="text">
          <string>Use meaningful symbolism</string>
@@ -127,6 +139,15 @@ qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), s
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#U23Button {
+    border-image: url(:/Flags/pk.png);
+    color: red;
+    font: bold 12pt Arial;
+    text-align: center;
+}
+</string>
         </property>
         <property name="text">
          <string>Use 2-3 colors</string>
