@@ -269,5 +269,8 @@
         <file>treeMiddleLeft.png</file>
         <file>triangleTopLeft.png</file>
         <file>triangleTopRight.png</file>
+        <file>circleMiddleBottom.png</file>
+        <file>circleMiddleTop.png</file>
+        <file>treeMiddleRight.png</file>
     </qresource>
 </RCC>
