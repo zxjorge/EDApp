@@ -2,6 +2,7 @@
 #define KEEPSIMPLELESSON_H
 #include "mainmenu.h"
 #include <QStackedWidget>
+#include "box2d/Box2D.h"
 
 namespace Ui {
 class KeepSimpleLesson;
@@ -18,10 +19,12 @@ public:
 private slots:
     void NextClicked();
     void BackClicked();
+    void update();
 
 private:
     Ui::KeepSimpleLesson *ui;
     MainWindow *mainWindow;
+
 };
 
 #endif // KEEPSIMPLELESSON_H
