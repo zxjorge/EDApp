@@ -60,6 +60,7 @@ SOURCES += \
     bsod.cpp \
     definition.cpp \
     fillableflag.cpp \
+    flagcoloringpuzzle.cpp \
     flagwidget.cpp \
     keepsimplelesson.cpp \
     main.cpp \
@@ -125,6 +126,7 @@ HEADERS += \
     bsod.h \
     definition.h \
     fillableflag.h \
+    flagcoloringpuzzle.h \
     flagwidget.h \
     keepsimplelesson.h \
     mainmenu.h \
@@ -141,6 +143,7 @@ FORMS += \
     bsod.ui \
     definition.ui \
     fillableflag.ui \
+    flagcoloringpuzzle.ui \
     keepsimplelesson.ui \
     mainmenu.ui \
     mainwindow.ui \

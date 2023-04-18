@@ -12,7 +12,7 @@ class FillableFlag : public QWidget
     Q_OBJECT
 
 public:
-    explicit FillableFlag(QVector<QImage> layers, QWidget *parent = nullptr);
+    explicit FillableFlag(QWidget *parent = nullptr);
     ~FillableFlag();
 
 public slots:
@@ -24,6 +24,8 @@ private:
     QVector<QColor> layerColors;
 
     void paintEvent(QPaintEvent *event) override;
+    void mousePressEvent(QMouseEvent *event) override;
+    QPoint getScaledMousePoint(QMouseEvent* event);
 };
 
 #endif // FILLABLEFLAG_H
