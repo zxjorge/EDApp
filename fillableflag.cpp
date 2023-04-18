@@ -15,11 +15,11 @@ FillableFlag::FillableFlag(QWidget *parent) :
     layers.push_back(QImage(":/FlagTemplates/Flag Border.png"));
     layerColors.push_back(Qt::white);
 
-    QVector<QString> unselected = flagTemplates;
+    QVector<QString> unselected = FLAG_TEMPLATES;
 
     for (int i = 0; i < 4; i++) {
         int index = rng.bounded(unselected.length());
-        layers.push_back(QImage(":/FlagTemplates/" + unselected[index]));
+        layers.push_back(QImage(":/FLAG_TEMPLATES/" + unselected[index]));
         unselected.remove(index);
         layerColors.push_back(QColor(255 * i / 4, 255 * i / 4, 255 * i / 4));
     }

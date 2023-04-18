@@ -105,8 +105,8 @@ void KeepSimpleLesson::NextClicked(){
     } else {
         mainWindow->switchScene(new BasicQuiz(
             "Which flag is simpler?",
-            simpleFlags,
-            letteredFlags,
+            SIMPLE_FLAGS,
+            LETTERED_FLAGS,
             new FlagColoringPuzzle(mainWindow),
             mainWindow
         ));

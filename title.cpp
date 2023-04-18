@@ -22,15 +22,15 @@ Title::Title(MainWindow *parent) :
         int listPicker = rng.bounded(5);
 
         if(listPicker == 0)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::basicColorFlags.at(rng.bounded(basicColorFlags.size())));
+            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size())));
         else if(listPicker == 1)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::simpleFlags.at(rng.bounded(simpleFlags.size())));
+            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::SIMPLE_FLAGS.at(rng.bounded(SIMPLE_FLAGS.size())));
         else if(listPicker == 2)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::meaningfulFlags.at(rng.bounded(meaningfulFlags.size())));
+            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size())));
         else if(listPicker == 3)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::noLetterOrSealFlags.at(rng.bounded(noLetterOrSealFlags.size())));
+            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size())));
         else
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::letteredFlags.at(rng.bounded(letteredFlags.size())));
+            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
 
         QImage flagScaled = flagToAdd.scaled(flagWidth, flagHeight, Qt::IgnoreAspectRatio);
         flagsToDraw.append(flagScaled);
@@ -62,15 +62,15 @@ void Title::paintEvent(QPaintEvent*){
                     int listPicker = rng.bounded(5);
 
                     if(listPicker == 0)
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::basicColorFlags.at(rng.bounded(basicColorFlags.size())));
+                        flag.load(":/Flags/" + FLAGCONSTANTS_H::BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size())));
                     else if(listPicker == 1)
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::simpleFlags.at(rng.bounded(simpleFlags.size())));
+                        flag.load(":/Flags/" + FLAGCONSTANTS_H::SIMPLE_FLAGS.at(rng.bounded(SIMPLE_FLAGS.size())));
                     else if(listPicker == 2)
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::meaningfulFlags.at(rng.bounded(meaningfulFlags.size())));
+                        flag.load(":/Flags/" + FLAGCONSTANTS_H::MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size())));
                     else if(listPicker == 3)
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::noLetterOrSealFlags.at(rng.bounded(noLetterOrSealFlags.size())));
+                        flag.load(":/Flags/" + FLAGCONSTANTS_H::NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size())));
                     else
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::letteredFlags.at(rng.bounded(letteredFlags.size())));
+                        flag.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
 
                     flagScaled = flag.scaled(flagWidth, flagHeight);
                     oldFlagsToDraw[i] = flagsToDraw[i];

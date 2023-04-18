@@ -19,7 +19,7 @@ public:
 private slots:
     void NextClicked();
     void BackClicked();
-    void update();
+    //void update();
 
 private:
     Ui::KeepSimpleLesson *ui;
