@@ -7,7 +7,8 @@
 
 FillableFlag::FillableFlag(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FillableFlag)
+    ui(new Ui::FillableFlag),
+    currentColor(Qt::white)
 {
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
@@ -20,7 +21,7 @@ FillableFlag::FillableFlag(QWidget *parent) :
         int index = rng.bounded(unselected.length());
         layers.push_back(QImage(":/FlagTemplates/" + unselected[index]));
         unselected.remove(index);
-        layerColors.push_back(QColor(255 * (i + 1) / 4, 255 * (i + 1) / 4, 255 * (i + 1) / 4));
+        layerColors.push_back(QColor(255 * i / 4, 255 * i / 4, 255 * i / 4));
     }
 
     ui->setupUi(this);
@@ -31,15 +32,27 @@ FillableFlag::~FillableFlag()
     delete ui;
 }
 
-void FillableFlag::fillAtPoint(QPoint point, QColor color) {
+void FillableFlag::fillAtPoint(QPoint point) {
     for (int i = layers.length() - 1; i > 0; i--) {
         if (layers.at(i).pixelColor(point).alpha() > 0) {
-            layerColors.replace(i, color);
+            layerColors.replace(i, currentColor);
+            if (getColorCount() <= MAX_COLOR_COUNT) {
+                emit correctColorCount();
+            } else {
+                emit incorrectColorCount();
+            }
             update();
             return;
         }
     }
-    layerColors.replace(0, color);
+    layerColors.replace(0, currentColor);
+
+    if (getColorCount() <= MAX_COLOR_COUNT) {
+        emit correctColorCount();
+    } else {
+        emit incorrectColorCount();
+    }
+
     update();
 }
 
@@ -78,6 +91,24 @@ QPoint FillableFlag::getScaledMousePoint(QMouseEvent* event) {
  */
 void FillableFlag::mousePressEvent(QMouseEvent *event)
 {
-    fillAtPoint(getScaledMousePoint(event), Qt::red);
+    fillAtPoint(getScaledMousePoint(event));
     update();
+}
+
+QColor FillableFlag::getCurrentColor() {
+    return currentColor;
+}
+
+void FillableFlag::setCurrentColor(QColor color) {
+    currentColor = color;
+}
+
+int FillableFlag::getColorCount() {
+    QSet<QRgb> uniqueColors;
+
+    for (QColor &color : layerColors) {
+        uniqueColors.insert(color.rgb());
+    }
+
+    return uniqueColors.count();
 }
