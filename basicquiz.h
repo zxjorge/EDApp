@@ -18,7 +18,7 @@ public:
         QVector<QString> correctFlags,
         QVector<QString> wrongFlags,
         QWidget *successScene,
-        MainWindow *parent = nullptr,
+        MainWindow *parent,
         int currentStreak = 0,
         int targetStreak = 5
     );

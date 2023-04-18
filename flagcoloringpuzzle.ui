@@ -34,7 +34,7 @@
         </sizepolicy>
        </property>
        <property name="text">
-        <string>Use at most 3 colors!</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Congratulations!&lt;/p&gt;&lt;p&gt;You get to design your own flag!&lt;/p&gt;&lt;p&gt;Remember to use at most 3 colors!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

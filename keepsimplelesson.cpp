@@ -1,8 +1,10 @@
 #include "keepsimplelesson.h"
+#include "basicquiz.h"
 #include "ui_keepsimplelesson.h"
 #include <QPushButton>
-#include "Box2D/Box2D.h"
 #include "flagwidget.h"
+#include "flagconstants.h"
+#include "flagcoloringpuzzle.h"
 
 KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
     QStackedWidget(parent),
@@ -62,6 +64,14 @@ void KeepSimpleLesson::NextClicked(){
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {
         setCurrentIndex(nextIndex);
+    } else {
+        mainWindow->switchScene(new BasicQuiz(
+            "Which flag is simpler?",
+            simpleFlags,
+            letteredFlags,
+            new FlagColoringPuzzle(mainWindow),
+            mainWindow
+        ));
     }
 
 }
