@@ -38,22 +38,26 @@ BasicQuiz::BasicQuiz(
 
         QWidget *tmp = successScene;
         successScene = nullptr;
-        b2Vec2 gravity(0.0f, -9.8f);
+        b2Vec2 gravity(0.0f, 9.8f); // change gravity direction to point upwards
         b2World* world = new b2World(gravity);
 
-        // Create a dynamic body with a circle shape
+        // Create a dynamic body with a rectangle shape
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
-        bodyDef.position.Set(0.0f, 0.0f); // Set the initial position of the body
+        bodyDef.position.Set(ui->flag1->x() + ui->flag1->width() / 2, ui->flag1->y() + ui->flag1->height() / 2);
         b2Body* body = world->CreateBody(&bodyDef);
-        b2CircleShape shape;
-        shape.m_radius = 1.0f; // Set the radius of the circle
+        b2PolygonShape shape;
+        shape.SetAsBox(ui->flag1->width() / 2, ui->flag1->height() / 2);
         b2FixtureDef fixtureDef;
         fixtureDef.shape = &shape;
         fixtureDef.density = 1.0f; // Set the density of the body
         fixtureDef.friction = 0.3f; // Set the friction coefficient of the body
         fixtureDef.restitution = 0.5f; // Set the restitution coefficient of the body
         body->CreateFixture(&fixtureDef);
+
+        // Set an initial downward velocity to the body
+        b2Vec2 velocity(0.0f, -10.0f);
+        body->SetLinearVelocity(velocity);
 
         // Set up a timer to step the Box2D world and update the position of the image
         QTimer* timer = new QTimer(this);
@@ -65,12 +69,12 @@ BasicQuiz::BasicQuiz(
             world->Step(timeStep, velocityIterations, positionIterations);
 
             // Update the position of the image based on the position of the Box2D body
-            float32 x = body->GetPosition().x;
-            float32 y = body->GetPosition().y;
+            float32 x = body->GetPosition().x - ui->flag1->width() / 2;
+            float32 y = body->GetPosition().y - ui->flag1->height() / 2;
             ui->flag1->move(x, y);
-            if(ui->flag1->x() + 500 <= 0){
+            if (y >= this->height()) {
                 parent->switchScene(
-                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
                 );
             }
         });
@@ -85,22 +89,26 @@ BasicQuiz::BasicQuiz(
 
         QWidget *tmp = successScene;
         successScene = nullptr;
-        b2Vec2 gravity(0.0f, -9.8f);
+        b2Vec2 gravity(0.0f, 9.8f); // change gravity direction to point upwards
         b2World* world = new b2World(gravity);
 
-        // Create a dynamic body with a circle shape
+        // Create a dynamic body with a rectangle shape
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
-        bodyDef.position.Set(0.0f, 0.0f); // Set the initial position of the body
+        bodyDef.position.Set(ui->flag2->x() + ui->flag2->width() / 2, ui->flag2->y() + ui->flag2->height() / 2);
         b2Body* body = world->CreateBody(&bodyDef);
-        b2CircleShape shape;
-        shape.m_radius = 1.0f; // Set the radius of the circle
+        b2PolygonShape shape;
+        shape.SetAsBox(ui->flag2->width() / 2, ui->flag2->height() / 2);
         b2FixtureDef fixtureDef;
         fixtureDef.shape = &shape;
         fixtureDef.density = 1.0f; // Set the density of the body
         fixtureDef.friction = 0.3f; // Set the friction coefficient of the body
         fixtureDef.restitution = 0.5f; // Set the restitution coefficient of the body
         body->CreateFixture(&fixtureDef);
+
+        // Set an initial downward velocity to the body
+        b2Vec2 velocity(0.0f, -10.0f);
+        body->SetLinearVelocity(velocity);
 
         // Set up a timer to step the Box2D world and update the position of the image
         QTimer* timer = new QTimer(this);
@@ -112,16 +120,22 @@ BasicQuiz::BasicQuiz(
             world->Step(timeStep, velocityIterations, positionIterations);
 
             // Update the position of the image based on the position of the Box2D body
-            float32 x = body->GetPosition().x;
-            float32 y = body->GetPosition().y;
+            float32 x = body->GetPosition().x - ui->flag2->width() / 2;
+            float32 y = body->GetPosition().y - ui->flag2->height() / 2;
             ui->flag2->move(x, y);
-            if(ui->flag2->x() + 500 <= 0){
+            if (y >= this->height()) {
                 parent->switchScene(
-                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
                 );
             }
         });
         timer->start(16); // Start the timer with a 60 FPS update rate
+
+
+
+
+
+
 
 
     };
