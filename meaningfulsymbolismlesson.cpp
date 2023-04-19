@@ -12,33 +12,26 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    QPushButton* NextButton1 = qobject_cast<QPushButton*>(widget(0)->findChild<QPushButton*>("nextButton"));
-    QPushButton* mainMenuButton = qobject_cast<QPushButton*>(widget(0)->findChild<QPushButton*>("mainMenu"));
-    QPushButton* mainMenuButton2 = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("mainMenu_2"));
-    QPushButton* NextButton2 = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("nextButton_2"));
-    QPushButton* BackButton = qobject_cast<QPushButton*>(widget(1)->findChild<QPushButton*>("backButton"));
-
-    connect(NextButton1,
+    connect(ui->nextButton,
             &QPushButton::clicked,
             this,
             &MeaningfulSymbolismLesson::NextClicked);
-    connect(NextButton2,
+    connect(ui->nextButton_2,
             &QPushButton::clicked,
             this,
             &MeaningfulSymbolismLesson::NextClicked);
-    connect(BackButton,
+    connect(ui->backButton,
             &QPushButton::clicked,
             this,
             &MeaningfulSymbolismLesson::BackClicked);
 
-    connect(mainMenuButton,
+    connect(ui->mainMenu,
             &QPushButton::clicked,
             this,
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
-
-    connect(mainMenuButton2,
+    connect(ui->mainMenu_2,
             &QPushButton::clicked,
             this,
             [this] {

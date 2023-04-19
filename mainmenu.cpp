@@ -65,7 +65,6 @@ MainMenu::~MainMenu()
 }
 
 void MainMenu::SwitchToMainMenu(){
-    qDebug() << "chicken";
     mainWindow->switchScene(this);
 }
 

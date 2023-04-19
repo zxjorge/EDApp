@@ -23,7 +23,7 @@
    <string notr="true">text-align: left;
     white-space: wrap;</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidgetlayoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -61,210 +61,152 @@
       </property>
      </widget>
     </item>
-   </layout>
-  </widget>
-  <widget class="QPushButton" name="KISButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>140</y>
-     <width>250</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#KISButton {
-    border-image: url(:/Flags/jp.png);
-    color: black;
-    font: bold 25pt Arial;
-    text-align: center;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Keep it simple</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="U23Button">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>300</y>
-     <width>250</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#U23Button {
-    border-image: url(:/Flags/de.png);
-    color: White;
-    font: bold 25pt Arial;
-    text-align: center;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Use 2-3 colors</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="NLSButton">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>140</y>
-     <width>250</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#NLSButton {
-    border-image: url(:/Flags/ar.png);
-    color: black;
-    font: bold 23pt Arial;
-    text-align: center;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>No letterings or seals</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="UMSButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>300</y>
-     <width>250</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#UMSButton {
-    border-image: url(:/Flags/cy.png);
-    color: Black;
-    font: bold 18pt Arial;
-    text-align: center;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Use meaningful symbolism</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BDRButton">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>140</y>
-     <width>250</width>
-     <height>150</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>250</width>
-     <height>150</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton#BDRButton {
-    border-image: url(:/Flags/nz.png);
-    color: White;
-    font: bold 25pt Arial;
-    text-align: center;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="KISButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Keep it simple</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="UMSButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    text-align: middle;
+qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+    white-space: wrap;
 
-Be distinctive or 
-be related</string>
-   </property>
+}</string>
+        </property>
+        <property name="text">
+         <string>Use meaningful symbolism</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="U23Button">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Use 2-3 colors</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="NLSButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>No letterings or seals</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="BDRButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Be distinctive or be related</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Design your own flag</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
