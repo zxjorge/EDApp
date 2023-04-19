@@ -74,9 +74,13 @@ void Title::paintEvent(QPaintEvent*){
                     else
                         flag.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
 
-                    flagScaled = flag.scaled(flagWidth, flagHeight);
-                    oldFlagsToDraw[i] = flagsToDraw[i];
-                    flagsToDraw[i] = flagScaled;
+
+                    if(!flag.isNull()){
+                        flagScaled = flag.scaled(flagWidth, flagHeight);
+                        oldFlagsToDraw[i] = flagsToDraw[i];
+                        flagsToDraw[i] = flagScaled;
+                    }
+
                 }
                 painter.drawImage(flagsResX[i], flagY, flagsToDraw[i]);
                 painter.drawImage(flagsX[i] , flagY, oldFlagsToDraw[i]);
