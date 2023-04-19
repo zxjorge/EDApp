@@ -59,8 +59,9 @@ color: rgb(0, 0, 0);</string>
           <item>
            <widget class="QPushButton" name="mainMenu">
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);
-font: 9pt &quot;Arial Narrow&quot;;</string>
+             <string notr="true">background-color: transparent;
+text-decoration: underline; 
+font: 12pt &quot;Arial Narrow&quot;;</string>
             </property>
             <property name="text">
              <string>Back to Main Menu</string>
@@ -154,8 +155,8 @@ color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>180</width>
-                     <height>133</height>
+                     <width>200</width>
+                     <height>100</height>
                     </size>
                    </property>
                    <property name="text">
@@ -193,8 +194,8 @@ color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>180</width>
-                     <height>133</height>
+                     <width>200</width>
+                     <height>100</height>
                     </size>
                    </property>
                    <property name="text">
@@ -232,8 +233,8 @@ color: rgb(0, 0, 0);</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>180</width>
-                     <height>133</height>
+                     <width>200</width>
+                     <height>100</height>
                     </size>
                    </property>
                    <property name="text">
