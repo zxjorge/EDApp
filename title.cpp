@@ -32,11 +32,13 @@ Title::Title(MainWindow *parent) :
         else
             flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
 
-        QImage flagScaled = flagToAdd.scaled(flagWidth, flagHeight, Qt::IgnoreAspectRatio);
-        flagsToDraw.append(flagScaled);
-        oldFlagsToDraw.append(flagScaled);
-        flagsX.append(i * flagSpacing);
-        flagsResX.append(-flagWidth);
+        if(!flagToAdd.isNull()){
+            QImage flagScaled = flagToAdd.scaled(flagWidth, flagHeight, Qt::IgnoreAspectRatio);
+            flagsToDraw.append(flagScaled);
+            oldFlagsToDraw.append(flagScaled);
+            flagsX.append(i * flagSpacing);
+            flagsResX.append(-flagWidth);
+        }
     }
     startTimer(10);
     connect(ui->pushButton,
