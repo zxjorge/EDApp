@@ -31,11 +31,11 @@
               <family>Bookman Old Style</family>
               <pointsize>20</pointsize>
               <italic>false</italic>
-              <bold>true</bold>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -313,11 +313,11 @@ background-color: transparent;</string>
               <family>Bookman Old Style</family>
               <pointsize>20</pointsize>
               <italic>false</italic>
-              <bold>true</bold>
+              <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
