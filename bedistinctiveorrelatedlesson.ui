@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);</string>
+    <string notr="true">background-color: rgb(255, 219, 146);</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
@@ -28,16 +28,15 @@
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <family>Arial Rounded MT Bold</family>
-              <pointsize>15</pointsize>
+              <family>Bookman Old Style</family>
+              <pointsize>20</pointsize>
               <italic>false</italic>
-              <bold>false</bold>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 15pt &quot;Arial Rounded MT Bold&quot;;
-color: rgb(255, 255, 255);
-</string>
+             <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>Be Distinctive Or Be Related</string>
@@ -71,36 +70,190 @@ font: 9pt &quot;Arial Narrow&quot;;</string>
          </layout>
         </item>
         <item>
-         <widget class="QLabel" name="label_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <family>Arial Narrow</family>
-           </font>
-          </property>
+         <widget class="QFrame" name="verticalFrame_9">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
+           <string notr="true">QFrame#verticalFrame_9 {
+	border: 3px dashed white;
+}
+</string>
           </property>
-          <property name="text">
-           <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Bookman Old Style</family>
+               <pointsize>14</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="styleSheet">
+                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Commonwealth Nation Flags</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Australia</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/au.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>New Zealand</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/nz.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Fiji</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/fj.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </item>
         <item>
@@ -139,7 +292,7 @@ font: 9pt &quot;Arial Narrow&quot;;</string>
   </widget>
   <widget class="QWidget" name="page_2">
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);</string>
+    <string notr="true">background-color: rgb(255, 219, 146);</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
@@ -152,15 +305,15 @@ font: 9pt &quot;Arial Narrow&quot;;</string>
            <widget class="QLabel" name="label_4">
             <property name="font">
              <font>
-              <family>Arial Rounded MT Bold</family>
-              <pointsize>15</pointsize>
+              <family>Bookman Old Style</family>
+              <pointsize>20</pointsize>
               <italic>false</italic>
-              <bold>false</bold>
+              <bold>true</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 15pt &quot;Arial Rounded MT Bold&quot;;
-color: rgb(255, 255, 255);</string>
+             <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>Be Distinctive Or Be Related</string>
@@ -194,21 +347,154 @@ font: 9pt &quot;Arial Narrow&quot;;</string>
          </layout>
         </item>
         <item>
-         <widget class="QLabel" name="label_5">
+         <widget class="QFrame" name="verticalFrame">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 9pt &quot;Arial Narrow&quot;;</string>
-          </property>
-          <property name="text">
-           <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
+           <string notr="true">QFrame#verticalFrame {
+	border: 3px dashed white;
+}
 </string>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_34">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="styleSheet">
+              <string notr="true">
+font: 300 14pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
+</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="styleSheet">
+                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Muslim Countries</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Maldives</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/mv.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_18">
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Turkey</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_15">
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/tr.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QLabel" name="label_18">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Pakistan</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="maximumSize">
+                    <size>
+                     <width>180</width>
+                     <height>133</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/pk.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -257,6 +543,8 @@ font: 9pt &quot;Arial Narrow&quot;;</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
