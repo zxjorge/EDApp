@@ -4,6 +4,7 @@
 #include <Box2d/Box2d.h>
 #include <QTimer>
 
+
 BasicQuiz::BasicQuiz(
     QString question,
     QVector<QString> correctFlags,
@@ -38,7 +39,7 @@ BasicQuiz::BasicQuiz(
 
         QWidget *tmp = successScene;
         successScene = nullptr;
-        b2Vec2 gravity(0.0f, 9.8f); // change gravity direction to point upwards
+        b2Vec2 gravity(9.8f, 9.8f); // change gravity direction to point upwards
         b2World* world = new b2World(gravity);
 
         // Create a dynamic body with a rectangle shape
@@ -63,7 +64,7 @@ BasicQuiz::BasicQuiz(
         QTimer* timer = new QTimer(this);
         connect(timer, &QTimer::timeout, [=]() {
             // Step the Box2D world
-            float32 timeStep = 1.0f / 50.0f;
+            float32 timeStep = 1.0f / 2.0f;
             int32 velocityIterations = 6;
             int32 positionIterations = 2;
             world->Step(timeStep, velocityIterations, positionIterations);
@@ -80,6 +81,45 @@ BasicQuiz::BasicQuiz(
         });
         timer->start(16); // Start the timer with a 60 FPS update rate
 
+        /**b2Vec2 gravity(0.0f, -9.81f);
+        b2World world(gravity);
+
+        QPointF buttonPos = ui->flag1->pos();
+        b2BodyDef buttonDef;
+        buttonDef.type = b2_dynamicBody;
+        buttonDef.position.Set(buttonPos.x(), -buttonPos.y());
+        b2Body* buttonBody = world.CreateBody(&buttonDef);
+        buttonBody->SetUserData(ui->flag1);
+
+        QSizeF buttonSize = ui->flag1->size();
+        b2PolygonShape buttonShape;
+        buttonShape.SetAsBox(buttonSize.width() / 2.0f, buttonSize.height() / 2.0f);
+        b2FixtureDef buttonFixtureDef;
+        buttonFixtureDef.shape = &buttonShape;
+        buttonFixtureDef.density = 1.0f;
+        buttonFixtureDef.friction = 0.3f;
+        buttonFixtureDef.restitution = 0.5f;
+        buttonBody->CreateFixture(&buttonFixtureDef);
+
+        world.Step(1.0f / 60.0f, 6, 2);
+        for (b2Body* body = world.GetBodyList(); body != nullptr; body = body->GetNext()) {
+            if (body->GetType() == b2_dynamicBody) {
+                QPushButton* button = static_cast<QPushButton*>(body->GetUserData());
+                if (button != nullptr) {
+                    // Update position of the button
+                    QPointF pos(body->GetPosition().x, -body->GetPosition().y);
+                    button->setGeometry(QRect(pos.toPoint(), button->size()));
+
+                    // Update rotation of the button
+                    QTransform transform;
+                    transform.translate(button->width() / 2.0, button->height() / 2.0);
+                    transform.rotateRadians(-body->GetAngle());
+                    transform.translate(-button->width() / 2.0, -button->height() / 2.0);
+                    button->setMask(transform.map(button->mask()));
+                }
+            }
+        }*/
+
        // parent->switchScene(
          //  new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
         //);
@@ -89,7 +129,7 @@ BasicQuiz::BasicQuiz(
 
         QWidget *tmp = successScene;
         successScene = nullptr;
-        b2Vec2 gravity(0.0f, 9.8f); // change gravity direction to point upwards
+        b2Vec2 gravity(-9.8f, 9.8f); // change gravity direction to point upwards
         b2World* world = new b2World(gravity);
 
         // Create a dynamic body with a rectangle shape
@@ -114,7 +154,7 @@ BasicQuiz::BasicQuiz(
         QTimer* timer = new QTimer(this);
         connect(timer, &QTimer::timeout, [=]() {
             // Step the Box2D world
-            float32 timeStep = 1.0f / 50.0f;
+            float32 timeStep = 1.0f / 2.0f;
             int32 velocityIterations = 6;
             int32 positionIterations = 2;
             world->Step(timeStep, velocityIterations, positionIterations);
