@@ -51,9 +51,9 @@
      <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
-        <family>Stencil</family>
+        <family>Arial Rounded MT Bold</family>
         <pointsize>18</pointsize>
-        <italic>true</italic>
+        <italic>false</italic>
        </font>
       </property>
       <property name="text">
@@ -176,7 +176,7 @@
         <property name="styleSheet">
          <string notr="true">QPushButton#BDRButton {
     border-image: url(:/Flags/nz.png);
-    color: White;
+	color: rgb(205, 205, 205);
     font: bold 25pt Arial;
     text-align: center;
 }
