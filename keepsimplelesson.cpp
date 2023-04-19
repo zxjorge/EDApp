@@ -47,7 +47,7 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
             });
 
     // Assuming label_2 is a QLabel object
-    QPixmap pixmap(":/Flag/ae.png"); // Load your image
+    QPixmap pixmap(":/Flags/ae.png"); // Load your image
     ui->label_2->setPixmap(pixmap); // Set the pixmap to the label
 
     // Create a Box2D world with gravity in the downward direction
