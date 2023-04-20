@@ -18,6 +18,7 @@ BasicQuiz::BasicQuiz(QString question,
     world(b2Vec2(9.8f, 9.8f))
 {
     ui->setupUi(this);
+
     b2BodyDef groundBodyDef;
     groundBodyDef.position.Set(0.0f, 20.0f);
 
@@ -32,42 +33,33 @@ BasicQuiz::BasicQuiz(QString question,
     // The extents are the half-widths of the box.
     groundBox.SetAsBox(50.0f, 10.0f);
 
+
     // Add the ground fixture to the ground body.
     groundBody->CreateFixture(&groundBox, 0.0f);
 
     // Define the dynamic body. We set its position and call the body factory.
-
-    /*b2BodyDef bodyDef;
-    bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(ui->flag1->x() + ui->flag1->width() / 2, ui->flag1->y() + ui->flag1->height() / 2);
-    body = world.CreateBody(&bodyDef);
-    b2PolygonShape shape;
-    shape.SetAsBox(ui->flag1->width() / 2, ui->flag1->height() / 2);
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &shape;
-    fixtureDef.density = 1.0f; // Set the density of the body
-    fixtureDef.friction = 0.3f; // Set the friction coefficient of the body
-    fixtureDef.restitution = 0.5f; // Set the restitution coefficient of the body
-    body->CreateFixture(&fixtureDef);
-    */
-
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(ui->flag1->x() + ui->flag1->width() / 2, ui->flag1->y() + ui->flag1->height() / 2);
+    bodyDef.position.Set(0.0f, 4.0f);
+
     body = world.CreateBody(&bodyDef);
-    b2PolygonShape shape;
-    shape.SetAsBox(ui->flag1->width() / 2, ui->flag1->height() / 2);
+
+    // Define another box shape for our dynamic body.
+    b2PolygonShape dynamicBox;
+    dynamicBox.SetAsBox(1.0f, 1.0f);
+
+    // Define the dynamic body fixture.
     b2FixtureDef fixtureDef;
-    fixtureDef.shape = &shape;
-    fixtureDef.density = 1.0f; // Set the density of the body
-    fixtureDef.friction = 0.3f; // Set the friction coefficient of the body
-    fixtureDef.restitution = 0.5f; // Set the restitution coefficient of the body
+    fixtureDef.shape = &dynamicBox;
+
+    // Set the box density to be non-zero, so it will be dynamic.
+    fixtureDef.density = 1.0f;
+
+    // Override the default friction.
+    fixtureDef.friction = 0.3f;
+    fixtureDef.restitution = 0.9;
+    // Add the shape to the body.
     body->CreateFixture(&fixtureDef);
-
-
-    // Set an initial downward velocity to the body
-    //b2Vec2 velocity(0.0f, -10.0f);
-    //body->SetLinearVelocity(velocity);
     ui->question->setText(question);
     successScene->hide();
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
@@ -95,7 +87,7 @@ BasicQuiz::BasicQuiz(QString question,
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(ui->flag1->x() + ui->flag1->width() / 2, ui->flag1->y() + ui->flag1->height() / 2);
-        b2Body* body = world.CreateBody(&bodyDef);
+        body = world.CreateBody(&bodyDef);
         b2PolygonShape shape;
         shape.SetAsBox(ui->flag1->width() / 2, ui->flag1->height() / 2);
         b2FixtureDef fixtureDef;
@@ -225,8 +217,8 @@ void BasicQuiz::paintEvent(QPaintEvent *) {
 
 //    printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
 
-    //painter.drawImage((int)(position.x * 20), (int)(position.y*20), image);
-    painter.drawImage(QRect(int(position.x),int(position.y * 20),500,150), image);
+    painter.drawImage((int)(position.x * 20), (int)(position.y*20), image);
+
     //painter.drawImage(200, 200, image);
 //    qDebug() << image;
     painter.end();
