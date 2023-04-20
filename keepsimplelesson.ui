@@ -10,6 +10,11 @@
     <height>718</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>.AppleSystemUIFont</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>
@@ -131,7 +136,7 @@ color: rgb(0, 0, 0);</string>
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Flags that are simple</string>
+                <string>Flags that have a simple design</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -393,7 +398,7 @@ color: rgb(0, 0, 0);</string>
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Muslim Countries</string>
+                <string>More Flags that have a simple design</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>

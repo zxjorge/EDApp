@@ -130,7 +130,7 @@ color: rgb(0, 0, 0);</string>
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Flags which have 2-3 basic colors</string>
+                <string>Flags that use 2-3 basic colors</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -393,7 +393,7 @@ color: rgb(0, 0, 0);</string>
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Flags which have 2-3 basic colors</string>
+                <string>more Flags that use 2-3 basic colors</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
