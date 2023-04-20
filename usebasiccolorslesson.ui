@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>521</width>
+    <width>688</width>
     <height>470</height>
    </rect>
   </property>
@@ -14,76 +14,280 @@
    <string>StackedWidget</string>
   </property>
   <widget class="QWidget" name="page">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 219, 146);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="QLabel" name="label_7">
-          <property name="font">
-           <font>
-            <family>Stencil</family>
-           </font>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Bookman Old Style</family>
+              <pointsize>20</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="text">
+             <string>Use 2 - 3 Basic Colors</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="mainMenu">
+            <property name="styleSheet">
+             <string notr="true">
+text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;
+ </string>
+            </property>
+            <property name="text">
+             <string>Back to Main Menu</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QFrame" name="verticalFrame_9">
+          <property name="styleSheet">
+           <string notr="true">QFrame#verticalFrame_9 {
+        border: 3px dashed white;
+}
+</string>
           </property>
-          <property name="text">
-           <string>Use 2-3 Basic Colors</string>
-          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Bookman Old Style</family>
+               <pointsize>14</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>When creating a flag, limit the number of colors on the flag to three, which contrast well and come from the standard color set. The basic flag colors are red, blue, green, black, yellow, and white. They can range from dark to light. Occasionally other colors are also used, such as purple, gray, and orange, but they are seldom needed in a good design.</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="styleSheet">
+                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+text-decoration: underline;</string>
+               </property>
+               <property name="text">
+                <string>Flags which have 2-3 basic colors</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>France</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/fr.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Bulgaria</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/bg.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="styleSheet">
+                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                   </property>
+                   <property name="text">
+                    <string>Ukraine</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="Resources.qrc">:/Flags/ua.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="mainMenu">
-          <property name="text">
-           <string>Back to Main Menu</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_8">
-        <property name="text">
-         <string>When creating a flag, limit the number of colors on the flag to three, which contrast well and come from the standard color set. The basic flag colors are red, blue, green, black, yellow, and white. They can range from dark to light. Occasionally other colors are also used, such as purple, gray, and orange, but they are seldom needed in a good design.</string>
-        </property>
-        <property name="wordWrap">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="nextButton">
-          <property name="text">
-           <string>Next</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="nextButton">
+            <property name="styleSheet">
+             <string notr="true">text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Next</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </item>
@@ -178,6 +382,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
