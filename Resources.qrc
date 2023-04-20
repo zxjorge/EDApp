@@ -273,4 +273,11 @@
         <file>treeMiddleRight.png</file>
         <file>flowerMiddleRight.png</file>
     </qresource>
+    <qresource prefix="/Audio">
+        <file>bdsr1.mp3</file>
+        <file>bdsr2.mp3</file>
+    </qresource>
+    <qresource prefix="/Icons">
+        <file>Speaker_Icon.svg.png</file>
+    </qresource>
 </RCC>
