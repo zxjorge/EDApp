@@ -62,6 +62,7 @@ SOURCES += \
     fillableflag.cpp \
     flagcoloringpuzzle.cpp \
     flagwidget.cpp \
+    hardquiz.cpp \
     keepsimplelesson.cpp \
     main.cpp \
     mainmenu.cpp \
@@ -128,6 +129,7 @@ HEADERS += \
     fillableflag.h \
     flagcoloringpuzzle.h \
     flagwidget.h \
+    hardquiz.h \
     keepsimplelesson.h \
     mainmenu.h \
     mainwindow.h \
@@ -144,6 +146,7 @@ FORMS += \
     definition.ui \
     fillableflag.ui \
     flagcoloringpuzzle.ui \
+    hardquiz.ui \
     keepsimplelesson.ui \
     mainmenu.ui \
     mainwindow.ui \
