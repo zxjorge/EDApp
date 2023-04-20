@@ -1,4 +1,7 @@
 #include "usebasiccolorslesson.h"
+#include "basicquiz.h"
+#include "flagcoloringpuzzle.h"
+#include "flagconstants.h"
 #include "ui_usebasiccolorslesson.h"
 #include <QPushButton>
 
@@ -55,8 +58,15 @@ void UseBasicColorsLesson::NextClicked(){
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {
         setCurrentIndex(nextIndex);
+    } else {
+        mainWindow->switchScene(new BasicQuiz(
+            "Which flag has less colors?",
+            SIMPLE_FLAGS,
+            MEANINGFUL_FLAGS,
+            new FlagColoringPuzzle(mainWindow),
+            mainWindow
+            ));
     }
-
 }
 
 /**
