@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 219, 146);</string>
@@ -473,7 +476,7 @@ text-decoration: underline;</string>
                     <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
-                    <string>United Kingdom</string>
+                    <string>England</string>
                    </property>
                   </widget>
                  </item>
