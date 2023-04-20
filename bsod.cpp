@@ -1,6 +1,7 @@
 #include "bsod.h"
 #include "ui_bsod.h"
 #include <QTimer>
+#include "mainmenu.h"
 
 #ifdef _WIN32
 #include <iostream>
@@ -50,7 +51,6 @@ Bsod::Bsod(MainWindow *parent) :
             this,
             [this] {
                 ui->stackedWidget->setCurrentWidget(ui->cancelled);
-                onSceneEnd();
             });
     connect(ui->cancelledFine,
             &QPushButton::clicked,
@@ -63,7 +63,7 @@ Bsod::Bsod(MainWindow *parent) :
 }
 
 void Bsod::onSceneEnd() {
-
+    mainWindow->switchScene(new MainMenu(mainWindow));
 }
 
 Bsod::~Bsod()
