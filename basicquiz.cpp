@@ -82,8 +82,7 @@ BasicQuiz::BasicQuiz(QString question,
         QWidget *tmp = successScene;
         successScene = nullptr;
 
-
-        // Create a dynamic body with a rectangle shape
+        /*
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(ui->flag1->x() + ui->flag1->width() / 2, ui->flag1->y() + ui->flag1->height() / 2);
@@ -97,15 +96,6 @@ BasicQuiz::BasicQuiz(QString question,
         fixtureDef.restitution = 0.5f; // Set the restitution coefficient of the body
         body->CreateFixture(&fixtureDef);
 
-        // Set an initial downward velocity to the body
-        //b2Vec2 velocity(0.0f, -10.0f);
-        //body->SetLinearVelocity(velocity);
-
-        // Set up a timer to step the Box2D world and update the position of the image
-        QTimer* timer = new QTimer(this);
-        connect(timer, &QTimer::timeout, [=]() {
-            // Step the Box2D world
-
             float32 timeStep = 1.0f / 2.0f;
             int32 velocityIterations = 6;
             int32 positionIterations = 2;
@@ -113,6 +103,25 @@ BasicQuiz::BasicQuiz(QString question,
             // Update the position of the image based on the position of the Box2D body
             float32 x = body->GetPosition().x - ui->flag1->width() / 2;
             float32 y = body->GetPosition().y - ui->flag1->height() / 2;
+        */
+
+        b2Vec2 gravity(-9.8f, 9.81f);
+        world.SetGravity(gravity);
+        // Set an initial downward velocity to the body
+        //b2Vec2 velocity(0.0f, -10.0f);
+        //body->SetLinearVelocity(velocity);
+
+        bodyDef.position.Set(821,324);
+        body = world.CreateBody(&bodyDef);
+
+        // Set up a timer to step the Box2D world and update the position of the image
+        QTimer* timer = new QTimer(this);
+        connect(timer, &QTimer::timeout, [=]() {
+            // Step the Box2D world
+            world.Step(1.0/60.0, 6, 2);
+            // Update the position of the image based on the position of the Box2D body
+            float32 x = (body->GetPosition().x - ui->flag1->width() /2) ;
+            float32 y = (body->GetPosition().y - ui->flag1->height() /2);
             ui->flag1->move(x, y);
             if (y >= this->height()) {
                 parent->switchScene(
@@ -193,7 +202,7 @@ BasicQuiz::BasicQuiz(QString question,
 
             // Update the position of the image based on the position of the Box2D body
             float32 x = body->GetPosition().x * 20;
-            float32 y = body->GetPosition().y *20;
+            float32 y = body->GetPosition().y * 20;
             ui->flag2->move(x, y);
             if (y >= this->height()) {
                 parent->switchScene(
@@ -211,6 +220,9 @@ BasicQuiz::BasicQuiz(QString question,
     if (rng.bounded(2) == 0) {
         // flag1 is the right answer
         ui->flag1->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+
+
+
         ui->flag2->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
         connect(ui->flag1,
                 &QPushButton::clicked,
