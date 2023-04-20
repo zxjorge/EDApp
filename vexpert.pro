@@ -55,6 +55,7 @@ SOURCES += \
     Box2D/Dynamics/b2World.cpp \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
+    FlagCanvas.cpp \
     bedistinctiveorrelatedlesson.cpp \
     basicquiz.cpp \
     bsod.cpp \
@@ -71,9 +72,9 @@ SOURCES += \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
     noletteringorsealslesson.cpp \
+    prompttoflag.cpp \
     title.cpp \
-    usebasiccolorslesson.cpp \
-    spritecanvas.cpp
+    usebasiccolorslesson.cpp
 
 VPATH += box2d/src/
 
@@ -125,6 +126,7 @@ HEADERS += \
     Box2D/Dynamics/b2World.h \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
+    FlagCanvas.h \
     bedistinctiveorrelatedlesson.h \
     basicquiz.h \
     bsod.h \
@@ -140,12 +142,13 @@ HEADERS += \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
     noletteringorsealslesson.h \
+    prompttoflag.h \
     title.h \
     usebasiccolorslesson.h \
-    flagconstants.h \
-    spritecanvas.h
+    flagconstants.h
 
 FORMS += \
+    FlagCanvas.ui \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
@@ -159,9 +162,9 @@ FORMS += \
     mainwindow.ui \
     meaningfulsymbolismlesson.ui \
     noletteringorsealslesson.ui \
+    prompttoflag.ui \
     title.ui \
-    usebasiccolorslesson.ui \
-    spritecanvas.ui
+    usebasiccolorslesson.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
