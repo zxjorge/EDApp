@@ -12,7 +12,7 @@
 #include "flagcoloringpuzzle.h"
 
 /**
- * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for the KeepSimpleLesson
+ * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for KeepSimpleLesson
  * @param parent widget that is used to help handle memory and resources.
  */
 KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :

@@ -1,10 +1,15 @@
+/**
+ * MeaningfulSymbolismLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses MeaningfulSymbolismLesson.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "meaningfulsymbolismlesson.h"
 #include "ui_meaningfulsymbolismlesson.h"
 #include <QPushButton>
 
 /**
- * @brief MeaningfulSymbolismLesson::MeaningfulSymbolismLesson
- * @param parent
+ * @brief MeaningfulSymbolismLesson::MeaningfulSymbolismLesson Constructor for MeaningfulSymbolismLesson
+ * @param parent widget that is used to help handle memory and resources.
  */
 MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
     QStackedWidget(parent),
@@ -41,13 +46,16 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
 
 }
 
+/**
+ * @brief MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson destructor for MeaningfulSymbolismLesson
+ */
 MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson()
 {
     delete ui;
 }
 
 /**
- * @brief MeaningfulSymbolismLesson::NextClicked
+ * @brief MeaningfulSymbolismLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
  */
 void MeaningfulSymbolismLesson::NextClicked(){
 
@@ -58,7 +66,7 @@ void MeaningfulSymbolismLesson::NextClicked(){
 }
 
 /**
- * @brief MeaningfulSymbolismLesson::BackClicked
+ * @brief MeaningfulSymbolismLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
  */
 void MeaningfulSymbolismLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;

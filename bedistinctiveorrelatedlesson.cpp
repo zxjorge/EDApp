@@ -1,7 +1,16 @@
+/**
+ * BeDistinctiveOrRelatedLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses BeDistinctiveOrRelatedLesson.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "bedistinctiveorrelatedlesson.h"
 #include "ui_bedistinctiveorrelatedlesson.h"
 #include <QPushButton>
 
+/**
+ * @brief BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson Constructor for BeDistinctiveOrRelatedLesson
+ * @param parent widget that is used to help handle memory and resources.
+ */
 BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::BeDistinctiveOrRelatedLesson),
@@ -34,13 +43,17 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             });
 }
 
+/**
+ * @brief BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson destructor for BeDistinctiveOrRelatedLesson
+ */
 BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson()
 {
     delete ui;
 }
 
+
 /**
- * @brief BeDistinctiveOrRelatedLesson::NextClicked
+ * @brief BeDistinctiveOrRelatedLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
  */
 void BeDistinctiveOrRelatedLesson::NextClicked(){
 
@@ -52,7 +65,7 @@ void BeDistinctiveOrRelatedLesson::NextClicked(){
 }
 
 /**
- * @brief BeDistinctiveOrRelatedLesson::BackClicked
+ * @brief BeDistinctiveOrRelatedLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
  */
 void BeDistinctiveOrRelatedLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;

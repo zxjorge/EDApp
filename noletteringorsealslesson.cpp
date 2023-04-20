@@ -1,7 +1,16 @@
+/**
+ * NoLetteringOrSealsLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses NoLetteringOrSealsLesson.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "noletteringorsealslesson.h"
 #include "ui_noletteringorsealslesson.h"
 #include <QPushButton>
 
+/**
+ * @brief NoLetteringOrSealsLesson::NoLetteringOrSealsLesson Constructor for NoLetteringOrSealsLesson
+ * @param parent widget that is used to help handle memory and resources.
+ */
 NoLetteringOrSealsLesson::NoLetteringOrSealsLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::NoLetteringOrSealsLesson),
@@ -34,6 +43,9 @@ NoLetteringOrSealsLesson::NoLetteringOrSealsLesson(MainWindow *parent) :
             });
 }
 
+/**
+ * @brief NoLetteringOrSealsLesson::~NoLetteringOrSealsLesson destructor for NoLetteringOrSealsLesson
+ */
 NoLetteringOrSealsLesson::~NoLetteringOrSealsLesson()
 {
     delete ui;
@@ -41,7 +53,7 @@ NoLetteringOrSealsLesson::~NoLetteringOrSealsLesson()
 
 
 /**
- * @brief NoLetteringOrSealsLesson::NextClicked
+ * @brief NoLetteringOrSealsLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
  */
 void NoLetteringOrSealsLesson::NextClicked(){
 
@@ -52,7 +64,7 @@ void NoLetteringOrSealsLesson::NextClicked(){
 }
 
 /**
- * @brief NoLetteringOrSealsLesson::BackClicked
+ * @brief NoLetteringOrSealsLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
  */
 void NoLetteringOrSealsLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;
