@@ -67,6 +67,3 @@ MainMenu::~MainMenu()
 void MainMenu::SwitchToMainMenu(){
     mainWindow->switchScene(this);
 }
-
-
-

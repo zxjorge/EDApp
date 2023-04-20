@@ -1,5 +1,4 @@
 #include "fillableflag.h"
-#include "flagconstants.h"
 #include "ui_fillableflag.h"
 #include <QPainter>
 #include <QMouseEvent>
@@ -10,23 +9,6 @@ FillableFlag::FillableFlag(QWidget *parent) :
     ui(new Ui::FillableFlag),
     currentColor(Qt::white)
 {
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
-
-    layers.push_back(QImage(":/FlagTemplates/Flag Border.png"));
-    layerColors.push_back(Qt::white);
-
-    layers.push_back(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]));
-    layerColors.push_back(Qt::black);
-
-    QVector<QString> unselected = CORNER_FLAG_TEMPLATES;
-
-    for (int i = 1; i < 5; i++) {
-        int index = rng.bounded(unselected.length());
-        layers.push_back(QImage(":/FlagTemplates/" + unselected[index]));
-        unselected.remove(index);
-        layerColors.push_back(QColor(255 * i / 5, 255 * i / 5, 255 * i / 5));
-    }
-
     ui->setupUi(this);
 }
 
@@ -114,4 +96,9 @@ int FillableFlag::getColorCount() {
     }
 
     return uniqueColors.count();
+}
+
+void FillableFlag::addLayer(QImage img, QColor color) {
+    layers.push_back(img);
+    layerColors.push_back(color);
 }

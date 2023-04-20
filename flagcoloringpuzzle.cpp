@@ -2,6 +2,8 @@
 #include "ui_flagcoloringpuzzle.h"
 #include "mainmenu.h"
 #include <QColorDialog>
+#include <QRandomGenerator>
+#include "flagconstants.h"
 
 FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     QWidget(parent),
@@ -37,6 +39,29 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+
+    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white);
+    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black);
+
+    QSet<QString> seen;
+
+    for (int i = 1; i < 5; i++) {
+        int index = rng.bounded(CORNER_FLAG_TEMPLATES.length());
+        QString selected;
+
+        do {
+            selected = CORNER_FLAG_TEMPLATES[index];
+        }
+        while (seen.contains(selected));
+
+        seen.insert(selected);
+        ui->flag->addLayer(
+            QImage(":/FlagTemplates/" + selected),
+            QColor(255 * i / 5, 255 * i / 5, 255 * i / 5)
+        );
+    }
 }
 
 FlagColoringPuzzle::~FlagColoringPuzzle()
