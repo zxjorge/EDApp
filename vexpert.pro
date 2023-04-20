@@ -59,7 +59,9 @@ SOURCES += \
     basicquiz.cpp \
     bsod.cpp \
     definition.cpp \
+    drawutils.cpp \
     fillableflag.cpp \
+    finaldesignactivity.cpp \
     flagcoloringpuzzle.cpp \
     flagwidget.cpp \
     hardquiz.cpp \
@@ -70,7 +72,8 @@ SOURCES += \
     meaningfulsymbolismlesson.cpp \
     noletteringorsealslesson.cpp \
     title.cpp \
-    usebasiccolorslesson.cpp
+    usebasiccolorslesson.cpp \
+    spritecanvas.cpp
 
 VPATH += box2d/src/
 
@@ -126,7 +129,9 @@ HEADERS += \
     basicquiz.h \
     bsod.h \
     definition.h \
+    drawutils.h \
     fillableflag.h \
+    finaldesignactivity.h \
     flagcoloringpuzzle.h \
     flagwidget.h \
     hardquiz.h \
@@ -138,6 +143,7 @@ HEADERS += \
     title.h \
     usebasiccolorslesson.h \
     flagconstants.h \
+    spritecanvas.h
 
 FORMS += \
     bedistinctiveorrelatedlesson.ui \
@@ -145,6 +151,7 @@ FORMS += \
     bsod.ui \
     definition.ui \
     fillableflag.ui \
+    finaldesignactivity.ui \
     flagcoloringpuzzle.ui \
     hardquiz.ui \
     keepsimplelesson.ui \
@@ -153,7 +160,8 @@ FORMS += \
     meaningfulsymbolismlesson.ui \
     noletteringorsealslesson.ui \
     title.ui \
-    usebasiccolorslesson.ui
+    usebasiccolorslesson.ui \
+    spritecanvas.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
