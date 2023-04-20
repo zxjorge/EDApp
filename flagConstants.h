@@ -15,12 +15,7 @@ const QVector<QString> LETTERED_FLAGS = {"sx.png", "sm.png", "gt.png", "gu.png",
 const QVector<QString> CHRISTIANITY_FLAGS = {"nz.png", "dm.png", "me.png", "no.png", "es.png" };
 const QVector<QString> ISLAM_FLAGS = {"af.png", "az.png", "pk.png", "my.png", "tr.png" };
 
-const QVector<QString> FLAG_TEMPLATES = {"circleMiddle.png", "flowerMiddle.png", "polygonMiddle.png", "tigerMiddle.png", "triangleMiddle.png", "weirdShapeMiddle.png"};
-
-
-
-
-
-
+const QVector<QString> CORNER_FLAG_TEMPLATES = {"circleMiddleBottom.png", "circleMiddleTop.png", "flowerMiddleRight.png", "pentagonBottomLeft.png", "pentagonBottomRight.png", "treeMiddleLeft.png", "treeMiddleRight.png", "triangleTopLeft.png", "triangleTopRight.png"};
+const QVector<QString> CENTER_FLAG_TEMPLATES = {"circleMiddle.png", "flowerMiddle.png", "polygonMiddle.png", "tigerMiddle.png", "triangleMiddle.png", "weirdShapeMiddle.png"};
 
 #endif // FLAGCONSTANTS_H
