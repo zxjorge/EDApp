@@ -29,13 +29,13 @@ public:
     );
 
     ~BasicQuiz();
-    virtual void paintEvent(QPaintEvent *);
+    //virtual void paintEvent(QPaintEvent *);
 
 
 signals:
 
 public slots:
-    void updateWorld();
+    //void updateWorld();
 
 private:
     Ui::BasicQuiz *ui;

@@ -98,18 +98,18 @@ BasicQuiz::BasicQuiz(QString question,
         body->CreateFixture(&fixtureDef);
 
         // Set an initial downward velocity to the body
-        b2Vec2 velocity(0.0f, -10.0f);
-        body->SetLinearVelocity(velocity);
+        //b2Vec2 velocity(0.0f, -10.0f);
+        //body->SetLinearVelocity(velocity);
 
         // Set up a timer to step the Box2D world and update the position of the image
         QTimer* timer = new QTimer(this);
         connect(timer, &QTimer::timeout, [=]() {
             // Step the Box2D world
+
             float32 timeStep = 1.0f / 2.0f;
             int32 velocityIterations = 6;
             int32 positionIterations = 2;
             world.Step(timeStep, velocityIterations, positionIterations);
-
             // Update the position of the image based on the position of the Box2D body
             float32 x = body->GetPosition().x - ui->flag1->width() / 2;
             float32 y = body->GetPosition().y - ui->flag1->height() / 2;
@@ -164,6 +164,9 @@ BasicQuiz::BasicQuiz(QString question,
        // parent->switchScene(
          //  new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
         //);
+
+
+
     };
 
     auto onWrong2 = [=] () mutable {
@@ -174,9 +177,33 @@ BasicQuiz::BasicQuiz(QString question,
         // Define the dynamic body. We set its position and call the body factory.
 
         printf("Init world\n");
-
+        /*
         connect(&timer, &QTimer::timeout, this, &BasicQuiz::updateWorld);
         timer.start(10);
+        */
+
+        QWidget *tmp = successScene;
+        successScene = nullptr;
+
+
+        QTimer* timer = new QTimer(this);
+        connect(timer, &QTimer::timeout, [=]() {
+            // Step the Box2D world
+            world.Step(1.0/60.0, 6, 2);
+
+            // Update the position of the image based on the position of the Box2D body
+            float32 x = body->GetPosition().x * 20;
+            float32 y = body->GetPosition().y *20;
+            ui->flag2->move(x, y);
+            if (y >= this->height()) {
+                parent->switchScene(
+                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+                );
+            }
+
+        });
+        timer->start(16);
+
     };
 
 
@@ -207,15 +234,14 @@ BasicQuiz::BasicQuiz(QString question,
                 onCorrect);
     }
 }
-
+/*
 void BasicQuiz::paintEvent(QPaintEvent *) {
     // Create a painter
     QPainter painter(this);
     b2Vec2 position = body->GetPosition();
-    QImage image = QImage(":/Flags/as.png");
     float angle = body->GetAngle();
 
-//    printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
+   //printf("%4.2f %4.2f %4.2f\n", position.x, position.y, angle);
 
     painter.drawImage((int)(position.x * 20), (int)(position.y*20), image);
 
@@ -229,7 +255,7 @@ void BasicQuiz::updateWorld() {
     world.Step(1.0/60.0, 6, 2);
     update();
 }
-
+*/
 BasicQuiz::~BasicQuiz()
 {
     delete ui;
