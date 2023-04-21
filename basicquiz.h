@@ -32,6 +32,7 @@ public:
     //virtual void paintEvent(QPaintEvent *);
 
 
+
 signals:
 
 public slots:
@@ -43,6 +44,14 @@ private:
     QTimer timer;
     QImage image;
     b2World world;
+    QWidget *successScene;
+    QString question;
+    QVector<QString> correctFlags;
+    QVector<QString> wrongFlags;
+    int targetStreak = 5;
+    MainWindow *parent;
+
+    void flagAnimation(QWidget*, float, float);
 
 
 };

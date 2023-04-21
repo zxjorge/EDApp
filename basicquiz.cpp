@@ -18,50 +18,9 @@ BasicQuiz::BasicQuiz(QString question,
     world(b2Vec2(9.8f, 9.8f))
 {
     ui->setupUi(this);
-
-    b2BodyDef groundBodyDef;
-    groundBodyDef.position.Set(0.0f, 20.0f);
-
-    // Call the body factory which allocates memory for the ground body
-    // from a pool and creates the ground box shape (also from a pool).
-    // The body is also added to the world.
-    b2Body* groundBody = world.CreateBody(&groundBodyDef);
-
-    // Define the ground box shape.
-    b2PolygonShape groundBox;
-
-    // The extents are the half-widths of the box.
-    groundBox.SetAsBox(50.0f, 10.0f);
-
-
-    // Add the ground fixture to the ground body.
-    groundBody->CreateFixture(&groundBox, 0.0f);
-
-    // Define the dynamic body. We set its position and call the body factory.
-    b2BodyDef bodyDef;
-    bodyDef.type = b2_dynamicBody;
-    bodyDef.position.Set(0.0f, 4.0f);
-
-    body = world.CreateBody(&bodyDef);
-
-    // Define another box shape for our dynamic body.
-    b2PolygonShape dynamicBox;
-    dynamicBox.SetAsBox(1.0f, 1.0f);
-
-    // Define the dynamic body fixture.
-    b2FixtureDef fixtureDef;
-    fixtureDef.shape = &dynamicBox;
-
-    // Set the box density to be non-zero, so it will be dynamic.
-    fixtureDef.density = 1.0f;
-
-    // Override the default friction.
-    fixtureDef.friction = 0.3f;
-    fixtureDef.restitution = 0.9;
-    // Add the shape to the body.
-    body->CreateFixture(&fixtureDef);
     ui->question->setText(question);
     successScene->hide();
+
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
     auto onCorrect = [=] () mutable {
@@ -77,10 +36,12 @@ BasicQuiz::BasicQuiz(QString question,
                 );
         }
     };
+
+
     auto onWrong1 = [=] () mutable {
 
-        QWidget *tmp = successScene;
-        successScene = nullptr;
+//        QWidget *tmp = successScene;
+//        successScene = nullptr;
 
         /*
         b2BodyDef bodyDef;
@@ -105,31 +66,49 @@ BasicQuiz::BasicQuiz(QString question,
             float32 y = body->GetPosition().y - ui->flag1->height() / 2;
         */
 
-        b2Vec2 gravity(-9.8f, 9.81f);
-        world.SetGravity(gravity);
-        // Set an initial downward velocity to the body
-        //b2Vec2 velocity(0.0f, -10.0f);
-        //body->SetLinearVelocity(velocity);
+//        groundBodyDef.position.Set(0.0f, 20.0f);
 
-        bodyDef.position.Set(821,324);
-        body = world.CreateBody(&bodyDef);
+//        // Call the body factory which allocates memory for the ground body
+//        // from a pool and creates the ground box shape (also from a pool).
+//        // The body is also added to the world.
+//        b2Body* groundBody = world.CreateBody(&groundBodyDef);
+
+//        // Define the ground box shape.
+//        b2PolygonShape groundBox;
+
+//        // The extents are the half-widths of the box.
+//        groundBox.SetAsBox(50.0f, 10.0f);
+
+//        groundBody->CreateFixture(&groundBox, 0.0f);
+
+
+//        b2Vec2 gravity(-9.8f, 9.81f);
+//        world.SetGravity(gravity);
+//        // Set an initial downward velocity to the body
+//        b2Vec2 velocity(0.0f, -40.0f);
+//        body->SetLinearVelocity(velocity);
+
+//        bodyDef.position.Set(821,324);
+//        body = world.CreateBody(&bodyDef);
 
         // Set up a timer to step the Box2D world and update the position of the image
-        QTimer* timer = new QTimer(this);
-        connect(timer, &QTimer::timeout, [=]() {
-            // Step the Box2D world
-            world.Step(1.0/60.0, 6, 2);
-            // Update the position of the image based on the position of the Box2D body
-            float32 x = (body->GetPosition().x - ui->flag1->width() /2) ;
-            float32 y = (body->GetPosition().y - ui->flag1->height() /2);
-            ui->flag1->move(x, y);
-            if (y >= this->height()) {
-                parent->switchScene(
-                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
-                );
-            }
-        });
-        timer->start(16); // Start the timer with a 60 FPS update rate
+//        QTimer* timer = new QTimer(this);
+//        connect(timer, &QTimer::timeout, [=]() {
+//            // Step the Box2D world
+//            world.Step(1.0/60.0, 6, 2);
+//            // Update the position of the image based on the position of the Box2D body
+//            float32 x = (body->GetPosition().x - ui->flag1->width() /2);
+//            float32 y = (body->GetPosition().y - ui->flag1->height() /2);
+//            ui->flag1->move(x, y);
+//            if (y >= this->height()) {
+//                parent->switchScene(
+//                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+//                );
+//            }
+//        });
+//        timer->start(16); // Start the timer with a 60 FPS update rate
+
+
 
         /**b2Vec2 gravity(0.0f, -9.81f);
         b2World world(gravity);
@@ -174,6 +153,9 @@ BasicQuiz::BasicQuiz(QString question,
          //  new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
         //);
 
+        //flagAnimation(ui->flag1);
+        flagAnimation(ui->flag1, ui->flag1->x()/2, ui->flag1->y()/2);
+
 
 
     };
@@ -185,12 +167,12 @@ BasicQuiz::BasicQuiz(QString question,
 
         // Define the dynamic body. We set its position and call the body factory.
 
-        printf("Init world\n");
         /*
         connect(&timer, &QTimer::timeout, this, &BasicQuiz::updateWorld);
         timer.start(10);
         */
 
+        /*
         QWidget *tmp = successScene;
         successScene = nullptr;
 
@@ -212,6 +194,9 @@ BasicQuiz::BasicQuiz(QString question,
 
         });
         timer->start(16);
+        */
+
+        flagAnimation(ui->flag2, ui->flag2->x(), ui->flag2->y());
 
     };
 
@@ -268,6 +253,79 @@ void BasicQuiz::updateWorld() {
     update();
 }
 */
+
+void BasicQuiz::flagAnimation(QWidget* wrongFlag, float flagXPosition, float flagYPosition){
+    QTimer* timer = new QTimer(this);
+
+
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(ui->verticalLayout->contentsRect().bottomLeft().x(), ui->verticalLayout->contentsRect().bottomLeft().y());
+
+    // Call the body factory which allocates memory for the ground body
+    // from a pool and creates the ground box shape (also from a pool).
+    // The body is also added to the world.
+    b2Body* groundBody = world.CreateBody(&groundBodyDef);
+
+    // Define the ground box shape.
+    b2PolygonShape groundBox;
+
+    // The extents are the half-widths of the box.
+    groundBox.SetAsBox(50.0f, 10.0f);
+
+    b2BodyDef bodyDef;
+    bodyDef.type = b2_dynamicBody;
+        bodyDef.position.Set(flagXPosition, flagYPosition);
+        body = world.CreateBody(&bodyDef);
+
+
+    // Add the ground fixture to the ground body.
+    groundBody->CreateFixture(&groundBox, 0.0f);
+
+    // Define the dynamic body. We set its position and call the body factory.
+
+    // Define another box shape for our dynamic body.
+    b2PolygonShape dynamicBox;
+    dynamicBox.SetAsBox(1.0f, 1.0f);
+
+    // Define the dynamic body fixture.
+    b2FixtureDef fixtureDef;
+    fixtureDef.shape = &dynamicBox;
+
+    // Set the box density to be non-zero, so it will be dynamic.
+    fixtureDef.density = 1.0f;
+
+    // Override the default friction.
+    fixtureDef.friction = 0.3f;
+    fixtureDef.restitution = 0.9;
+    // Add the shape to the body.
+    body->CreateFixture(&fixtureDef);
+
+
+
+
+    connect(timer, &QTimer::timeout, [=]() {
+        // Step the Box2D world
+        world.Step(1.0/60.0, 6, 2);
+
+       // body = world.CreateBody(&bodyDef);
+
+        // Update the position of the image based on the position of the Box2D body
+        float32 x = body->GetPosition().x*5;
+        float32 y = body->GetPosition().y*5;
+        wrongFlag->move(x, y);
+        if (y >= this->height()) {
+            QWidget *tmp = successScene;
+            successScene = nullptr;
+
+            parent->switchScene(
+                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+            );
+        }
+
+    });
+    timer->start(16);
+
+}
 BasicQuiz::~BasicQuiz()
 {
     delete ui;
