@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>1</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -90,42 +90,87 @@ background-color: transparent;
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_22">
            <item>
-            <widget class="QLabel" name="label_16">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <property name="leftMargin">
+              <number>0</number>
              </property>
-             <property name="maximumSize">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bookman Old Style</family>
+                 <pointsize>20</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+               <property name="text">
+                <string>When creating a flag, you want to make sure that your flag is not too complicated. The flag should be so simple that a child can draw it from memory. Flags flap. Flags drape. Flags must be seen from a distance and from their opposite side. Under these circumstances, only simple designs make effective flags.
+</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="speak1">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
               <size>
-               <width>16777215</width>
-               <height>16777</height>
+               <width>20</width>
+               <height>40</height>
               </size>
              </property>
-             <property name="font">
-              <font>
-               <family>Bookman Old Style</family>
-               <pointsize>20</pointsize>
-               <italic>false</italic>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string>When creating a flag, you want to make sure that your flag is not too complicated. The flag should be so simple that a child can draw it from memory. Flags flap. Flags drape. Flags must be seen from a distance and from their opposite side. Under these circumstances, only simple designs make effective flags.
-</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+            </spacer>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -167,8 +212,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -179,6 +224,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -206,8 +258,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -218,6 +270,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -245,8 +304,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -257,6 +316,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -371,22 +437,76 @@ background-color: transparent;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_34">
            <item>
-            <widget class="QLabel" name="label_5">
-             <property name="styleSheet">
-              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <property name="sizeConstraint">
+              <enum>QLayout::SetMaximumSize</enum>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="styleSheet">
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string>To make a simple flag, never use writing of any kind or an organization’s seal on the flag. Words defeat the purpose: why not just write “U.S.A.” on a flag? A flag is a graphic symbol. Lettering is nearly impossible to read from a distance, hard to sew, and difficult to reduce to lapel–pin size. Words are not reversible—this forces double– or triple-thickness fabric.
+               </property>
+               <property name="text">
+                <string>To make a simple flag, never use writing of any kind or an organization’s seal on the flag. Words defeat the purpose: why not just write “U.S.A.” on a flag? A flag is a graphic symbol. Lettering is nearly impossible to read from a distance, hard to sew, and difficult to reduce to lapel–pin size. Words are not reversible—this forces double– or triple-thickness fabric.
 </string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="speak2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
              </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+            </spacer>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -422,8 +542,8 @@ text-decoration: underline;</string>
                   <widget class="QLabel" name="label_13">
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -434,6 +554,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -455,8 +582,8 @@ text-decoration: underline;</string>
                   <widget class="QLabel" name="label_15">
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -467,6 +594,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -488,8 +622,8 @@ text-decoration: underline;</string>
                   <widget class="QLabel" name="label_17">
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -500,6 +634,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -619,51 +760,80 @@ background-color: transparent;
          </layout>
         </item>
         <item>
-         <widget class="QFrame" name="verticalFrame_10">
+         <widget class="QFrame" name="verticalFrame_11">
           <property name="styleSheet">
-           <string notr="true">QFrame#verticalFrame_10 {
+           <string notr="true">QFrame#verticalFrame_11 {
 	border: 3px dashed white;
 }
 </string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_22">
            <item>
-            <widget class="QLabel" name="label_16">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <property name="topMargin">
+              <number>0</number>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Bookman Old Style</family>
-               <pointsize>20</pointsize>
-               <italic>false</italic>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bookman Old Style</family>
+                 <pointsize>19</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 300 19pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string>Furthermore, complicated flags cost more to make, which often can limit how widely they are used. Most poor designs have the elements of a great flag in them—simplify them by focusing on a single symbol, a few colors, large shapes, and no lettering. Avoid the temptation to include a symbol for everybody. Ideally the design will be reversible or at least recognizable from either side. Don’t put a different design on the back.
+               </property>
+               <property name="text">
+                <string>Furthermore, complicated flags cost more to make, which often can limit how widely they are used. Most poor designs have the elements of a great flag in them—simplify them by focusing on a single symbol, a few colors, large shapes, and no lettering. Avoid the temptation to include a symbol for everybody. Ideally the design will be reversible or at least recognizable from either side. Don’t put a different design on the back.
 </string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="speak3">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -705,8 +875,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -717,6 +887,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_9">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -744,8 +921,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -756,6 +933,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_10">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -783,8 +967,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>200</height>
                     </size>
                    </property>
                    <property name="text">
@@ -795,6 +979,13 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_11">
+                   <property name="text">
+                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
