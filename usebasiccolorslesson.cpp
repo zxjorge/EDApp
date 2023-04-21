@@ -1,3 +1,8 @@
+/**
+ * UseBasicColorsLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses UseBasicColorsLesson.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "usebasiccolorslesson.h"
 #include "basicquiz.h"
 #include "flagcoloringpuzzle.h"
@@ -6,8 +11,8 @@
 #include <QPushButton>
 
 /**
- * @brief UseBasicColorsLesson::UseBasicColorsLesson
- * @param parent
+ * @brief UseBasicColorsLesson::UseBasicColorsLesson Constructor for UseBasicColorsLesson
+ * @param parent widget that is used to help handle memory and resources.
  */
 UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
     QStackedWidget(parent),
@@ -43,7 +48,7 @@ UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
 
 
 /**
- * @brief UseBasicColorsLesson::~UseBasicColorsLesson
+ * @brief UseBasicColorsLesson::~UseBasicColorsLesson Destructor for UseBasicColorsLesson
  */
 UseBasicColorsLesson::~UseBasicColorsLesson()
 {
@@ -51,7 +56,7 @@ UseBasicColorsLesson::~UseBasicColorsLesson()
 }
 
 /**
- * @brief UseBasicColorsLesson::NextClicked
+ * @brief UseBasicColorsLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
  */
 void UseBasicColorsLesson::NextClicked(){
 
@@ -70,7 +75,7 @@ void UseBasicColorsLesson::NextClicked(){
 }
 
 /**
- * @brief UseBasicColorsLesson::BackClicked
+ * @brief UseBasicColorsLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
  */
 void UseBasicColorsLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;

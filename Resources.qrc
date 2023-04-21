@@ -254,6 +254,8 @@
         <file>va.png</file>
         <file>vc.png</file>
         <file>ve.png</file>
+        <file>flagCollage.jpg</file>
+        <file>nationalFlags.jpg</file>
     </qresource>
     <qresource prefix="/FlagTemplates">
         <file>circleMiddle.png</file>
@@ -272,5 +274,12 @@
         <file>circleMiddleTop.png</file>
         <file>treeMiddleRight.png</file>
         <file>flowerMiddleRight.png</file>
+    </qresource>
+    <qresource prefix="/Audio">
+        <file>bdsr1.mp3</file>
+        <file>bdsr2.mp3</file>
+    </qresource>
+    <qresource prefix="/Icons">
+        <file>Speaker_Icon.svg.png</file>
     </qresource>
 </RCC>

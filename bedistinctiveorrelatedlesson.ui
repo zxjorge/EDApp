@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
-    <height>437</height>
+    <width>952</width>
+    <height>494</height>
    </rect>
   </property>
   <property name="font">
@@ -34,13 +34,13 @@
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -87,48 +87,93 @@ background-color: transparent;
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_21">
            <item>
-            <widget class="QLabel" name="label_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Bookman Old Style</family>
-               <pointsize>14</pointsize>
-               <italic>false</italic>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+            <layout class="QVBoxLayout" name="verticalLayout_15">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>1677</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bookman Old Style</family>
+                 <pointsize>20</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+               </property>
+               <property name="text">
+                <string>When creating a flag, avoid duplicating other flags, but use similarities to show connections. This is perhaps the most difficult principle, but it is very important. Sometimes the good designs are already “taken”.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="speak">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>15</width>
+                 <height>15</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
               <widget class="QLabel" name="label_3">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
@@ -146,7 +191,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_11">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>Australia</string>
@@ -163,8 +208,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>100</height>
+                     <width>300</width>
+                     <height>150</height>
                     </size>
                    </property>
                    <property name="text">
@@ -185,7 +230,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_7">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>New Zealand</string>
@@ -202,8 +247,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>100</height>
+                     <width>300</width>
+                     <height>150</height>
                     </size>
                    </property>
                    <property name="text">
@@ -224,7 +269,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_6">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>Fiji</string>
@@ -241,8 +286,8 @@ text-decoration: underline;</string>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>100</height>
+                     <width>300</width>
+                     <height>150</height>
                     </size>
                    </property>
                    <property name="text">
@@ -261,6 +306,20 @@ text-decoration: underline;</string>
               </layout>
              </item>
             </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="styleSheet">
+              <string notr="true">font: 300 12pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>As former British colonies, these countries show their heritage by including the union jack in their flag.</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -316,13 +375,13 @@ background-color: transparent;</string>
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -367,30 +426,68 @@ background-color: transparent;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_34">
            <item>
-            <widget class="QLabel" name="label_5">
-             <property name="styleSheet">
-              <string notr="true">
-font: 300 14pt &quot;Bookman Old Style&quot;;
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="styleSheet">
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
-             </property>
-             <property name="text">
-              <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
+               </property>
+               <property name="text">
+                <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
 </string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="speak2">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_11">
              <item>
               <widget class="QLabel" name="label_12">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
@@ -408,7 +505,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_14">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>Maldives</string>
@@ -417,10 +514,16 @@ text-decoration: underline;</string>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_13">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>199</height>
                     </size>
                    </property>
                    <property name="text">
@@ -441,7 +544,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_16">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>Turkey</string>
@@ -450,10 +553,16 @@ text-decoration: underline;</string>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_15">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>199</height>
                     </size>
                    </property>
                    <property name="text">
@@ -474,7 +583,7 @@ text-decoration: underline;</string>
                  <item>
                   <widget class="QLabel" name="label_18">
                    <property name="styleSheet">
-                    <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;</string>
+                    <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
                     <string>Pakistan</string>
@@ -483,10 +592,16 @@ text-decoration: underline;</string>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_17">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>200</width>
-                     <height>133</height>
+                     <width>300</width>
+                     <height>199</height>
                     </size>
                    </property>
                    <property name="text">
@@ -505,6 +620,20 @@ text-decoration: underline;</string>
               </layout>
              </item>
             </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="styleSheet">
+              <string notr="true">font: 300 12pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Because these countries have a majority muslim population, they have a cresent moon intheir flag.</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>

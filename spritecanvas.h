@@ -33,6 +33,10 @@ public:
     void showBrushIcon();
     void setDrawUtils(DrawUtils* drawUtils);
 
+public slots:
+    void onToolChanged();
+    void saveFlag(QString filename);
+
 private:
     Ui::SpriteCanvas *ui;
 

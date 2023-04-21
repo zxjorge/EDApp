@@ -32,13 +32,13 @@
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -101,13 +101,13 @@ background-color: transparent;
              <property name="font">
               <font>
                <family>Bookman Old Style</family>
-               <pointsize>14</pointsize>
+               <pointsize>20</pointsize>
                <italic>false</italic>
                <bold>false</bold>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
@@ -126,11 +126,11 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_3">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Flags which have 2-3 basic colors</string>
+                <string>Flags that use 2-3 basic colors</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -314,13 +314,13 @@ background-color: transparent;</string>
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -367,8 +367,7 @@ background-color: transparent;</string>
            <item>
             <widget class="QLabel" name="label_5">
              <property name="styleSheet">
-              <string notr="true">
-font: 300 14pt &quot;Bookman Old Style&quot;;
+              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
@@ -389,11 +388,11 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_12">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>Flags which have 2-3 basic colors</string>
+                <string>Flags that use 2-3 basic colors</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>

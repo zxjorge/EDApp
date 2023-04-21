@@ -5,6 +5,7 @@
  */
 #ifndef DRAWUTILS_H
 #define DRAWUTILS_H
+#include "qobject.h"
 #include <QColor>
 #include <QBrush>
 #include <QPen>
@@ -19,8 +20,9 @@ enum ToolType{
 /**
  * @brief The Tool model
  */
-class DrawUtils
+class DrawUtils: public QObject
 {
+    Q_OBJECT
 public:
     DrawUtils();
 
@@ -32,6 +34,9 @@ public:
     void drawLineOnImage(QImage& image, QPoint from, QPoint to);
 
     ToolType getSelectedToolType();
+
+signals:
+    void toolUpdated();
 
 private:
     QPen brushPen;

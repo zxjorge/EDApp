@@ -1,3 +1,8 @@
+/**
+ * KeepSimpleLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses KeepSimpleLesson.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "keepsimplelesson.h"
 #include "basicquiz.h"
 #include "ui_keepsimplelesson.h"
@@ -6,6 +11,10 @@
 #include "flagconstants.h"
 #include "flagcoloringpuzzle.h"
 
+/**
+ * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for KeepSimpleLesson
+ * @param parent widget that is used to help handle memory and resources.
+ */
 KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::KeepSimpleLesson),
@@ -20,10 +29,20 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &KeepSimpleLesson::NextClicked);
+    connect(ui->nextButton_3,
+            &QPushButton::clicked,
+            this,
+            &KeepSimpleLesson::NextClicked);
+
     connect(ui->backButton,
             &QPushButton::clicked,
             this,
             &KeepSimpleLesson::BackClicked);
+    connect(ui->backButton_2,
+            &QPushButton::clicked,
+            this,
+            &KeepSimpleLesson::BackClicked);
+
     connect(ui->mainMenu,
             &QPushButton::clicked,
             this,
@@ -36,15 +55,20 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+    connect(ui->mainMenu_3,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                mainWindow->switchScene(new MainMenu(mainWindow));
+            });
 
 
-    // Create a Box2D world with gravity in the downward direction
 
 
 }
 
 /**
- * @brief KeepSimpleLesson::~KeepSimpleLesson
+ * @brief KeepSimpleLesson::~KeepSimpleLesson destructor for KeepSimpleLesson
  */
 KeepSimpleLesson::~KeepSimpleLesson()
 {
@@ -52,7 +76,7 @@ KeepSimpleLesson::~KeepSimpleLesson()
 }
 
 /**
- * @brief KeepSimpleLesson::NextClicked
+ * @brief KeepSimpleLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
  */
 void KeepSimpleLesson::NextClicked(){
 
@@ -64,7 +88,7 @@ void KeepSimpleLesson::NextClicked(){
 }
 
 /**
- * @brief KeepSimpleLesson::BackClicked
+ * @brief KeepSimpleLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
  */
 void KeepSimpleLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;

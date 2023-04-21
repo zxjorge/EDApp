@@ -36,7 +36,7 @@ SpriteCanvas::~SpriteCanvas()
  */
 void SpriteCanvas::setDrawUtils(DrawUtils* drawUtils) {
     this->drawUtils = drawUtils;
-    showBrushIcon();
+    onToolChanged();
 }
 
 /**
@@ -150,33 +150,37 @@ void SpriteCanvas::mouseReleaseEvent(QMouseEvent*) {
 
 }
 
-/**
- * @brief SpriteCanvas::showFillIcon shows the fill icon when the cursor is over the sprite canvas
- */
-void SpriteCanvas::showFillIcon(){
-    QPixmap brushPixmap(":/icons/filltool_icon.png");
-    QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    QCursor brushCursor(scaledBrushPixmap, scaledBrushPixmap.width()/8, scaledBrushPixmap.height()/1.1);
-    setCursor(brushCursor);
+void SpriteCanvas::onToolChanged() {
+    QCursor brushCursor;
 
+    switch (drawUtils->getSelectedToolType()) {
+    case ToolType::BRUSH: {
+        QPixmap brushPixmap(":/icons/brush_icon.png");
+        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 8, scaledBrushPixmap.height()/1.1);
+        break;
+    }
+    case ToolType::FILL: {
+        QPixmap brushPixmap(":/icons/filltool_icon.png");
+        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width()/8, scaledBrushPixmap.height()/1.1);
+        break;
+    }
+    case ToolType::ERASER: {
+        QPixmap brushPixmap(":/icons/erase_icon.png");
+        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 6, scaledBrushPixmap.height() / 1.2);
+        break;
+    }
+    }
+    setCursor(brushCursor);
 }
 
-/**
- * @brief SpriteCanvas::showEraseIcon shows the erase icon when the cursor is over the sprite canvas
- */
-void SpriteCanvas::showEraseIcon(){
-    QPixmap brushPixmap(":/icons/erase_icon.png");
-    QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    QCursor brushCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 6, scaledBrushPixmap.height() / 1.2);
-    setCursor(brushCursor);
-}
-
-/**
- * @brief SpriteCanvas::showBrushIcon shows the brush icon when the cursor is over the sprite canvas
- */
-void SpriteCanvas::showBrushIcon(){
-    QPixmap brushPixmap(":/icons/brush_icon.png");
-    QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-    QCursor brushCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 8, scaledBrushPixmap.height()/1.1);
-    setCursor(brushCursor);
+void SpriteCanvas::saveFlag(QString filename) {
+    if (!filename.endsWith(".png")) {
+        filename += ".png";
+    }
+    if (sprite.save(filename)) {
+        qDebug() << "Unable to save to " << filename << Qt::endl;
+    }
 }

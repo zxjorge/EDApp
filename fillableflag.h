@@ -19,6 +19,7 @@ public:
 
     void setCurrentColor(QColor color);
     QColor getCurrentColor();
+    void addLayer(QImage img, QColor color);
 
 signals:
     void correctColorCount();

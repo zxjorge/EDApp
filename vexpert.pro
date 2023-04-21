@@ -1,4 +1,8 @@
-QT       += core gui
+QT       += core gui multimedia
+
+
+
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -70,7 +74,6 @@ SOURCES += \
     mainmenu.cpp \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
-    noletteringorsealslesson.cpp \
     prompttoflag.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
@@ -140,7 +143,6 @@ HEADERS += \
     mainmenu.h \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
-    noletteringorsealslesson.h \
     prompttoflag.h \
     title.h \
     usebasiccolorslesson.h \
@@ -160,7 +162,6 @@ FORMS += \
     mainmenu.ui \
     mainwindow.ui \
     meaningfulsymbolismlesson.ui \
-    noletteringorsealslesson.ui \
     prompttoflag.ui \
     title.ui \
     usebasiccolorslesson.ui \
