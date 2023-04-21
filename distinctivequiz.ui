@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>hardquiz</class>
- <widget class="QStackedWidget" name="hardquiz">
+ <class>DistinctiveQuiz</class>
+ <widget class="QStackedWidget" name="DistinctiveQuiz">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>603</width>
-    <height>397</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,29 +17,15 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>601</width>
-      <height>401</height>
+      <x>-1</x>
+      <y>-1</y>
+      <width>401</width>
+      <height>301</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
-      <widget class="QLabel" name="displayFlag1">
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QPushButton" name="flag2">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="promptLabel">
+     <item row="1" column="1">
+      <widget class="QLabel" name="displayFlag2">
        <property name="text">
         <string>TextLabel</string>
        </property>
@@ -52,22 +38,36 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="displayFlag2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="promptLabel">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="flag2">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="displayFlag1Label">
        <property name="text">
         <string>TextLabel</string>
        </property>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="flag3">
+      <widget class="QPushButton" name="flag4">
        <property name="text">
         <string>PushButton</string>
        </property>
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QPushButton" name="flag4">
+      <widget class="QPushButton" name="flag3">
        <property name="text">
         <string>PushButton</string>
        </property>

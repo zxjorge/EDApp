@@ -4,7 +4,6 @@
 #include "bedistinctiveorrelatedlesson.h"
 #include "keepsimplelesson.h"
 #include "meaningfulsymbolismlesson.h"
-#include "noletteringorsealslesson.h"
 #include "usebasiccolorslesson.h"
 #include <QDebug>
 
