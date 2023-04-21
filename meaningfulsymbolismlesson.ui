@@ -14,7 +14,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>1</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -32,13 +32,13 @@
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
@@ -314,13 +314,13 @@ background-color: transparent;</string>
             <property name="font">
              <font>
               <family>Bookman Old Style</family>
-              <pointsize>20</pointsize>
+              <pointsize>30</pointsize>
               <italic>false</italic>
               <bold>false</bold>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
