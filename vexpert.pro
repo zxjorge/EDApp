@@ -74,7 +74,6 @@ SOURCES += \
     mainmenu.cpp \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
-    noletteringorsealslesson.cpp \
     prompttoflag.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
@@ -144,7 +143,6 @@ HEADERS += \
     mainmenu.h \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
-    noletteringorsealslesson.h \
     prompttoflag.h \
     title.h \
     usebasiccolorslesson.h \
@@ -164,7 +162,6 @@ FORMS += \
     mainmenu.ui \
     mainwindow.ui \
     meaningfulsymbolismlesson.ui \
-    noletteringorsealslesson.ui \
     prompttoflag.ui \
     title.ui \
     usebasiccolorslesson.ui \

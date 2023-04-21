@@ -254,6 +254,8 @@
         <file>va.png</file>
         <file>vc.png</file>
         <file>ve.png</file>
+        <file>flagCollage.jpg</file>
+        <file>nationalFlags.jpg</file>
     </qresource>
     <qresource prefix="/FlagTemplates">
         <file>circleMiddle.png</file>

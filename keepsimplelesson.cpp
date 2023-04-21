@@ -29,10 +29,20 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &KeepSimpleLesson::NextClicked);
+    connect(ui->nextButton_3,
+            &QPushButton::clicked,
+            this,
+            &KeepSimpleLesson::NextClicked);
+
     connect(ui->backButton,
             &QPushButton::clicked,
             this,
             &KeepSimpleLesson::BackClicked);
+    connect(ui->backButton_2,
+            &QPushButton::clicked,
+            this,
+            &KeepSimpleLesson::BackClicked);
+
     connect(ui->mainMenu,
             &QPushButton::clicked,
             this,
@@ -40,6 +50,12 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
     connect(ui->mainMenu_2,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                mainWindow->switchScene(new MainMenu(mainWindow));
+            });
+    connect(ui->mainMenu_3,
             &QPushButton::clicked,
             this,
             [this] {

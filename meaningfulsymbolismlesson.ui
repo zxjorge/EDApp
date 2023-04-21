@@ -101,13 +101,13 @@ background-color: transparent;
              <property name="font">
               <font>
                <family>Bookman Old Style</family>
-               <pointsize>14</pointsize>
+               <pointsize>20</pointsize>
                <italic>false</italic>
                <bold>false</bold>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
@@ -126,7 +126,7 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_3">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
@@ -367,8 +367,7 @@ background-color: transparent;</string>
            <item>
             <widget class="QLabel" name="label_5">
              <property name="styleSheet">
-              <string notr="true">
-font: 300 14pt &quot;Bookman Old Style&quot;;
+              <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
@@ -388,11 +387,11 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_12">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>more Flags with meaningful symbolism</string>
+                <string>Flags with meaningful symbolism</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>

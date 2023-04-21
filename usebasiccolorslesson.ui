@@ -126,7 +126,7 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_3">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
@@ -388,11 +388,11 @@ color: rgb(0, 0, 0);</string>
              <item>
               <widget class="QLabel" name="label_12">
                <property name="styleSheet">
-                <string notr="true">font: 300 13pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
 text-decoration: underline;</string>
                </property>
                <property name="text">
-                <string>more Flags that use 2-3 basic colors</string>
+                <string>Flags that use 2-3 basic colors</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>

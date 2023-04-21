@@ -34,13 +34,6 @@ MainMenu::MainMenu(MainWindow *parent) :
                 mainWindow->switchScene(new KeepSimpleLesson(mainWindow));
             });
 
-    connect(ui->NLSButton,
-            &QPushButton::clicked,
-            this,
-            [this] {
-                mainWindow->switchScene(new NoLetteringOrSealsLesson(mainWindow));
-            });
-
     connect(ui->U23Button,
             &QPushButton::clicked,
             this,
