@@ -38,10 +38,7 @@ void ColorPicker::UpdateColor(){
     // Update the color label with the selected color
     QColor color = QColor::fromRgb(red, green, blue);
     color.setHsv(color.hue(), color.saturation(), bright);
-    // Update the color button
-    QPalette palette = ui->ColorButton->palette();
-    palette.setColor(QPalette::Button, color);
-    ui->ColorButton->setPalette(palette);
+    ui->ColorButton->setStyleSheet(QString("background-color: %1;").arg(color.name()));
     // Store the selected color
     SelectedColor = color;
 }
