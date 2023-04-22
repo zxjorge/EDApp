@@ -63,12 +63,12 @@ SOURCES += \
     basicquiz.cpp \
     bsod.cpp \
     definition.cpp \
+    distinctivequiz.cpp \
     drawutils.cpp \
     fillableflag.cpp \
     finaldesignactivity.cpp \
     flagcoloringpuzzle.cpp \
     flagwidget.cpp \
-    hardquiz.cpp \
     keepsimplelesson.cpp \
     main.cpp \
     mainmenu.cpp \
@@ -134,12 +134,12 @@ HEADERS += \
     basicquiz.h \
     bsod.h \
     definition.h \
+    distinctivequiz.h \
     drawutils.h \
     fillableflag.h \
     finaldesignactivity.h \
     flagcoloringpuzzle.h \
     flagwidget.h \
-    hardquiz.h \
     keepsimplelesson.h \
     mainmenu.h \
     mainwindow.h \
@@ -156,10 +156,10 @@ FORMS += \
     basicquiz.ui \
     bsod.ui \
     definition.ui \
+    distinctivequiz.ui \
     fillableflag.ui \
     finaldesignactivity.ui \
     flagcoloringpuzzle.ui \
-    hardquiz.ui \
     keepsimplelesson.ui \
     mainmenu.ui \
     mainwindow.ui \

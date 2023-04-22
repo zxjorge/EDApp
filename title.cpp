@@ -59,7 +59,7 @@ void Title::paintEvent(QPaintEvent*){
     QImage flagScaled;
     QImage flag;
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
-
+    flagY = this->height() / 2;
     for(int i = 0; i < numOfFlags; i++){
         flagsX[i] = flagsX[i] + sliderSpeed;
         if(flagsX[i] >= this->width() - flagWidth && flagsResX.at(i) != 0){

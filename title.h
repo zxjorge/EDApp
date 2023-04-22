@@ -26,7 +26,7 @@ private:
     const int flagWidth = 150;
     const int flagHeight = 75;
     const int flagSpacing = 200;
-    const int flagY = 325;
+    int flagY;
     const double sliderSpeed = 1;
     QVector<QImage> flagsToDraw;
     QVector<QImage> oldFlagsToDraw;
