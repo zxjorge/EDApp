@@ -1,21 +1,21 @@
-#ifndef PROMPTTOFLAG_H
-#define PROMPTTOFLAG_H
+#ifndef MSACTIVITY_H
+#define MSACTIVITY_H
 #include <QWidget>
 #include <QString>
 #include "mainwindow.h"
 
 
 namespace Ui {
-class PromptToFlag;
+class MSActivity;
 }
 
-class PromptToFlag : public QWidget
+class MSActivity : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit PromptToFlag(MainWindow *parent = nullptr);
-    ~PromptToFlag();
+    explicit MSActivity(MainWindow *parent = nullptr);
+    ~MSActivity();
 
 private:
     Ui::PromptToFlag *ui;
@@ -23,4 +23,4 @@ private:
     QMap<int, QString> prompts;
 };
 
-#endif // PROMPTTOFLAG_H
+#endif // MSACTIVITY_H

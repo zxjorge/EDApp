@@ -1,7 +1,7 @@
-#include "prompttoflag.h"
-#include "ui_prompttoflag.h"
+#include "MSActivity.h"
+#include "ui_msactivity.h"
 
-PromptToFlag::PromptToFlag(MainWindow *parent) :
+MSActivity::MSActivity(MainWindow *parent) :
     QWidget(parent),
     ui(new Ui::PromptToFlag),
     mainWindow(parent)
@@ -14,7 +14,10 @@ PromptToFlag::PromptToFlag(MainWindow *parent) :
     prompts[4] = "The colors of this country are green for its lush forests and black for its black sand beaches.";
 }
 
-PromptToFlag::~PromptToFlag()
+MSActivity::~MSActivity()
 {
     delete ui;
+}
+void MSActivity::FillScrollArea(){
+
 }
