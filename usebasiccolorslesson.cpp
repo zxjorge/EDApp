@@ -66,11 +66,11 @@ void UseBasicColorsLesson::NextClicked(){
     } else {
         mainWindow->switchScene(new BasicQuiz(
             "Which flag has less colors?",
-            SIMPLE_FLAGS,
-            MEANINGFUL_FLAGS,
+            BASIC_COLOR_FLAGS,
+            COMPLEX_COLOR_FLAGS,
             new FlagColoringPuzzle(mainWindow),
             mainWindow
-            ));
+        ));
     }
 }
 

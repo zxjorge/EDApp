@@ -4,6 +4,7 @@
 #include <QColorDialog>
 #include <QRandomGenerator>
 #include "flagconstants.h"
+#include "saves.h"
 
 FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     QWidget(parent),
@@ -11,6 +12,7 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+    Saves::Save("UseBasicColorsLesson","Flags.data");
     connect(ui->colorPaletteButton,
             &QPushButton::clicked,
             this,
