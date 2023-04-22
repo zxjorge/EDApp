@@ -2,8 +2,8 @@
  <author/>
  <comment/>
  <exportmacro/>
- <class>PromptToFlag</class>
- <widget class="QWidget" name="PromptToFlag">
+ <class>MSActivity</class>
+ <widget class="QWidget" name="MSActivity">
   <property name="geometry">
    <rect>
     <x>0</x>

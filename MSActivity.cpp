@@ -1,9 +1,13 @@
-#include "MSActivity.h"
+#include "msactivity.h"
 #include "ui_msactivity.h"
 
+/**
+ * @brief MSActivity::MSActivity
+ * @param parent
+ */
 MSActivity::MSActivity(MainWindow *parent) :
     QWidget(parent),
-    ui(new Ui::PromptToFlag),
+    ui(new Ui::MSActivity),
     mainWindow(parent)
 {
     ui->setupUi(this);
@@ -14,10 +18,18 @@ MSActivity::MSActivity(MainWindow *parent) :
     prompts[4] = "The colors of this country are green for its lush forests and black for its black sand beaches.";
 }
 
+/**
+ * @brief MSActivity::~MSActivity
+ */
 MSActivity::~MSActivity()
 {
     delete ui;
 }
+
+/**
+ * @brief MSActivity::FillScrollArea
+ */
 void MSActivity::FillScrollArea(){
 
 }
+

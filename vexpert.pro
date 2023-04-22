@@ -59,7 +59,6 @@ SOURCES += \
     Box2D/Dynamics/b2World.cpp \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
-    MSActivity.cpp \
     bedistinctiveorrelatedlesson.cpp \
     basicquiz.cpp \
     bsod.cpp \
@@ -76,6 +75,7 @@ SOURCES += \
     mainmenu.cpp \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
+    msactivity.cpp \
     saves.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
@@ -131,7 +131,6 @@ HEADERS += \
     Box2D/Dynamics/b2World.h \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
-    MSActivity.h \
     bedistinctiveorrelatedlesson.h \
     basicquiz.h \
     bsod.h \
@@ -147,6 +146,7 @@ HEADERS += \
     mainmenu.h \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
+    msactivity.h \
     saves.h \
     title.h \
     usebasiccolorslesson.h \
@@ -154,7 +154,6 @@ HEADERS += \
     spritecanvas.h
 
 FORMS += \
-    MSActivity.ui \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
@@ -168,6 +167,7 @@ FORMS += \
     mainmenu.ui \
     mainwindow.ui \
     meaningfulsymbolismlesson.ui \
+    msactivity.ui \
     title.ui \
     usebasiccolorslesson.ui \
     spritecanvas.ui

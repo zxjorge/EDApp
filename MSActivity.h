@@ -1,9 +1,9 @@
 #ifndef MSACTIVITY_H
 #define MSACTIVITY_H
-#include <QWidget>
-#include <QString>
 #include "mainwindow.h"
-
+#include <QWidget>
+#include <QMap>
+#include <QString>
 
 namespace Ui {
 class MSActivity;
@@ -18,9 +18,11 @@ public:
     ~MSActivity();
 
 private:
-    Ui::PromptToFlag *ui;
+    Ui::MSActivity *ui;
     MainWindow *mainWindow;
     QMap<int, QString> prompts;
+    void FillScrollArea();
+
 };
 
 #endif // MSACTIVITY_H
