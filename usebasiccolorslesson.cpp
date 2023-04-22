@@ -70,7 +70,7 @@ void UseBasicColorsLesson::NextClicked(){
             COMPLEX_COLOR_FLAGS,
             new FlagColoringPuzzle(mainWindow),
             mainWindow
-            ));
+        ));
     }
 }
 
