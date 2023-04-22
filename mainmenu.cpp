@@ -4,8 +4,8 @@
 #include "bedistinctiveorrelatedlesson.h"
 #include "keepsimplelesson.h"
 #include "meaningfulsymbolismlesson.h"
-#include "noletteringorsealslesson.h"
 #include "usebasiccolorslesson.h"
+#include "saves.h"
 #include <QDebug>
 
 
@@ -18,7 +18,12 @@ MainMenu::MainMenu(MainWindow *parent) :
     ui(new Ui::MainMenu),
     mainWindow(parent)
 {
+
     ui->setupUi(this);
+    int lessonsCompleted = Saves::loadFromFile("Flags");
+    if(lessonsCompleted == 1){
+        ui->DesignButton->isEnabled();
+    }
 
     connect(ui->BDRButton,
             &QPushButton::clicked,
@@ -60,3 +65,5 @@ MainMenu::~MainMenu()
 void MainMenu::SwitchToMainMenu(){
     mainWindow->switchScene(this);
 }
+
+

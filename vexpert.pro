@@ -75,6 +75,7 @@ SOURCES += \
     mainwindow.cpp \
     meaningfulsymbolismlesson.cpp \
     prompttoflag.cpp \
+    saves.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
     spritecanvas.cpp
@@ -144,6 +145,7 @@ HEADERS += \
     mainwindow.h \
     meaningfulsymbolismlesson.h \
     prompttoflag.h \
+    saves.h \
     title.h \
     usebasiccolorslesson.h \
     flagconstants.h \
