@@ -62,6 +62,7 @@ SOURCES += \
     bedistinctiveorrelatedlesson.cpp \
     basicquiz.cpp \
     bsod.cpp \
+    colorpicker.cpp \
     definition.cpp \
     distinctivequiz.cpp \
     drawutils.cpp \
@@ -134,6 +135,7 @@ HEADERS += \
     bedistinctiveorrelatedlesson.h \
     basicquiz.h \
     bsod.h \
+    colorpicker.h \
     definition.h \
     distinctivequiz.h \
     drawutils.h \
@@ -157,6 +159,7 @@ FORMS += \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
+    colorpicker.ui \
     definition.ui \
     distinctivequiz.ui \
     fillableflag.ui \
