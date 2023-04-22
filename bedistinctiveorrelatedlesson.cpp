@@ -8,6 +8,8 @@
 #include <QPushButton>
 #include <QUrl>
 #include <QAudioOutput>
+#include "distinctivequiz.h"
+#include "mainmenu.h"
 
 
 
@@ -58,6 +60,14 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &BeDistinctiveOrRelatedLesson::Speak2Clicked);
+
+    connect(ui->nextButton_2,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                mainWindow->switchScene(new DistinctiveQuiz(mainWindow));
+            });
+
 
 }
 

@@ -46,6 +46,10 @@ MainMenu::MainMenu(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MeaningfulSymbolismLesson(mainWindow));
             });
+
+
+
+
 }
 
 /**
