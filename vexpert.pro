@@ -75,8 +75,8 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
+    meaningfulsymbolismactivity.cpp \
     meaningfulsymbolismlesson.cpp \
-    msactivity.cpp \
     saves.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
@@ -147,8 +147,8 @@ HEADERS += \
     keepsimplelesson.h \
     mainmenu.h \
     mainwindow.h \
+    meaningfulsymbolismactivity.h \
     meaningfulsymbolismlesson.h \
-    msactivity.h \
     saves.h \
     title.h \
     usebasiccolorslesson.h \
@@ -169,8 +169,8 @@ FORMS += \
     keepsimplelesson.ui \
     mainmenu.ui \
     mainwindow.ui \
+    meaningfulsymbolismactivity.ui \
     meaningfulsymbolismlesson.ui \
-    msactivity.ui \
     title.ui \
     usebasiccolorslesson.ui \
     spritecanvas.ui

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>688</width>
-    <height>470</height>
+    <width>952</width>
+    <height>492</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -205,13 +205,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_19">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -251,13 +244,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_20">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -294,13 +280,6 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_21">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -526,13 +505,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_22">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -578,13 +550,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_23">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -627,13 +592,6 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_24">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>

@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>2</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -227,13 +227,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -273,13 +266,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_2">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -316,13 +302,6 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_3">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -557,13 +536,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_8">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -597,13 +569,6 @@ text-decoration: underline;</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLabel" name="label_7">
-                   <property name="text">
-                    <string>TextLabel</string>
-                   </property>
-                  </widget>
-                 </item>
                 </layout>
                </item>
                <item>
@@ -634,13 +599,6 @@ text-decoration: underline;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_6">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -861,7 +819,7 @@ text-decoration: underline;</string>
                     <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
-                    <string>Vietnam</string>
+                    <string>Bahrain</string>
                    </property>
                   </widget>
                  </item>
@@ -883,17 +841,10 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/vn.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/bh.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_9">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -907,7 +858,7 @@ text-decoration: underline;</string>
                     <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
-                    <string>Bangladesh</string>
+                    <string>Barbados</string>
                    </property>
                   </widget>
                  </item>
@@ -929,17 +880,10 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/bd.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/bb.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_10">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>
@@ -953,7 +897,7 @@ text-decoration: underline;</string>
                     <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;</string>
                    </property>
                    <property name="text">
-                    <string>India</string>
+                    <string>Jamaica</string>
                    </property>
                   </widget>
                  </item>
@@ -975,17 +919,10 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/in.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/jm.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_11">
-                   <property name="text">
-                    <string>TextLabel</string>
                    </property>
                   </widget>
                  </item>

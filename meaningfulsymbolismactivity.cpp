@@ -1,13 +1,13 @@
-#include "msactivity.h"
-#include "ui_msactivity.h"
+#include "meaningfulsymbolismactivity.h"
+#include "ui_meaningfulsymbolismactivity.h"
 
 /**
- * @brief MSActivity::MSActivity
+ * @brief MeaningfulSymbolismActivity::MeaningfulSymbolismActivity
  * @param parent
  */
-MSActivity::MSActivity(MainWindow *parent) :
+MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
     QWidget(parent),
-    ui(new Ui::MSActivity),
+    ui(new Ui::MeaningfulSymbolismActivity),
     mainWindow(parent)
 {
     ui->setupUi(this);
@@ -19,17 +19,16 @@ MSActivity::MSActivity(MainWindow *parent) :
 }
 
 /**
- * @brief MSActivity::~MSActivity
+ * @brief MeaningfulSymbolismActivity::~MeaningfulSymbolismLActivity
  */
-MSActivity::~MSActivity()
+MeaningfulSymbolismActivity::~MeaningfulSymbolismActivity()
 {
     delete ui;
 }
 
 /**
- * @brief MSActivity::FillScrollArea
+ * @brief MeaningfulSymbolismActivity::FillScrollArea
  */
-void MSActivity::FillScrollArea(){
+void MeaningfulSymbolismActivity::FillScrollArea(){
 
 }
-
