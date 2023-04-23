@@ -19,19 +19,26 @@ Title::Title(MainWindow *parent) :
     QImage flagToAdd;
 
     for(int i = 0; i < numOfFlags; i++){
-        int listPicker = rng.bounded(5);
+        int listPicker = rng.bounded(9);
 
         if(listPicker == 0)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size())));
+            flagToAdd.load(":/Flags/" + BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size())));
         else if(listPicker == 1)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::SIMPLE_FLAGS.at(rng.bounded(SIMPLE_FLAGS.size())));
+            flagToAdd.load(":/Flags/" + SIMPLE_FLAGS.at(rng.bounded(SIMPLE_FLAGS.size())));
         else if(listPicker == 2)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size())));
+            flagToAdd.load(":/Flags/" + MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size())));
         else if(listPicker == 3)
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size())));
-        else
-            flagToAdd.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
-
+            flagToAdd.load(":/Flags/" + NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size())));
+        else if (listPicker == 4)
+            flagToAdd.load(":/Flags/" + LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
+        else if(listPicker == 5)
+            flagToAdd.load(":/Flags/" + COMPLEX_COLOR_FLAGS.at(rng.bounded(COMPLEX_COLOR_FLAGS.size())));
+        else if(listPicker == 6)
+            flagToAdd.load(":/Flags/" + ISLAM_FLAGS.at(rng.bounded(ISLAM_FLAGS.size())));
+        else if(listPicker == 7)
+            flagToAdd.load(":/Flags/" + CHRISTIANITY_FLAGS.at(rng.bounded(CHRISTIANITY_FLAGS.size())));
+        else if(listPicker == 8)
+            flagToAdd.load(":/Flags/" + UNION_JACK_FLAGS.at(rng.bounded(UNION_JACK_FLAGS.size())));
         // Skip if null
         if(flagToAdd.isNull()) {
             i--;
@@ -65,7 +72,7 @@ void Title::paintEvent(QPaintEvent*){
         if(flagsX[i] >= this->width() - flagWidth && flagsResX.at(i) != 0){
                 if(flagsResX.at(i) == -flagWidth){
 
-                    int listPicker = rng.bounded(5);
+                    int listPicker = rng.bounded(9);
 
                     if(listPicker == 0)
                         flag.load(":/Flags/" + FLAGCONSTANTS_H::BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size())));
@@ -75,8 +82,16 @@ void Title::paintEvent(QPaintEvent*){
                         flag.load(":/Flags/" + FLAGCONSTANTS_H::MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size())));
                     else if(listPicker == 3)
                         flag.load(":/Flags/" + FLAGCONSTANTS_H::NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size())));
-                    else
-                        flag.load(":/Flags/" + FLAGCONSTANTS_H::LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
+                    else if (listPicker == 4)
+                        flag.load(":/Flags/" + LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size())));
+                    else if(listPicker == 5)
+                        flag.load(":/Flags/" + COMPLEX_COLOR_FLAGS.at(rng.bounded(COMPLEX_COLOR_FLAGS.size())));
+                    else if(listPicker == 6)
+                        flag.load(":/Flags/" + ISLAM_FLAGS.at(rng.bounded(ISLAM_FLAGS.size())));
+                    else if(listPicker == 7)
+                        flag.load(":/Flags/" + CHRISTIANITY_FLAGS.at(rng.bounded(CHRISTIANITY_FLAGS.size())));
+                    else if(listPicker == 8)
+                        flag.load(":/Flags/" + UNION_JACK_FLAGS.at(rng.bounded(UNION_JACK_FLAGS.size())));
 
 
                     if(!flag.isNull()){
