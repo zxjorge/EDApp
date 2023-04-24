@@ -6,6 +6,7 @@
  */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "saves.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    Saves* getSaves();
+
 public slots:
     /**
      * @brief switchScene Changes the central widget to be the given widget
@@ -28,5 +31,6 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+    Saves saves;
 };
 #endif // MAINWINDOW_H

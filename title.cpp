@@ -4,8 +4,10 @@
  * Reviewed by: Sahil Karki
  */
 #include "title.h"
+#include "mainmenu.h"
 #include "qpainter.h"
 #include "qrandom.h"
+#include "saves.h"
 #include "ui_title.h"
 #include "flagConstants.h"
 #include <QPushButton>
@@ -122,7 +124,11 @@ void Title::paintEvent(QPaintEvent*){
 }
 
 void Title::onButtonpressed() {
-    mainWindow->switchScene(new Definition(mainWindow));
+    if (mainWindow->getSaves()->getNumberOfLessonsSaved() > 0) {
+        mainWindow->switchScene(new MainMenu(mainWindow));
+    } else {
+        mainWindow->switchScene(new Definition(mainWindow));
+    }
 }
 
 void Title::timerEvent(QTimerEvent*)
