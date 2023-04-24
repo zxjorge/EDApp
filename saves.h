@@ -5,11 +5,12 @@
 
 class Saves
 {
+    static QJsonArray savedLessonsArray;
 public:
     static void Save(QString, QString);
-    static int loadFromFile(QString filename);
+    static void loadFromFile(QString);
+    static int getNumberOfLessonsSaved();
 
-private:
 
 };
 

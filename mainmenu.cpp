@@ -21,7 +21,8 @@ MainMenu::MainMenu(MainWindow *parent) :
 {
 
     ui->setupUi(this);
-    int lessonsCompleted = Saves::loadFromFile("Flags");
+    Saves::loadFromFile("Flags.data");
+    int lessonsCompleted = Saves::getNumberOfLessonsSaved();
     if(lessonsCompleted == 1){
         ui->DesignButton->isEnabled();
     }
