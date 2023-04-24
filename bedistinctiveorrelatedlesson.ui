@@ -439,7 +439,7 @@ color: rgb(0, 0, 0);</string>
                <property name="text">
                 <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
  
-An example of this is countries with a predominantly muslim population usually have a crescent moon on their flag, whereas countries with a predominantly christian population have either a cross, or stars in the shape of a cross on them.</string>
+An example of this is countries with a predominantly muslim population usually have a crescent moon on their flag or text in arabic, whereas countries with a predominantly christian population have either a cross, or stars in the shape of a cross on them.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
