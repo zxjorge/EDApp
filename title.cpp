@@ -22,6 +22,11 @@ Title::Title(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+
+    if (parent->getSaves()->getNumberOfLessonsSaved() > 0) {
+        ui->pushButton->setText("Let's go already!");
+    }
+
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
     QImage flagToAdd;
 
