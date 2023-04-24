@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1323</width>
-    <height>718</height>
+    <height>730</height>
    </rect>
   </property>
   <property name="font">
@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
