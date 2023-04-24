@@ -3,7 +3,45 @@
 
 #include <QWidget>
 
-const int MAX_COLOR_COUNT = 3;
+enum ActionType { ADD_LAYER, FILL };
+
+class Action {
+public:
+    Action() {
+        this->actionType = ActionType::ADD_LAYER;
+    }
+    Action(QColor oldColor, int layerIndex) {
+        this->actionType = ActionType::FILL;
+        this->oldColor = oldColor;
+        this->layerIndex = layerIndex;
+    }
+
+    ActionType actionType;
+
+    QColor oldColor;
+    int layerIndex;
+};
+
+class UndoneAction {
+public:
+    UndoneAction(QColor oldColor, QImage oldLayer) {
+        this->actionType = ActionType::ADD_LAYER;
+        this->oldColor = oldColor;
+        this->oldLayer = oldLayer;
+    }
+    UndoneAction(QColor oldColor, int layerIndex) {
+        this->actionType = ActionType::FILL;
+        this->oldColor = oldColor;
+        this->layerIndex = layerIndex;
+    }
+
+    ActionType actionType;
+
+    QColor oldColor;
+    int layerIndex;
+
+    QImage oldLayer;
+};
 
 namespace Ui {
 class FillableFlag;
@@ -19,7 +57,7 @@ public:
 
     void setCurrentColor(QColor color);
     QColor getCurrentColor();
-    void addLayer(QImage img, QColor color);
+    void addLayer(QImage img, QColor color = Qt::black);
 
 signals:
     void correctColorCount();
@@ -27,12 +65,16 @@ signals:
 
 public slots:
     void fillAtPoint(QPoint point);
+    void undo();
+    void redo();
 
 private:
     Ui::FillableFlag *ui;
     QVector<QImage> layers;
     QVector<QColor> layerColors;
     QColor currentColor;
+    QVector<Action> actions;
+    QVector<UndoneAction> undoneActions;
 
     void paintEvent(QPaintEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;

@@ -4,6 +4,9 @@
 #include <QMouseEvent>
 #include <QRandomGenerator>
 
+const int MAX_COLOR_COUNT = 3;
+const int MAX_ACTION_HISTORY = 10;
+
 FillableFlag::FillableFlag(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::FillableFlag),
@@ -18,9 +21,16 @@ FillableFlag::~FillableFlag()
 }
 
 void FillableFlag::fillAtPoint(QPoint point) {
+    if (actions.length() >= MAX_ACTION_HISTORY) {
+        actions.pop_front();
+    }
+    undoneActions.clear();
+
     for (int i = layers.length() - 1; i > 0; i--) {
         if (layers.at(i).pixelColor(point).alpha() > 0) {
+            actions.append(Action(layerColors[i], i));
             layerColors.replace(i, currentColor);
+
             if (getColorCount() <= MAX_COLOR_COUNT) {
                 emit correctColorCount();
             } else {
@@ -31,6 +41,7 @@ void FillableFlag::fillAtPoint(QPoint point) {
         }
     }
     layerColors.replace(0, currentColor);
+    actions.append(Action(layerColors[0], 0));
 
     if (getColorCount() <= MAX_COLOR_COUNT) {
         emit correctColorCount();
@@ -101,4 +112,50 @@ int FillableFlag::getColorCount() {
 void FillableFlag::addLayer(QImage img, QColor color) {
     layers.push_back(img);
     layerColors.push_back(color);
+    undoneActions.clear();
+
+    if (actions.length() >= MAX_ACTION_HISTORY) {
+        actions.pop_front();
+    }
+
+    actions.append(Action());
+}
+
+void FillableFlag::undo() {
+    if (actions.empty()) {
+        return;
+    }
+
+    Action action = actions.back();
+    actions.pop_back();
+
+    if (action.actionType == ActionType::ADD_LAYER) {
+        undoneActions.append(UndoneAction(layerColors.back(), layers.back()));
+        layers.pop_back();
+        layerColors.pop_back();
+    } else {
+        undoneActions.append(UndoneAction(layerColors[action.layerIndex], action.layerIndex));
+        layerColors[action.layerIndex] = action.oldColor;
+    }
+
+    update();
+}
+
+void FillableFlag::redo() {
+    if (undoneActions.empty()) {
+        return;
+    }
+
+    UndoneAction action = undoneActions.back();
+    undoneActions.pop_back();
+
+    if (action.actionType == ActionType::ADD_LAYER) {
+        actions.append(Action());
+        layers.append(action.oldLayer);
+        layerColors.append(action.oldColor);
+    } else {
+        actions.append(Action(layerColors[action.layerIndex], action.layerIndex));
+        layerColors[action.layerIndex] = action.oldColor;
+    }
+    update();
 }
