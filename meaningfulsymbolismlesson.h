@@ -13,16 +13,32 @@ namespace Ui {
 class MeaningfulSymbolismLesson;
 }
 
+
 class MeaningfulSymbolismLesson : public QStackedWidget
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief MeaningfulSymbolismLesson::MeaningfulSymbolismLesson Constructor for MeaningfulSymbolismLesson
+     * @param parent widget that is used to help handle memory and resources.
+     */
     explicit MeaningfulSymbolismLesson(MainWindow *parent = nullptr);
+
+    /**
+     * @brief MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson destructor for MeaningfulSymbolismLesson
+     */
     ~MeaningfulSymbolismLesson();
 
-private slots:
+private slots:   
+    /**
+     * @brief MeaningfulSymbolismLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
+     */
     void NextClicked();
+
+    /**
+     * @brief MeaningfulSymbolismLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
+     */
     void BackClicked();
 
 

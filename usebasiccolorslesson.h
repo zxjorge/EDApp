@@ -18,11 +18,27 @@ class UseBasicColorsLesson : public QStackedWidget
     Q_OBJECT
 
 public:
+
+    /**
+     * @brief UseBasicColorsLesson::UseBasicColorsLesson Constructor for UseBasicColorsLesson
+     * @param parent widget that is used to help handle memory and resources.
+     */
     explicit UseBasicColorsLesson(MainWindow *parent = nullptr);
+
+    /**
+     * @brief UseBasicColorsLesson::~UseBasicColorsLesson Destructor for UseBasicColorsLesson
+     */
     ~UseBasicColorsLesson();
 
 private slots:
+    /**
+     * @brief UseBasicColorsLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
+     */
     void NextClicked();
+
+    /**
+     * @brief UseBasicColorsLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
+     */
     void BackClicked();
 
 private:

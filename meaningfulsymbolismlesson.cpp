@@ -51,17 +51,12 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
 
 }
 
-/**
- * @brief MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson destructor for MeaningfulSymbolismLesson
- */
 MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson()
 {
     delete ui;
 }
 
-/**
- * @brief MeaningfulSymbolismLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
- */
+
 void MeaningfulSymbolismLesson::NextClicked(){
 
     int nextIndex = currentIndex() + 1;
@@ -70,9 +65,7 @@ void MeaningfulSymbolismLesson::NextClicked(){
     }
 }
 
-/**
- * @brief MeaningfulSymbolismLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
- */
+
 void MeaningfulSymbolismLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);

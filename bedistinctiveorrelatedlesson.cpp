@@ -12,11 +12,6 @@
 #include "mainmenu.h"
 
 
-
-/**
- * @brief BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson Constructor for BeDistinctiveOrRelatedLesson
- * @param parent widget that is used to help handle memory and resources.
- */
 BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::BeDistinctiveOrRelatedLesson),
@@ -69,18 +64,13 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             });
 }
 
-/**
- * @brief BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson destructor for BeDistinctiveOrRelatedLesson
- */
+
 BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson()
 {
     delete ui;
 }
 
 
-/**
- * @brief BeDistinctiveOrRelatedLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
- */
 void BeDistinctiveOrRelatedLesson::NextClicked(){
     if(player->isPlaying()){
         player->stop();
@@ -91,9 +81,7 @@ void BeDistinctiveOrRelatedLesson::NextClicked(){
     }
 }
 
-/**
- * @brief BeDistinctiveOrRelatedLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
- */
+
 void BeDistinctiveOrRelatedLesson::BackClicked(){
     if(player->isPlaying()){
         player->stop();
