@@ -29,9 +29,6 @@ class SpriteCanvas : public QWidget
 public:
     explicit SpriteCanvas(QWidget *parent = nullptr);
     ~SpriteCanvas();
-    void showEraseIcon();
-    void showFillIcon();
-    void showBrushIcon();
     void setDrawUtils(DrawUtils* drawUtils);
     void setImage(QImage image);
 
