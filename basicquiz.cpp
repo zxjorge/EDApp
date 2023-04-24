@@ -52,18 +52,18 @@ BasicQuiz::BasicQuiz(QString question,
     };
 
     auto failAnimation = [=] (QPushButton *wrongFlag, QPushButton *correctFlag) {
-        correctFlag->setEnabled(false);
+        correctFlag->blockSignals(true);
+        wrongFlag->blockSignals(true);
+
         b2World *world = new b2World(b2Vec2(0, 980.0f / SCALE));
 
         b2BodyDef groundBodyDef;
-//        QRect screenRect = ui->verticalLayout->contentsRect();
         groundBodyDef.position.Set(0, height() / 2 / SCALE);
 
         // Call the body factory which allocates memory for the ground body
         // from a pool and creates the ground box shape (also from a pool).
         // The body is also added to the world.
         b2Body* groundBody = world->CreateBody(&groundBodyDef);
-//        qDebug() << ui->verticalLayout->contentsRect().bottomLeft().y() << Qt::endl;
 
         // Define the ground box shape.
         b2PolygonShape groundBox;
@@ -119,6 +119,7 @@ BasicQuiz::BasicQuiz(QString question,
             float32 y = body->GetPosition().y * SCALE;
             wrongFlag->move(x, y);
 
+            // Run until we are off the screen
             if (y >= height() || x >= width() || x <= - wrongFlag->width()) {
                 if (successScene == nullptr) {
                     return;
