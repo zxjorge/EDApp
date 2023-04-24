@@ -77,7 +77,7 @@ public:
      * @param img The layer to add
      * @param color The color of the layer
      */
-    void addLayer(QImage img, QColor color = Qt::black);
+    void addLayer(QImage img, QColor color = Qt::black, bool untrack = false);
 
 signals:
     /**

@@ -40,8 +40,9 @@ void FillableFlag::fillAtPoint(QPoint point) {
             return;
         }
     }
-    layerColors.replace(0, currentColor);
+
     actions.append(Action(layerColors[0], 0));
+    layerColors.replace(0, currentColor);
 
     if (getColorCount() <= MAX_COLOR_COUNT) {
         emit correctColorCount();
@@ -109,9 +110,14 @@ int FillableFlag::getColorCount() {
     return uniqueColors.count();
 }
 
-void FillableFlag::addLayer(QImage img, QColor color) {
+void FillableFlag::addLayer(QImage img, QColor color, bool untrack) {
     layers.push_back(img);
     layerColors.push_back(color);
+
+    if (untrack) {
+        return;
+    }
+
     undoneActions.clear();
 
     if (actions.length() >= MAX_ACTION_HISTORY) {

@@ -35,8 +35,8 @@ KeepSimpleActivity::KeepSimpleActivity(MainWindow *parent) :
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
 
-    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white);
-    update();
+    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
+
     connect(ui->choice1,
             &QPushButton::clicked,
             this,
