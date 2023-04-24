@@ -50,6 +50,7 @@ UseBasicColorsLesson::~UseBasicColorsLesson()
     delete ui;
 }
 
+
 void UseBasicColorsLesson::NextClicked(){
 
     int nextIndex = currentIndex() + 1;
@@ -65,6 +66,7 @@ void UseBasicColorsLesson::NextClicked(){
         ));
     }
 }
+
 
 void UseBasicColorsLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;

@@ -41,11 +41,19 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+    connect(ui->undo,
+            &QPushButton::clicked,
+            ui->flag,
+            &FillableFlag::undo);
+    connect(ui->redo,
+            &QPushButton::clicked,
+            ui->flag,
+            &FillableFlag::redo);
 
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
-    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white);
-    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black);
+    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
+    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
 
     QSet<QString> seen;
 
@@ -61,7 +69,8 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
         seen.insert(selected);
         ui->flag->addLayer(
             QImage(":/FlagTemplates/" + selected),
-            QColor(255 * i / 5, 255 * i / 5, 255 * i / 5)
+            QColor(255 * i / 5, 255 * i / 5, 255 * i / 5),
+            true
         );
     }
 }

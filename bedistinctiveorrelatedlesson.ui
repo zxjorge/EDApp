@@ -18,6 +18,9 @@
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 219, 146);</string>
@@ -430,12 +433,13 @@ background-color: transparent;</string>
              <item>
               <widget class="QLabel" name="label_5">
                <property name="styleSheet">
-                <string notr="true">font: 300 20pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 18pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
                 <string>However, a flag’s symbols, colors, and shapes can recall other flags—a powerful way to show heritage, solidarity, or connectedness. This requires knowledge of other flags. Often the best way to start the design process can be looking to one’s “roots” in flags—by country, tribe, or religion. 
-</string>
+ 
+An example of this is countries with a predominantly muslim population usually have a crescent moon on their flag or text in arabic, whereas countries with a predominantly christian population have either a cross, or stars in the shape of a cross on them.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -628,7 +632,7 @@ text-decoration: underline;</string>
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
-              <string>Because these countries have a majority muslim population, they have a cresent moon intheir flag.</string>
+              <string>Because these countries have a majority muslim population, they have a crescent moon intheir flag.</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
