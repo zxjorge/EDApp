@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>902</width>
-    <height>580</height>
+    <height>638</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -302,7 +302,7 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
            <string notr="true">QPushButton#DesignButton {
 	background-image: url(:/Flags/nationalFlags.jpg);
 	 font: 600 20pt &quot;Bookman Old Style&quot;;
-    color: rgb(255, 255, 0);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 QPushButton#DesignButton:disabled {

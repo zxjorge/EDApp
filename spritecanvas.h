@@ -78,11 +78,6 @@ private:
     void mousePressEvent(QMouseEvent *event) override;
 
     /**
-     * @brief SpriteCanvas::mouseReleaseEvent this method is responsible for handling what happens when the mouse button is released on the sprite canvas
-     */
-    void mouseReleaseEvent(QMouseEvent *event) override;
-
-    /**
      * @brief SpriteCanvas::mouseMoveEvent this method is responsible for handling what happens when the mouse is moved on the sprite canvas while the left click is being
      * held down. It updates the canvas based on the current drawing tool and the position of the mouse cursor
      * @param event this QMouseEvent is used to check if the left button of the mouse is being clicked or not and to get the position
