@@ -1,11 +1,13 @@
 #include "saves.h"
 #include "QtCore/qmetatype.h"
+#include "QtCore/qstring.h"
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QFile>
 #include <QJsonDocument>
 #include <QFileInfo>
 #include <iostream>
+
 
 void Saves::Save(QString lessonToSave,QString filename )
 {
@@ -38,6 +40,7 @@ void Saves::Save(QString lessonToSave,QString filename )
 
 void Saves::loadFromFile(QString filename){
     // Reads from file.
+//    qDebug<< QCoreApplication::applicationDirPath();
     QFile file(filename);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug() << "Failed to open file!";
@@ -52,8 +55,9 @@ void Saves::loadFromFile(QString filename){
           return;
       }
     else{
-        json["saved_lessons"] = savedLessonsArray;
+         savedLessonsArray = json["saved_lessons"].toArray();
     }
+
 }
 
 int Saves::getNumberOfLessonsSaved(){

@@ -23,8 +23,8 @@ MainMenu::MainMenu(MainWindow *parent) :
     ui->setupUi(this);
     saves.loadFromFile("Flags.data");
     int lessonsCompleted = saves.getNumberOfLessonsSaved();
-    if(lessonsCompleted == 1){
-        ui->DesignButton->isEnabled();
+    if(lessonsCompleted == 2){
+        ui->DesignButton->setEnabled(true);
     }
 
     connect(ui->BDRButton,
