@@ -8,9 +8,8 @@
 #include "keepsimpleactivity.h"
 #include "ui_keepsimplelesson.h"
 #include <QPushButton>
-#include "flagwidget.h"
+#include "mainmenu.h"
 #include "flagconstants.h"
-#include "flagcoloringpuzzle.h"
 
 /**
  * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for KeepSimpleLesson

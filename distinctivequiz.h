@@ -36,6 +36,9 @@ private slots:
     void flag2Clicked();
     void flag3Clicked();
     void flag4Clicked();
+
+    // TODO Rename from snake case to camel case
+
     void on_next_clicked();
     void setUpQuestion();
 

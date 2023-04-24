@@ -6,7 +6,7 @@
  */
 #ifndef USEBASICCOLORSLESSON_H
 #define USEBASICCOLORSLESSON_H
-#include "mainmenu.h"
+#include "mainwindow.h"
 #include <QStackedWidget>
 
 namespace Ui {

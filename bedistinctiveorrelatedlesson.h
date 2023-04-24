@@ -6,7 +6,7 @@
  */
 #ifndef BEDISTINCTIVEORRELATEDLESSON_H
 #define BEDISTINCTIVEORRELATEDLESSON_H
-#include "mainmenu.h"
+#include "mainwindow.h"
 #include <QStackedWidget>
 #include <QMediaPlayer>
 #include <QAudioOutput>

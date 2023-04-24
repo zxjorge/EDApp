@@ -6,7 +6,7 @@
  */
 #ifndef KEEPSIMPLELESSON_H
 #define KEEPSIMPLELESSON_H
-#include "mainmenu.h"
+#include "mainwindow.h"
 #include <QStackedWidget>
 
 

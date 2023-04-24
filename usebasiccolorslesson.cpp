@@ -7,6 +7,7 @@
 #include "basicquiz.h"
 #include "flagcoloringpuzzle.h"
 #include "flagconstants.h"
+#include "mainmenu.h"
 #include "ui_usebasiccolorslesson.h"
 #include <QPushButton>
 

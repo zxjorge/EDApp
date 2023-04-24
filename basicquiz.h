@@ -1,10 +1,14 @@
+/**
+ * basicquiz.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by basicquiz.cpp and has methods, signals, and slots to handle
+ * This class handles the UI aspects, logic, and data for all the quizzes
+ * Reviewed by: Najman Husaini
+ */
 #ifndef BASICQUIZ_H
 #define BASICQUIZ_H
 
 #include <QWidget>
-//#include <QTimer>
 #include "mainwindow.h"
-//#include <QPainter>
 
 namespace Ui {
 class BasicQuiz;
@@ -15,6 +19,16 @@ class BasicQuiz : public QWidget
     Q_OBJECT
 
 public:
+    /**
+     * @brief BasicQuiz Constructs a randomized quiz involving a right and wrong answer
+     * @param question The question to display to the user
+     * @param correctFlags A vector of flags that are the correct choice
+     * @param wrongFlags A vector of flags that are the wrong choice
+     * @param successScene The widget to switch to after the quiz completes
+     * @param parent The main window
+     * @param currentStreak The player's current win streak
+     * @param targetStreak The win streak required to win
+     */
     explicit BasicQuiz(
         QString question,
         QVector<QString> correctFlags,
@@ -26,31 +40,10 @@ public:
     );
 
     ~BasicQuiz();
-    //virtual void paintEvent(QPaintEvent *);
-
-
-
-signals:
-
-public slots:
-    //void updateWorld();
 
 private:
     Ui::BasicQuiz *ui;
-//    b2Body* body = 0;
-//    QTimer timer;
-//    QImage image;
-//    b2World world;
-//    QWidget *successScene;
-//    QString question;
-//    QVector<QString> correctFlags;
-//    QVector<QString> wrongFlags;
-//    int targetStreak = 5;
     MainWindow *parent;
-
-//    void flagAnimation(QWidget*, float, float);
-
-
 };
 
 #endif // BASICQUIZ_H

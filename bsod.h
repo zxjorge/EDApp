@@ -1,3 +1,9 @@
+/**
+ * bsod.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by bsod.cpp and has methods, signals, and slots to handle
+ * This class handles the UI aspects, logic, and data for the Blue Screen of Death easter egg
+ * Reviewed by: Najman Husaini
+ */
 #ifndef BSOD_H
 #define BSOD_H
 
@@ -17,6 +23,9 @@ public:
     ~Bsod();
 
 private slots:
+    /**
+     * @brief onSceneEnd Called when the player exits the scene
+     */
     void onSceneEnd();
 
 private:

@@ -1,5 +1,7 @@
 /**
  * spritecanvas.h made by NajMingle for A7: Sprite Editor Implementation - CS 3505 Spring 2023
+ * Repurposed for A8 as drawutils.h, used with drawutils.cpp
+ *
  * Model for tools and drawing on images
  * Reviewed by: Najman Husaini
  */
@@ -10,7 +12,9 @@
 #include <QBrush>
 #include <QPen>
 
-/// Represents all 4 tool types
+/**
+ * @brief Represents all 4 tool types
+ */
 enum ToolType{
     BRUSH,
     FILL,
