@@ -12,7 +12,7 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    Saves::Save("UseBasicColorsLesson","Flags.data");
+    saves.Save("UseBasicColorsLesson","Flags.data");
     connect(ui->colorPaletteButton,
             &QPushButton::clicked,
             this,
