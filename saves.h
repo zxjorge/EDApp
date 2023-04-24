@@ -1,16 +1,19 @@
 #ifndef SAVES_H
 #define SAVES_H
 #include "QtCore/qjsonarray.h"
-#include "QtCore/qstring.h"
+
 
 class Saves
 {
+    QJsonArray savedLessonsArray;
 public:
-    static void Save(QString, QString);
-    static int loadFromFile(QString filename);
+    void Save(QString, QString);
+    void loadFromFile(QString);
+    int getNumberOfLessonsSaved();
 
-private:
 
 };
+
+static Saves saves = Saves();
 
 #endif // SAVES_H

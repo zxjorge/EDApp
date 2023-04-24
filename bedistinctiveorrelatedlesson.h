@@ -21,13 +21,36 @@ class BeDistinctiveOrRelatedLesson : public QStackedWidget
     Q_OBJECT
 
 public:
+   /**
+    * @brief BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson Constructor for BeDistinctiveOrRelatedLesson
+    * @param parent widget that is used to help handle memory and resources.
+    */
     explicit BeDistinctiveOrRelatedLesson(MainWindow *parent = nullptr);
+
+   /**
+    * @brief BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson destructor for BeDistinctiveOrRelatedLesson
+    */
     ~BeDistinctiveOrRelatedLesson();
 
 private slots:
+    /**
+     * @brief BeDistinctiveOrRelatedLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
+     */
     void NextClicked();
+
+    /**
+     * @brief BeDistinctiveOrRelatedLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
+     */
     void BackClicked();
+
+    /**
+     * @brief Speak1Clicked Slot that handles what happens when the speak button is clicked on the first slide
+     */
     void Speak1Clicked();
+
+    /**
+     * @brief Speak2Clicked Slot that handles wht happens when the speak button is clicked on the second slide
+     */
     void Speak2Clicked();
 
 
