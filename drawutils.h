@@ -31,6 +31,7 @@ public:
     DrawUtils();
 
     void setColor(QColor color);
+    QColor getColor();
     void setBrushSize(int size);
     void setSelectedToolType(ToolType type);
 

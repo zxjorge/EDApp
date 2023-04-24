@@ -8,6 +8,7 @@
 #define FINALDESIGNACTIVITY_H
 
 #include "drawutils.h"
+#include "mainwindow.h"
 #include <QWidget>
 
 namespace Ui {
@@ -19,12 +20,13 @@ class FinalDesignActivity : public QWidget
     Q_OBJECT
 
 public:
-    explicit FinalDesignActivity(QWidget *parent = nullptr);
+    explicit FinalDesignActivity(MainWindow *parent = nullptr);
     ~FinalDesignActivity();
 
 private:
     Ui::FinalDesignActivity *ui;
     DrawUtils drawUtils;
+    MainWindow *mainWindow;
 };
 
 #endif // FINALDESIGNACTIVITY_H

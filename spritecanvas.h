@@ -33,6 +33,7 @@ public:
     void showFillIcon();
     void showBrushIcon();
     void setDrawUtils(DrawUtils* drawUtils);
+    void setImage(QImage image);
 
 public slots:
     void onToolChanged();

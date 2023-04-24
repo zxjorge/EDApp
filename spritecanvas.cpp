@@ -180,7 +180,11 @@ void SpriteCanvas::saveFlag(QString filename) {
     if (!filename.endsWith(".png")) {
         filename += ".png";
     }
-    if (sprite.save(filename)) {
+    if (!sprite.save(filename)) {
         qDebug() << "Unable to save to " << filename << Qt::endl;
     }
+}
+
+void SpriteCanvas::setImage(QImage image) {
+    sprite = image;
 }

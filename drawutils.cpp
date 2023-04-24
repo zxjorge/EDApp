@@ -16,7 +16,7 @@
  */
 DrawUtils::DrawUtils() :
     brushPen(QPen(Qt::black, 10, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin)),
-    selectedToolType(ToolType::FILL)
+    selectedToolType(ToolType::BRUSH)
 {
 }
 
@@ -165,4 +165,8 @@ void DrawUtils::drawLineOnImage(QImage& image, QPoint from, QPoint to) {
     }
     painter.setPen(pen);
     painter.drawLine(from, to);
+}
+
+QColor DrawUtils::getColor() {
+    return brushPen.color();
 }

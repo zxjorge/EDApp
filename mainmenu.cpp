@@ -1,4 +1,5 @@
 #include "mainmenu.h"
+#include "finaldesignactivity.h"
 #include "ui_mainmenu.h"
 #include <QPushButton>
 #include "bedistinctiveorrelatedlesson.h"
@@ -53,9 +54,12 @@ MainMenu::MainMenu(MainWindow *parent) :
                 mainWindow->switchScene(new MeaningfulSymbolismLesson(mainWindow));
             });
 
-
-
-
+    connect(ui->DesignButton,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                mainWindow->switchScene(new FinalDesignActivity(mainWindow));
+            });
 }
 
 /**
