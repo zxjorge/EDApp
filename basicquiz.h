@@ -36,7 +36,9 @@ public:
         QWidget *successScene,
         MainWindow *parent,
         int currentStreak = 0,
-        int targetStreak = 5
+        int targetStreak = 5,
+        QString lastCorrectFlag = "",
+        QString lastWrongFlag = ""
     );
 
     ~BasicQuiz();

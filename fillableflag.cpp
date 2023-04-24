@@ -21,6 +21,10 @@ FillableFlag::~FillableFlag()
 }
 
 void FillableFlag::fillAtPoint(QPoint point) {
+    if (point.x() >= layers.at(0).width() || point.x() < 0 || point.y() >= layers.at(0).height() || point.y() < 0) {
+        return;
+    }
+
     if (actions.length() >= MAX_ACTION_HISTORY) {
         actions.pop_front();
     }

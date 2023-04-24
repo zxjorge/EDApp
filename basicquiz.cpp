@@ -12,13 +12,16 @@ const double VERTICAL_SPEED = 100;
 const double SCALE = 10.0;
 
 
-BasicQuiz::BasicQuiz(QString question,
+BasicQuiz::BasicQuiz(
+    QString question,
     QVector<QString> correctFlags,
     QVector<QString> wrongFlags,
     QWidget *successScene,
     MainWindow *parent,
     int currentStreak,
-    int targetStreak) :
+    int targetStreak,
+    QString lastCorrectFlag,
+    QString lastWrongFlag) :
     QWidget(parent),
     ui(new Ui::BasicQuiz)
 {
@@ -34,36 +37,19 @@ BasicQuiz::BasicQuiz(QString question,
                 parent->switchScene(new MainMenu(parent));
             });
 
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
-
-    auto onCorrect = [=] () mutable {
-        currentStreak++;
-        QWidget *tmp = successScene;
-        successScene = nullptr;
-
-        if (currentStreak >= targetStreak) {
-            tmp->show();
-            parent->switchScene(tmp);
-        } else {
-            parent->switchScene(
-                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, currentStreak, targetStreak)
-            );
-        }
-    };
-
     auto failAnimation = [=] (QPushButton *wrongFlag, QPushButton *correctFlag) {
-        correctFlag->setEnabled(false);
+        correctFlag->blockSignals(true);
+        wrongFlag->blockSignals(true);
+
         b2World *world = new b2World(b2Vec2(0, 980.0f / SCALE));
 
         b2BodyDef groundBodyDef;
-//        QRect screenRect = ui->verticalLayout->contentsRect();
         groundBodyDef.position.Set(0, height() / 2 / SCALE);
 
         // Call the body factory which allocates memory for the ground body
         // from a pool and creates the ground box shape (also from a pool).
         // The body is also added to the world.
         b2Body* groundBody = world->CreateBody(&groundBodyDef);
-//        qDebug() << ui->verticalLayout->contentsRect().bottomLeft().y() << Qt::endl;
 
         // Define the ground box shape.
         b2PolygonShape groundBox;
@@ -119,6 +105,7 @@ BasicQuiz::BasicQuiz(QString question,
             float32 y = body->GetPosition().y * SCALE;
             wrongFlag->move(x, y);
 
+            // Run until we are off the screen
             if (y >= height() || x >= width() || x <= - wrongFlag->width()) {
                 if (successScene == nullptr) {
                     return;
@@ -144,11 +131,39 @@ BasicQuiz::BasicQuiz(QString question,
         failAnimation(ui->flag2, ui->flag1);
     };
 
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QString correctFlagName;
+
+    do {
+        correctFlagName = ":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()));
+    } while (correctFlagName == lastCorrectFlag);
+
+    QString wrongFlagName;
+
+    do {
+        wrongFlagName = ":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()));
+    } while (wrongFlagName == lastWrongFlag);
+
+    auto onCorrect = [=] () mutable {
+        currentStreak++;
+        QWidget *tmp = successScene;
+        successScene = nullptr;
+
+        if (currentStreak >= targetStreak) {
+            tmp->show();
+            parent->switchScene(tmp);
+        } else {
+            parent->switchScene(
+                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, currentStreak, targetStreak, correctFlagName, wrongFlagName)
+            );
+        }
+    };
+
     if (rng.bounded(2) == 0) {
         // flag1 is the right answer
-        ui->flag1->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag1->setIcon(QIcon(correctFlagName));
+        ui->flag2->setIcon(QIcon(wrongFlagName));
 
-        ui->flag2->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,
@@ -159,8 +174,9 @@ BasicQuiz::BasicQuiz(QString question,
                 onWrong2);
     } else {
         // flag2 is the right answer
-        ui->flag1->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
-        ui->flag2->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag1->setIcon(QIcon(wrongFlagName));
+        ui->flag2->setIcon(QIcon(correctFlagName));
+
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,

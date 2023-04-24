@@ -131,7 +131,7 @@ void DrawUtils::drawPointOnImage(QImage& image, QPoint point) {
     if(selectedToolType == ERASER){
         painter.setCompositionMode(QPainter::CompositionMode_Source);
         pen = brushPen;
-        pen.setColor(QColor(0, 0, 0, 0));
+        pen.setColor(Qt::white);
     } else if(selectedToolType == FILL) {
         fillImageAtPosition(image, point);
         return;
@@ -156,7 +156,7 @@ void DrawUtils::drawLineOnImage(QImage& image, QPoint from, QPoint to) {
     if(selectedToolType == ERASER){
         painter.setCompositionMode(QPainter::CompositionMode_Source);
         pen = brushPen;
-        pen.setColor(QColor(0, 0, 0, 0));
+        pen.setColor(Qt::white);
     } else if(selectedToolType == FILL) {
         // Do nothing
         return;

@@ -11,10 +11,7 @@
 #include "ui_usebasiccolorslesson.h"
 #include <QPushButton>
 
-/**
- * @brief UseBasicColorsLesson::UseBasicColorsLesson Constructor for UseBasicColorsLesson
- * @param parent widget that is used to help handle memory and resources.
- */
+
 UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::UseBasicColorsLesson),
@@ -48,9 +45,6 @@ UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
 }
 
 
-/**
- * @brief UseBasicColorsLesson::~UseBasicColorsLesson Destructor for UseBasicColorsLesson
- */
 UseBasicColorsLesson::~UseBasicColorsLesson()
 {
     delete ui;

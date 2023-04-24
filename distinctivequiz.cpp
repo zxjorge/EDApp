@@ -2,7 +2,7 @@
 #include "qrandom.h"
 #include "ui_distinctivequiz.h"
 #include "flagConstants.h"
-
+#include "qdiriterator.h"
 DistinctiveQuiz::DistinctiveQuiz(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::DistinctiveQuiz)
@@ -18,12 +18,22 @@ DistinctiveQuiz::DistinctiveQuiz(MainWindow *parent) :
     updateStatLabels();
 
     ui->colorCode->setVisible(false);
-  //  QSize size(ui->flag1->width(),ui->flag1->height());
-  //  ui->flag1->setIconSize(size);
     flagButtons.append(ui->flag1);
     flagButtons.append(ui->flag2);
     flagButtons.append(ui->flag3);
     flagButtons.append(ui->flag4);
+
+
+//    QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
+//    int images = 0;
+//    while (it.hasNext()) {
+//        QString i = it.next();
+//        QStringList flag = i.split(":/Flags/");
+//        QTextStream(stdout) << flag[1] << Qt::endl;
+//     //   images += 1;
+//    }
+   // QTextStream(stdout) << images << Qt::endl;
+
 
     for(int i = 0; i < flagButtons.size(); i++){
         flagSelected.append(false);
@@ -227,26 +237,28 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
             //Ensures that if the current category is picked, a different flag is chosen.
             //Makes sure to check for lists that have overlapping flags
             while(randomFlag == "" || symbolList.contains(randomFlag) || randomFlags.contains(randomFlag)){
-                int listPicker = rng.bounded(9);
 
-                if(listPicker == 0)
-                    randomFlag = BASIC_COLOR_FLAGS.at(rng.bounded(BASIC_COLOR_FLAGS.size()));
-                else if(listPicker == 1)
-                    randomFlag = FLAGCONSTANTS_H::SIMPLE_FLAGS.at(rng.bounded(SIMPLE_FLAGS.size()));
-                else if(listPicker == 2)
-                    randomFlag = FLAGCONSTANTS_H::MEANINGFUL_FLAGS.at(rng.bounded(MEANINGFUL_FLAGS.size()));
-                else if(listPicker == 3)
-                    randomFlag = FLAGCONSTANTS_H::NO_LETTER_OR_SEAL_FLAGS.at(rng.bounded(NO_LETTER_OR_SEAL_FLAGS.size()));
-                else if (listPicker == 4)
-                    randomFlag = LETTERED_FLAGS.at(rng.bounded(LETTERED_FLAGS.size()));
-                else if(listPicker == 5)
-                    randomFlag = COMPLEX_COLOR_FLAGS.at(rng.bounded(COMPLEX_COLOR_FLAGS.size()));
-                else if(listPicker == 6)
-                    randomFlag = ISLAM_FLAGS.at(rng.bounded(ISLAM_FLAGS.size()));
-                else if(listPicker == 7)
-                    randomFlag = CHRISTIANITY_FLAGS.at(rng.bounded(CHRISTIANITY_FLAGS.size()));
-                else if(listPicker == 8)
-                    randomFlag = UNION_JACK_FLAGS.at(rng.bounded(UNION_JACK_FLAGS.size()));
+              //  QVector<QString> filePaths;
+
+                QDir dir(":/Flags");
+                // Retrieve the list of files in the resource folder
+                QStringList fileList = dir.entryList(QDir::Files);
+
+                int flagPicker = rng.bounded(fileList.size());
+
+                randomFlag = fileList[flagPicker];
+
+//                QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
+//                int flagCount = 0;
+//                while (it.hasNext()) {
+//                    if(flagCount == flagPicker){
+//                        QString filePath = it.next();
+//                        QStringList flag = filePath.split(":/Flags/");
+//                        randomFlag = flag[1];
+//                        break;
+//                    }
+//                    flagCount += 1;
+//                }
             }
             randomFlags.append(randomFlag);
             QIcon flagIcon(":/Flags/" + randomFlag);

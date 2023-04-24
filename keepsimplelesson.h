@@ -19,11 +19,28 @@ class KeepSimpleLesson : public QStackedWidget
     Q_OBJECT
 
 public:
+
+    /**
+     * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for KeepSimpleLesson
+     * @param parent widget that is used to help handle memory and resources.
+     */
     explicit KeepSimpleLesson(MainWindow *parent = nullptr);
+
+    /**
+     * @brief KeepSimpleLesson::~KeepSimpleLesson destructor for KeepSimpleLesson
+     */
     ~KeepSimpleLesson();
 
 private slots:
+
+   /**
+    * @brief KeepSimpleLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
+    */
     void NextClicked();
+
+   /**
+    * @brief KeepSimpleLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
+    */
     void BackClicked();
 
 private:

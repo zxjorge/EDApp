@@ -37,6 +37,40 @@ FinalDesignActivity::FinalDesignActivity(MainWindow *parent) :
                 QMessageBox::information(mainWindow, "Saved", "Your flag was saved to final_flag.png!");
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+
+    connect(ui->sizeSlider,
+            &QAbstractSlider::valueChanged,
+            this,
+            [this] {
+                ui->sizeBox->setValue(ui->sizeSlider->value());
+                drawUtils.setBrushSize(ui->sizeSlider->value());
+            });
+    connect(ui->sizeBox,
+            &QSpinBox::textChanged,
+            this,
+            [this] {
+                ui->sizeSlider->setValue(ui->sizeBox->value());
+                drawUtils.setBrushSize(ui->sizeBox->value());
+            });
+
+    connect(ui->brushButton,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                drawUtils.setSelectedToolType(ToolType::BRUSH);
+            });
+    connect(ui->fillButton,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                drawUtils.setSelectedToolType(ToolType::FILL);
+            });
+    connect(ui->eraserButton,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                drawUtils.setSelectedToolType(ToolType::ERASER);
+            });
 }
 
 FinalDesignActivity::~FinalDesignActivity()
