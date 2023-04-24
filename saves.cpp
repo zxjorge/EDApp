@@ -59,7 +59,6 @@ int Saves::getNumberOfLessonsSaved(){
     return savedLessonsArray.size();
 }
 
-
-
-
-
+const QJsonArray *Saves::getSavedLessonsArray() {
+    return &savedLessonsArray;
+}

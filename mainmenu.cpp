@@ -26,6 +26,15 @@ MainMenu::MainMenu(MainWindow *parent) :
         ui->DesignButton->setEnabled(true);
     }
 
+    const QJsonArray* completeLessons = parent->getSaves()->getSavedLessonsArray();
+
+    if (completeLessons->contains("KeepSimpleLesson")) {
+        ui->keepSimpleLabel->setText("Complete");
+    }
+    if (completeLessons->contains("UseBasicColorsLesson")) {
+        ui->colorsLabel->setText("Complete");
+    }
+
     connect(ui->BDRButton,
             &QPushButton::clicked,
             this,
