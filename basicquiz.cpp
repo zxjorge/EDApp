@@ -24,6 +24,7 @@ BasicQuiz::BasicQuiz(QString question,
     ui->setupUi(this);
     ui->question->setText(question);
     successScene->hide();
+    ui->progressBar->setValue(100 * currentStreak / targetStreak);
 
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
