@@ -1,4 +1,5 @@
 #include "basicquiz.h"
+#include "mainmenu.h"
 #include "ui_basicquiz.h"
 #include <QRandomGenerator>
 #include <Box2D/Box2D.h>
@@ -25,6 +26,13 @@ BasicQuiz::BasicQuiz(QString question,
     ui->question->setText(question);
     successScene->hide();
     ui->progressBar->setValue(100 * currentStreak / targetStreak);
+
+    connect(ui->mainMenu,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                parent->switchScene(new MainMenu(parent));
+            });
 
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
 
