@@ -87,7 +87,7 @@ void KeepSimpleLesson::NextClicked(){
         mainWindow->switchScene(new BasicQuiz(
             "Which flag is simpler?",
             SIMPLE_FLAGS,
-            MEANINGFUL_FLAGS + COMPLEX_COLOR_FLAGS,
+            COMPLEX_COLOR_FLAGS,
             new KeepSimpleActivity(mainWindow),
             mainWindow
         ));
