@@ -7,10 +7,7 @@
 #include "ui_meaningfulsymbolismlesson.h"
 #include <QPushButton>
 
-/**
- * @brief MeaningfulSymbolismLesson::MeaningfulSymbolismLesson Constructor for MeaningfulSymbolismLesson
- * @param parent widget that is used to help handle memory and resources.
- */
+
 MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::MeaningfulSymbolismLesson),
