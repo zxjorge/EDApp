@@ -25,6 +25,11 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &MeaningfulSymbolismLesson::NextClicked);
+    connect(ui->nextButton_3,
+            &QPushButton::clicked,
+            this,
+            &MeaningfulSymbolismLesson::NextClicked);
+
     connect(ui->backButton,
             &QPushButton::clicked,
             this,

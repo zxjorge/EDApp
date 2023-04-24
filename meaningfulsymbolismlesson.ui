@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
   <property name="currentIndex">
    <number>0</number>
   </property>
@@ -28,21 +31,16 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
-           <widget class="QLabel" name="label">
-            <property name="font">
-             <font>
-              <family>Bookman Old Style</family>
-              <pointsize>30</pointsize>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
+           <widget class="QPushButton" name="mainMenu">
             <property name="styleSheet">
-             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
+             <string notr="true">
+text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;
+ </string>
             </property>
             <property name="text">
-             <string>Meaningful Symbolism</string>
+             <string>Back to Main Menu</string>
             </property>
            </widget>
           </item>
@@ -60,16 +58,21 @@ color: rgb(0, 0, 0);</string>
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="mainMenu">
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Bookman Old Style</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="styleSheet">
-             <string notr="true">
-text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;
- </string>
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string>Meaningful Symbolism</string>
             </property>
            </widget>
           </item>
@@ -139,6 +142,9 @@ color: rgb(0, 0, 0);</string>
                  <width>20</width>
                  <height>20</height>
                 </size>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
@@ -304,6 +310,18 @@ text-decoration: underline;</string>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
+           <widget class="QPushButton" name="nextButton">
+            <property name="styleSheet">
+             <string notr="true">text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;</string>
+            </property>
+            <property name="text">
+             <string>Next</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <spacer name="horizontalSpacer_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -315,18 +333,6 @@ text-decoration: underline;</string>
              </size>
             </property>
            </spacer>
-          </item>
-          <item>
-           <widget class="QPushButton" name="nextButton">
-            <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
-            </property>
-            <property name="text">
-             <string>Next</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </item>
@@ -348,21 +354,14 @@ background-color: transparent;</string>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QLabel" name="label_4">
-            <property name="font">
-             <font>
-              <family>Bookman Old Style</family>
-              <pointsize>30</pointsize>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
+           <widget class="QPushButton" name="mainMenu_2">
             <property name="styleSheet">
-             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
+             <string notr="true">text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;</string>
             </property>
             <property name="text">
-             <string>Meaningful Symbolism</string>
+             <string>Back to Main Menu</string>
             </property>
            </widget>
           </item>
@@ -380,14 +379,21 @@ color: rgb(0, 0, 0);</string>
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="mainMenu_2">
+           <widget class="QLabel" name="label_4">
+            <property name="font">
+             <font>
+              <family>Bookman Old Style</family>
+              <pointsize>30</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+             <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string>Meaningful Symbolism</string>
             </property>
            </widget>
           </item>
@@ -438,6 +444,9 @@ color: rgb(0, 0, 0);</string>
                  <width>20</width>
                  <height>20</height>
                 </size>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
                </property>
                <property name="styleSheet">
                 <string notr="true">border-image: url(:/Icons/Speaker_Icon.svg.png);</string>
@@ -587,14 +596,14 @@ text-decoration: underline;</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QPushButton" name="backButton">
+         <widget class="QPushButton" name="nextButton_2">
           <property name="styleSheet">
            <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
 background-color: transparent;</string>
           </property>
           <property name="text">
-           <string>Back</string>
+           <string>Next</string>
           </property>
          </widget>
         </item>
@@ -612,14 +621,14 @@ background-color: transparent;</string>
          </spacer>
         </item>
         <item>
-         <widget class="QPushButton" name="nextButton_2">
+         <widget class="QPushButton" name="backButton">
           <property name="styleSheet">
            <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
 background-color: transparent;</string>
           </property>
           <property name="text">
-           <string>Next</string>
+           <string>Back</string>
           </property>
          </widget>
         </item>
@@ -629,7 +638,101 @@ background-color: transparent;</string>
     </item>
    </layout>
   </widget>
+  <widget class="QWidget" name="page_3">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 219, 146);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_14">
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>10</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_19">
+      <property name="styleSheet">
+       <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Congrats on finishing this lesson!!</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_20">
+      <property name="styleSheet">
+       <string notr="true">font: 300 15pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>In the next activity, you will be given a description of a country's flag. With that description, pick the flag that best matches the description.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nextButton_3">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="MeaningfulSymbolismActivity" name="page_4"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MeaningfulSymbolismActivity</class>
+   <extends>QWidget</extends>
+   <header location="global">meaningfulsymbolismactivity.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Resources.qrc"/>
  </resources>

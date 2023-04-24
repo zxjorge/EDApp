@@ -29,7 +29,6 @@ private slots:
 private:
     Ui::MeaningfulSymbolismLesson *ui;
     MainWindow *mainWindow;
-
 };
 
 #endif // MEANINGFULSYMBOLISMLESSON_H

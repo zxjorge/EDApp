@@ -2,7 +2,7 @@
 #define MEANINGFULSYMBOLISMACTIVITY_H
 #include "mainwindow.h"
 #include <QWidget>
-#include <QMap>
+#include <QVector>
 #include <QString>
 
 namespace Ui {
@@ -20,9 +20,11 @@ public:
 private:
     Ui::MeaningfulSymbolismActivity *ui;
     MainWindow *mainWindow;
-    QMap<int, QString> prompts;
-    void FillScrollArea();
-
+    QVector<QString> prompts;
+    QVector<QString> correctAnswers;
+    int numbers[15];
+    int currentIndex;
+    void DisplayPrompt();
 };
 
 #endif // MEANINGFULSYMBOLISMACTIVITY_H
