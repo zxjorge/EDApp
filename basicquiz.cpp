@@ -12,13 +12,16 @@ const double VERTICAL_SPEED = 100;
 const double SCALE = 10.0;
 
 
-BasicQuiz::BasicQuiz(QString question,
+BasicQuiz::BasicQuiz(
+    QString question,
     QVector<QString> correctFlags,
     QVector<QString> wrongFlags,
     QWidget *successScene,
     MainWindow *parent,
     int currentStreak,
-    int targetStreak) :
+    int targetStreak,
+    QString lastCorrectFlag,
+    QString lastWrongFlag) :
     QWidget(parent),
     ui(new Ui::BasicQuiz)
 {
@@ -33,23 +36,6 @@ BasicQuiz::BasicQuiz(QString question,
             [=] {
                 parent->switchScene(new MainMenu(parent));
             });
-
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
-
-    auto onCorrect = [=] () mutable {
-        currentStreak++;
-        QWidget *tmp = successScene;
-        successScene = nullptr;
-
-        if (currentStreak >= targetStreak) {
-            tmp->show();
-            parent->switchScene(tmp);
-        } else {
-            parent->switchScene(
-                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, currentStreak, targetStreak)
-            );
-        }
-    };
 
     auto failAnimation = [=] (QPushButton *wrongFlag, QPushButton *correctFlag) {
         correctFlag->blockSignals(true);
@@ -145,11 +131,39 @@ BasicQuiz::BasicQuiz(QString question,
         failAnimation(ui->flag2, ui->flag1);
     };
 
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QString correctFlagName;
+
+    do {
+        correctFlagName = ":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()));
+    } while (correctFlagName == lastCorrectFlag);
+
+    QString wrongFlagName;
+
+    do {
+        wrongFlagName = ":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()));
+    } while (wrongFlagName == lastWrongFlag);
+
+    auto onCorrect = [=] () mutable {
+        currentStreak++;
+        QWidget *tmp = successScene;
+        successScene = nullptr;
+
+        if (currentStreak >= targetStreak) {
+            tmp->show();
+            parent->switchScene(tmp);
+        } else {
+            parent->switchScene(
+                new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, currentStreak, targetStreak, correctFlagName, wrongFlagName)
+            );
+        }
+    };
+
     if (rng.bounded(2) == 0) {
         // flag1 is the right answer
-        ui->flag1->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag1->setIcon(QIcon(correctFlagName));
+        ui->flag2->setIcon(QIcon(wrongFlagName));
 
-        ui->flag2->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,
@@ -160,8 +174,9 @@ BasicQuiz::BasicQuiz(QString question,
                 onWrong2);
     } else {
         // flag2 is the right answer
-        ui->flag1->setIcon(QIcon(":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()))));
-        ui->flag2->setIcon(QIcon(":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()))));
+        ui->flag1->setIcon(QIcon(wrongFlagName));
+        ui->flag2->setIcon(QIcon(correctFlagName));
+
         connect(ui->flag1,
                 &QPushButton::clicked,
                 this,
