@@ -50,9 +50,6 @@ UseBasicColorsLesson::~UseBasicColorsLesson()
     delete ui;
 }
 
-/**
- * @brief UseBasicColorsLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
- */
 void UseBasicColorsLesson::NextClicked(){
 
     int nextIndex = currentIndex() + 1;
@@ -69,9 +66,6 @@ void UseBasicColorsLesson::NextClicked(){
     }
 }
 
-/**
- * @brief UseBasicColorsLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
- */
 void UseBasicColorsLesson::BackClicked(){
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);

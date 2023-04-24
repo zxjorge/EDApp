@@ -9,10 +9,6 @@
 #include <cmath>
 #include <QPainter>
 
-/**
- * @brief SpriteCanvas::SpriteCanvas constructor for spriteCanvas.
- * @param parent
- */
 SpriteCanvas::SpriteCanvas(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SpriteCanvas),
@@ -23,25 +19,16 @@ SpriteCanvas::SpriteCanvas(QWidget *parent) :
     ui->setupUi(this);
 }
 
-/**
- * @brief SpriteCanvas::~SpriteCanvas destructor for spriteCanvas.
- */
 SpriteCanvas::~SpriteCanvas()
 {
     delete ui;
 }
 
-/**
- * @brief SpriteCanvas::setTool sets the drawing utility model to be used
- */
 void SpriteCanvas::setDrawUtils(DrawUtils* drawUtils) {
     this->drawUtils = drawUtils;
     onToolChanged();
 }
 
-/**
- * @brief SpriteCanvas::paintEvent
- */
 void SpriteCanvas::paintEvent(QPaintEvent*) {
     QPainter painter(this);
     float scale;
@@ -67,10 +54,6 @@ void SpriteCanvas::paintEvent(QPaintEvent*) {
     );
 }
 
-/**
- * @brief SpriteCanvas::getDimensionLimit gets the dimensions of the sprite canvas
- * @return the width and the height of the sprite canvas
- */
 DimensionLimit SpriteCanvas::getDimensionLimit() {
     if ((float)width() / height() < (float)sprite.width() / sprite.height()) {
         return DimensionLimit::WIDTH;
@@ -79,10 +62,6 @@ DimensionLimit SpriteCanvas::getDimensionLimit() {
     }
 }
 
-/**
- * @brief SpriteCanvas::getPixelSize returns the pixel size of the sprite canvas
- * @return a float value which represents the pixel size
- */
 float SpriteCanvas::getPixelSize() {
     if (getDimensionLimit() == DimensionLimit::WIDTH) {
         return (float)width() / sprite.width();
@@ -91,12 +70,6 @@ float SpriteCanvas::getPixelSize() {
     }
 }
 
-/**
- * @brief SpriteCanvas::getScaledMousePoint convert the position of the mouse to a QPoint object which is
- * scaled based on the size of the sprite canvas' pixel size
- * @param event this QMouseEvent is used to get the current position of the mouse
- * @return the scaled position of the mouse cursor as a QPoint
- */
 QPoint SpriteCanvas::getScaledMousePoint(QMouseEvent* event) {
     QPointF point = event->position();
     point.rx() = point.x() - canvasOffsetX;
@@ -109,11 +82,6 @@ QPoint SpriteCanvas::getScaledMousePoint(QMouseEvent* event) {
     return point.toPoint();
 }
 
-/**
- * @brief SpriteCanvas::mousePressEvent this method is responsible for handling what happens when something is drawn on the spriteCanvas.
- * It updates the canvas based on the current drawing tool and the position of the mouse cursor.
- * @param event this QMouseEvent is used to check if the left button of the mouse is being clicked or not and to get the position.
- */
 void SpriteCanvas::mousePressEvent(QMouseEvent *event)
 {
     if (event->button() != Qt::LeftButton) {
@@ -126,11 +94,6 @@ void SpriteCanvas::mousePressEvent(QMouseEvent *event)
     update();
 }
 
-/**
- * @brief SpriteCanvas::mouseMoveEvent this method is responsible for handling what happens when the mouse is moved on the sprite canvas while the left click is being
- * held down. It updates the canvas based on the current drawing tool and the position of the mouse cursor.
- * @param event this QMouseEvent is used to check if the left button of the mouse is being clicked or not and to get the position.
- */
 void SpriteCanvas::mouseMoveEvent(QMouseEvent *event)
 {
     if (event->buttons() != Qt::LeftButton) {
@@ -142,14 +105,6 @@ void SpriteCanvas::mouseMoveEvent(QMouseEvent *event)
     lastMousePos = pos;
     update();
 }
-
-/**
- * @brief SpriteCanvas::mouseReleaseEvent this method is responsible for handling what happens when the mouse button is released on the sprite canvas.
- */
-void SpriteCanvas::mouseReleaseEvent(QMouseEvent*) {
-
-}
-
 void SpriteCanvas::onToolChanged() {
     QCursor brushCursor;
 
