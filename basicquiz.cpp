@@ -30,6 +30,8 @@ BasicQuiz::BasicQuiz(
     successScene->hide();
     ui->progressBar->setValue(100 * currentStreak / targetStreak);
 
+
+
     connect(ui->mainMenu,
             &QPushButton::clicked,
             this,
