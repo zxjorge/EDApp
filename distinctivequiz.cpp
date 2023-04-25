@@ -157,7 +157,7 @@ void DistinctiveQuiz::setUpQuestion(){
             display2 += CHRISTIANITY_FLAGS.at(rng.bounded(CHRISTIANITY_FLAGS.size()));
         }
         setUpButtons(CHRISTIANITY_FLAGS, display1,display2);
-        ui->hint->setText("Choose flags that:\nContain Christian symbols");
+        ui->hint->setText("Choose flags that:\nContain Christian symbols\nA cross or cross constellation");
     }
     else if(symbolPicker == 1){
         display1 += ISLAM_FLAGS.at(rng.bounded(ISLAM_FLAGS.size()));
@@ -169,7 +169,7 @@ void DistinctiveQuiz::setUpQuestion(){
         }
 
         setUpButtons(ISLAM_FLAGS, display1,display2);
-        ui->hint->setText("Choose flags that:\nContain Islamic symbols");
+        ui->hint->setText("Choose flags that:\nContain Islamic symbols\nA crescent moon or arabic text");
     }
     else{
         display1 += UNION_JACK_FLAGS.at(rng.bounded(UNION_JACK_FLAGS.size()));
