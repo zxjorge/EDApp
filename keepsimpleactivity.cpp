@@ -65,6 +65,35 @@ KeepSimpleActivity::KeepSimpleActivity(MainWindow *parent) :
                 ui->flag->addLayer(QImage(":/FlagTemplates/tigerMiddle.png"));
                 update();
             });
+
+    connect(ui->choice5,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                ui->flag->addLayer(QImage(":/FlagTemplates/treeMiddleLeft.png"));
+                update();
+            });
+    connect(ui->choice6,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                ui->flag->addLayer(QImage(":/FlagTemplates/polygonMiddle.png"));
+                update();
+            });
+    connect(ui->choice7,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                ui->flag->addLayer(QImage(":/FlagTemplates/flowerMiddleRight.png"));
+                update();
+            });
+    connect(ui->choice8,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                ui->flag->addLayer(QImage(":/FlagTemplates/treeMiddleRight.png"));
+                update();
+            });
 }
 
 KeepSimpleActivity::~KeepSimpleActivity()
