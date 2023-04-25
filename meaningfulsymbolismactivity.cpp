@@ -1,3 +1,8 @@
+/**
+ * MeaningfulSymbolismLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses MeaningfulSymbolismActivity.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "meaningfulsymbolismactivity.h"
 #include "ui_meaningfulsymbolismactivity.h"
 
