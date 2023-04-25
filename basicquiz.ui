@@ -34,11 +34,20 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>75</width>
+          <height>75</height>
+         </size>
+        </property>
         <property name="layoutDirection">
          <enum>Qt::RightToLeft</enum>
         </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
+        </property>
         <property name="text">
-         <string>Back to Main Menu</string>
+         <string/>
         </property>
        </widget>
       </item>

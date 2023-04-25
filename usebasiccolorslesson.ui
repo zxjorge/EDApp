@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>952</width>
-    <height>492</height>
+    <width>988</width>
+    <height>559</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -61,15 +61,17 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QPushButton" name="mainMenu">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">
-text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;
- </string>
+             <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -372,13 +374,17 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QPushButton" name="mainMenu_2">
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+             <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string/>
             </property>
            </widget>
           </item>
