@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     saves.loadFromFile();
+    setWindowTitle("How to be a VEXPERT!");
     setCentralWidget(new Title(this));
 }
 

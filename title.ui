@@ -24,8 +24,15 @@
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
+       <family>Bookman Old Style</family>
        <pointsize>36</pointsize>
+       <italic>false</italic>
+       <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 600 36pt &quot;Bookman Old Style&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>How to be a VEXPERT!</string>
@@ -65,8 +72,15 @@
      </property>
      <property name="font">
       <font>
+       <family>Bookman Old Style</family>
        <pointsize>27</pointsize>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 500 27pt &quot;Bookman Old Style&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>A what?</string>
