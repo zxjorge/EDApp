@@ -1,4 +1,5 @@
 #include "basicquiz.h"
+#include "flagconstants.h"
 #include "mainmenu.h"
 #include "ui_basicquiz.h"
 #include <QRandomGenerator>
@@ -163,7 +164,10 @@ BasicQuiz::BasicQuiz(
     if (rng.bounded(2) == 0) {
         // flag1 is the right answer
         ui->flag1->setIcon(QIcon(correctFlagName));
+        qDebug() << extractCountryCode(correctFlagName) << Qt::endl;
+        ui->flag1Name->setText(FLAG_NAMES.at(extractCountryCode(correctFlagName)));
         ui->flag2->setIcon(QIcon(wrongFlagName));
+        ui->flag2Name->setText(FLAG_NAMES.at(extractCountryCode(wrongFlagName)));
 
         connect(ui->flag1,
                 &QPushButton::clicked,
@@ -176,7 +180,10 @@ BasicQuiz::BasicQuiz(
     } else {
         // flag2 is the right answer
         ui->flag1->setIcon(QIcon(wrongFlagName));
+        qDebug() << extractCountryCode(correctFlagName) << Qt::endl;
+        ui->flag1Name->setText(FLAG_NAMES.at(extractCountryCode(wrongFlagName)));
         ui->flag2->setIcon(QIcon(correctFlagName));
+        ui->flag2Name->setText(FLAG_NAMES.at(extractCountryCode(correctFlagName)));
 
         connect(ui->flag1,
                 &QPushButton::clicked,

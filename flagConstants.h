@@ -25,7 +25,7 @@ const QVector<QString> UNION_JACK_FLAGS = {"au.png", "nz.png", "tv.png", "fj.png
 const QVector<QString> CORNER_FLAG_TEMPLATES = {"circleMiddleBottom.png", "circleMiddleTop.png", "flowerMiddleRight.png", "pentagonBottomLeft.png", "pentagonBottomRight.png", "treeMiddleLeft.png", "treeMiddleRight.png", "triangleTopLeft.png", "triangleTopRight.png"};
 const QVector<QString> CENTER_FLAG_TEMPLATES = {"circleMiddle.png", "flowerMiddle.png", "polygonMiddle.png", "tigerMiddle.png", "triangleMiddle.png", "weirdShapeMiddle.png"};
 
-const std::unordered_map<std::string, std::string> FLAG_NAMES = {
+const std::unordered_map<QString, QString> FLAG_NAMES = {
     {"aw", "Aruba"}, {"af", "Afghanistan"}, {"ao", "Angola"}, {"ai", "Anguilla"}, {"ax", "Åland Islands"}, {"al", "Albania"}, {"ad", "Andorra"}, {"ae", "United Arab Emirates"},
     {"ar", "Argentina"}, {"am", "Armenia"}, {"as", "American Samoa"}, {"aq", "Antarctica"}, {"tf", "French Southern Territories"}, {"ag", "Antigua and Barbuda"}, {"au", "Australia"},
     {"at", "Austria"}, {"az", "Azerbaijan"}, {"bi", "Burundi"}, {"be", "Belgium"}, {"bj", "Benin"}, {"bq", "Bonaire, Sint Eustatius and Saba"}, {"bf", "Burkina Faso"}, {"bd", "Bangladesh"},
@@ -58,5 +58,7 @@ const std::unordered_map<std::string, std::string> FLAG_NAMES = {
     {"us", "United States"}, {"uz", "Uzbekistan"}, {"va", "Holy See (Vatican City State)"}, {"vc", "Saint Vincent and the Grenadines"}, {"ve", "Venezuela, Bolivarian Republic of"},
     {"vg", "Virgin Islands, British"}, {"vi", "Virgin Islands, U.S."}, {"vn", "Viet Nam"}, {"vu", "Vanuatu"}, {"wf", "Wallis and Futuna"}, {"ws", "Samoa"}, {"ye", "Yemen"}, {"za", "South Africa"},
     {"zm", "Zambia"}, {"zw", "Zimbabwe"}};
+
+QString extractCountryCode(const QString &name);
 
 #endif // FLAGCONSTANTS_H
