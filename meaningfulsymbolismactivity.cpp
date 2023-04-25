@@ -210,6 +210,12 @@ void MeaningfulSymbolismActivity::CheckAnswer(){
     else{
          lastClickedButton->setStyleSheet("background-color: red;");
     }
+
+    ui->ans1->blockSignals(true);
+    ui->ans2->blockSignals(true);
+    ui->ans3->blockSignals(true);
+    ui->ans4->blockSignals(true);
+
     ui->CheckNext->setText("Next Question");
     connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::NextQuestion);
 }
@@ -220,6 +226,12 @@ void MeaningfulSymbolismActivity::NextQuestion(){
     InitializeQuestion();
     ui->CheckNext->setText("Check Answer");
     lastClickedButton->setStyleSheet(""); // Revert color of previous button
+
+    ui->ans1->blockSignals(false);
+    ui->ans2->blockSignals(false);
+    ui->ans3->blockSignals(false);
+    ui->ans4->blockSignals(false);
+
     connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::CheckAnswer);
     }else{
     emit SendScore(correctAns);
