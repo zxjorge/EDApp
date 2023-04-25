@@ -1,3 +1,9 @@
+/**
+ * DistinctiveQuiz.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by DistinctiveQuiz.cpp and has methods, signals, and slots to handle
+ * This class handles the UI aspects, logic, and data for the quiz that shows up after the distinctive lesson
+ * Reviewed by: Najman Husaini
+ */
 #ifndef DISTINCTIVEQUIZ_H
 #define DISTINCTIVEQUIZ_H
 

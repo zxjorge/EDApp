@@ -1,3 +1,9 @@
+/**
+ * FlagStrip.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by FlagStrip.cpp and has methods, signals, and slots to handle
+ * This class handles the UI aspects, logic, and data for the flag animation that appears on the title screen.
+ * Reviewed by: Najman Husaini
+ */
 #ifndef FLAGSTRIP_H
 #define FLAGSTRIP_H
 

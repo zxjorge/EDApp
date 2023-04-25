@@ -1,3 +1,9 @@
+/**
+ * FlagConstants.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by a lot of the other files to look up and display flags
+ * as per the requirements
+ * Reviewed by: Sahil karki
+ */
 #ifndef FLAGCONSTANTS_H
 #define FLAGCONSTANTS_H
 #include <QVector>

@@ -1,3 +1,9 @@
+/**
+ * MeaningfulSymbolismActivity.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This header file will be used by MeaningfulSymbolismActivity.cpp and has methods, signals, and slots.
+ * This class handles the UI aspects, logic, and data for the Meaninful Symbolism lesson's activity.
+ * Reviewed by: Sahil Karki
+ */
 #ifndef MEANINGFULSYMBOLISMACTIVITY_H
 #define MEANINGFULSYMBOLISMACTIVITY_H
 #include "mainwindow.h"
@@ -22,14 +28,32 @@ public:
     ~MeaningfulSymbolismActivity();
 
 private slots:
+    /**
+     * @brief InitializeQuestion Initializes the question that shows up as the prompt for the activity.
+     */
     void InitializeQuestion();
+
+    /**
+     * @brief CheckAnswer Checks if the flags selected by the user are the right answer.
+     */
     void CheckAnswer();
+
+    /**
+     * @brief NextQuestion Handles what the next question / prompt will be
+     */
     void NextQuestion();
 
-public slots:
+public slots:  
+    /**
+     * @brief Reset resets all the stats, and also calls initializeQuestion.
+     */
     void Reset();
 
 signals:
+    /**
+     * @brief SendScore signal that is emitted to send the score
+     * @param score player's score
+     */
     void SendScore(int score);
 
 

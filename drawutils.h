@@ -3,7 +3,7 @@
  * Repurposed for A8 as drawutils.h, used with drawutils.cpp
  *
  * Model for tools and drawing on images
- * Reviewed by: Najman Husaini
+ * Reviewed by: Sahil Karki
  */
 #ifndef DRAWUTILS_H
 #define DRAWUTILS_H
