@@ -66,8 +66,14 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QPushButton" name="mainMenu">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">
+             <string notr="true">border: 1px solid black;
 text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
 background-color: transparent;
@@ -155,19 +161,6 @@ color: rgb(0, 0, 0);</string>
                 <string/>
                </property>
               </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </item>
@@ -344,10 +337,17 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QPushButton" name="nextButton">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+background-color: transparent;
+border: 1px solid black;</string>
             </property>
             <property name="text">
              <string>Next</string>
@@ -410,7 +410,8 @@ color: rgb(0, 0, 0);</string>
             <property name="styleSheet">
              <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+background-color: transparent;
+border: 1px solid black;</string>
             </property>
             <property name="text">
              <string>Back to Main Menu</string>
@@ -470,19 +471,6 @@ An example of this is countries with a predominantly muslim population usually h
                 <string/>
                </property>
               </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </item>
@@ -651,7 +639,8 @@ color: rgb(0, 0, 0);</string>
           <property name="styleSheet">
            <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+background-color: transparent;
+border: 1px solid black;</string>
           </property>
           <property name="text">
            <string>Back</string>
@@ -676,7 +665,8 @@ background-color: transparent;</string>
           <property name="styleSheet">
            <string notr="true">text-decoration: underline; 
 font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+background-color: transparent;
+border: 1px solid black;</string>
           </property>
           <property name="text">
            <string>Next</string>

@@ -30,16 +30,18 @@ public:
      */
     ~MeaningfulSymbolismLesson();
 
-private slots:   
-    /**
-     * @brief MeaningfulSymbolismLesson::NextClicked Slot that handles what happens when the next button is clicked in the UI
-     */
+signals:
+    void ResetQuiz();
+
+private slots:
     void NextClicked();
 
     /**
      * @brief MeaningfulSymbolismLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
      */
     void BackClicked();
+    void CaptureScore(int score);
+    void Restart();
 
 
 private:

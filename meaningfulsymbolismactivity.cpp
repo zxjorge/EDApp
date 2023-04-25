@@ -5,6 +5,8 @@
  */
 #include "meaningfulsymbolismactivity.h"
 #include "ui_meaningfulsymbolismactivity.h"
+#include <QRandomGenerator>
+#include <QDebug>
 
 /**
  * @brief MeaningfulSymbolismActivity::MeaningfulSymbolismActivity
@@ -17,6 +19,9 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
 {
     ui->setupUi(this);
     currentIndex = 0;
+    AnsweredQuestions = 0;
+    correctAns = 0;
+    maxGames = 5;
     prompts.append("The red background symbolizes revolution and bloodshed. The golden star represents the five main classes in Vietnamese society — intellectuals, farmers, workers, entrepreneurs, and soldiers.");
     prompts.append("The disc represents the sun rising over the country, and its red color is intended to represent the blood that the people of this country shed during their war of independence. The green field represents the land's natural bounty.");
     prompts.append("The white color of the saltire and central disk symbolized peace. The remaining areas were red, for the independence struggle and the nation's suffering and green, for hopes placed on future development.");
@@ -34,6 +39,23 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
     prompts.append("The red stripe represented the Spaniards that joined in the quest for this country's Independence. Today, those meanings have shifted somewhat. In the modern age, the green represents hope and victory, the white represents unity, and the red pays tribute to the national heroes who have fought for this country over the years. In the middle is the national symbol of this country which depicts a golden eagle perched on a prickly pear cactus devouring a rattlesnake.");
     prompts.append("On this flag, red symbolizes all of the blood lost by people fighting for this country to become a republic, and green symbolizes hope for the future. In the middle of this flag, there is a yellow armillary sphere and a red shield. The armillary sphere is an astronomical device that was used to navigate the oceans during the Age of Exploration. On the shield, there are 7 yellow castles and a white interior with 5 smaller blue shields. On each of the blue shields, there are 5 white dots. The shield itself represents past victories. The 7 castles represent the 7 castles that this country took back from the Moors. The 5 smaller blue shields represent the 5 Moorish kings who were killed by the first King of this country. The 5 white dots within each blue shield represent the 5 wounds of Christ.");
 
+    correctAnswers.append(":/Flags/vn.png");
+    correctAnswers.append(":/Flags/bd.png");
+    correctAnswers.append(":/Flags/bi.png");
+    correctAnswers.append(":/Flags/dm.png");
+    correctAnswers.append(":/Flags/dz.png");
+    correctAnswers.append(":/Flags/er.png");
+    correctAnswers.append(":/Flags/hk.png");
+    correctAnswers.append(":/Flags/gt.png");
+    correctAnswers.append(":/Flags/je.png");
+    correctAnswers.append(":/Flags/is.png");
+    correctAnswers.append(":/Flags/km.png");
+    correctAnswers.append(":/Flags/ki.png");
+    correctAnswers.append(":/Flags/kp.png");
+    correctAnswers.append(":/Flags/ly.png");
+    correctAnswers.append(":/Flags/mx.png");
+    correctAnswers.append(":/Flags/pt.png");
+
     for (int i = 0; i < 15; ++i) {
         numbers[i] = i;
     }
@@ -45,8 +67,50 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
         std::swap(numbers[i], numbers[j]);     // Swap elements at i and j
     }
 
-    connect(ui->newPrompt, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::DisplayPrompt);
-    DisplayPrompt();
+    connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::CheckAnswer);
+
+    // Connect the clicked() signal of each button to a slot
+    connect(ui->ans1, &QPushButton::clicked, [=]() {
+        if (lastClickedButton && lastClickedButton != ui->ans1) {
+            lastClickedButton->setStyleSheet(""); // Revert color of previous button
+        }
+        lastClickedButton = ui->ans1; // Save reference of clicked button
+        buttonIndex = 0;
+        ui->CheckNext->blockSignals(false);
+        ui->ans1->setStyleSheet("background-color: blue;"); // Set background color to blue
+    });
+
+    connect(ui->ans2, &QPushButton::clicked, [=]() {
+        if (lastClickedButton && lastClickedButton != ui->ans2) {
+            lastClickedButton->setStyleSheet(""); // Revert color of previous button
+        }
+        lastClickedButton = ui->ans2; // Save reference of clicked button
+        buttonIndex = 1;
+        ui->CheckNext->blockSignals(false);
+        ui->ans2->setStyleSheet("background-color: blue;"); // Set background color to blue
+    });
+
+    connect(ui->ans3, &QPushButton::clicked, [=]() {
+        if (lastClickedButton && lastClickedButton != ui->ans3) {
+            lastClickedButton->setStyleSheet(""); // Revert color of previous button
+        }
+        lastClickedButton = ui->ans3; // Save reference of clicked button
+        buttonIndex = 2;
+        ui->CheckNext->blockSignals(false);
+        ui->ans3->setStyleSheet("background-color: blue;"); // Set background color to blue
+    });
+
+    connect(ui->ans4, &QPushButton::clicked, [=]() {
+        if (lastClickedButton && lastClickedButton != ui->ans4) {
+            lastClickedButton->setStyleSheet(""); // Revert color of previous button
+        }
+        lastClickedButton = ui->ans4; // Save reference of clicked button
+        buttonIndex = 3;
+        ui->CheckNext->blockSignals(false);
+        ui->ans4->setStyleSheet("background-color: blue;"); // Set background color to blue
+    });
+
+    FirstQuestion();
 }
 
 /**
@@ -57,10 +121,118 @@ MeaningfulSymbolismActivity::~MeaningfulSymbolismActivity()
     delete ui;
 }
 
-void MeaningfulSymbolismActivity::DisplayPrompt(){
-    ui->promptLabel->setText(prompts.at(numbers[currentIndex]));
-    currentIndex = (currentIndex + 1)%15 ;
+void MeaningfulSymbolismActivity::InitializeQuestion(){
+    currentIndex++;
+    QVector<QString> icons;
+    selectedIndex = numbers[currentIndex];
+    ui->promptLabel->setText(prompts.at(selectedIndex));
+    icons.append(correctAnswers.at(selectedIndex));
+
+    while (icons.size() < 4) {
+        int randomNumber = QRandomGenerator::global()->bounded(15); // Generate a random number between 0 and 14
+        if (randomNumber != selectedIndex && !icons.contains(correctAnswers.at(randomNumber))) {
+            icons.append(correctAnswers.at(randomNumber));
+        }
+    }
+
+    for (int i = icons.size() - 1; i > 0; --i) {
+        int j = QRandomGenerator::global()->bounded(i + 1); // Generate a random index between 0 and i
+        icons.swapItemsAt(i, j); // Swap the elements at index i and j
+    }
+
+    QIcon icon(icons.at(0));
+    ui->ans1->setIcon(icon);
+
+    icon = QIcon (icons.at(1));
+    ui->ans2->setIcon(icon);
+
+    icon = QIcon (icons.at(2));
+    ui->ans3->setIcon(icon);
+
+    icon = QIcon (icons.at(3));
+    ui->ans4->setIcon(icon);
+
+
+    ui->ans1->setIconSize(QSize(150, 150));
+    ui->ans2->setIconSize(QSize(150, 150));
+    ui->ans3->setIconSize(QSize(150, 150));
+    ui->ans4->setIconSize(QSize(150, 150));
+    SavedIcons = icons;
+    ui->CheckNext->blockSignals(true);
 }
+
+void MeaningfulSymbolismActivity::FirstQuestion(){
+    selectedIndex = numbers[currentIndex];
+    ui->promptLabel->setText(prompts.at(selectedIndex));
+    QVector<QString> icons;
+    icons.append(correctAnswers.at(selectedIndex));
+
+    while (icons.size() < 4) {
+        int randomNumber = QRandomGenerator::global()->bounded(15); // Generate a random number between 0 and 14
+        if (randomNumber != selectedIndex && !icons.contains(correctAnswers.at(randomNumber))) {
+            icons.append(correctAnswers.at(randomNumber));
+        }
+    }
+
+    for (int i = icons.size() - 1; i > 0; --i) {
+        int j = QRandomGenerator::global()->bounded(i + 1); // Generate a random index between 0 and i
+        icons.swapItemsAt(i, j); // Swap the elements at index i and j
+    }
+
+
+    QIcon icon(icons.at(0));
+    ui->ans1->setIcon(icon);
+
+    icon = QIcon (icons.at(1));
+    ui->ans2->setIcon(icon);
+
+    icon = QIcon (icons.at(2));
+    ui->ans3->setIcon(icon);
+
+    icon = QIcon (icons.at(3));
+    ui->ans4->setIcon(icon);
+
+    ui->ans1->setIconSize(QSize(150, 150));
+    ui->ans2->setIconSize(QSize(150, 150));
+    ui->ans3->setIconSize(QSize(150, 150));
+    ui->ans4->setIconSize(QSize(150, 150));
+    SavedIcons = icons;
+    ui->CheckNext->blockSignals(true);
+}
+
+void MeaningfulSymbolismActivity::CheckAnswer(){
+    AnsweredQuestions++;
+    disconnect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::CheckAnswer);
+    if(SavedIcons.at(buttonIndex) == correctAnswers.at(selectedIndex)){
+         lastClickedButton->setStyleSheet("background-color: green;");
+        correctAns++;
+    }
+    else{
+         lastClickedButton->setStyleSheet("background-color: red;");
+    }
+    ui->CheckNext->setText("Next Question");
+    connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::NextQuestion);
+}
+
+void MeaningfulSymbolismActivity::NextQuestion(){
+    if(AnsweredQuestions < maxGames){
+    disconnect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::NextQuestion);
+    InitializeQuestion();
+    ui->CheckNext->setText("Check Answer");
+    lastClickedButton->setStyleSheet(""); // Revert color of previous button
+    connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::CheckAnswer);
+    }else{
+    emit SendScore(correctAns);
+    }
+ }
+
+void MeaningfulSymbolismActivity::Reset(){
+    lastClickedButton->setStyleSheet(""); // Revert color of previous button
+    AnsweredQuestions=0;
+    correctAns = 0;
+    InitializeQuestion();
+}
+
 
 
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>770</width>
-    <height>656</height>
+    <height>678</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,19 +34,6 @@ color: rgb(0, 0, 0);</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="newPrompt">
-     <property name="maximumSize">
-      <size>
-       <width>80</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="text">
-      <string>New Prompt</string>
      </property>
     </widget>
    </item>
@@ -231,7 +218,7 @@ color: rgb(0, 0, 0);</string>
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="submit">
+    <widget class="QPushButton" name="CheckNext">
      <property name="maximumSize">
       <size>
        <width>100</width>
