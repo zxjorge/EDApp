@@ -289,4 +289,10 @@
         <file>Speaker_Icon.svg.png</file>
         <file>home-menu-icon-21.jpg</file>
     </qresource>
+    <qresource prefix="/vexbot">
+        <file>vexbotCheer.png</file>
+        <file>vexbotSad.png</file>
+        <file>vexbotSerious.png</file>
+        <file>vexbotThink.png</file>
+    </qresource>
 </RCC>
