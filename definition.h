@@ -19,11 +19,20 @@ class Definition : public QWidget
     Q_OBJECT
 
 public:
+    /**
+     * @brief Definition::Definition
+     * @param parent
+     */
     explicit Definition(MainWindow *parent = nullptr);
+
+    /**
+     *@brief Definition::~Definition
+     */
     ~Definition();
 
 private slots:
     /**
+     * @brief Definition::OkClicked
      * Called when the Ok button is clicked
      */
     void OkClicked();

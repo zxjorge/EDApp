@@ -31,21 +31,6 @@ DistinctiveQuiz::DistinctiveQuiz(MainWindow *parent) :
     flagButtons.append(ui->flag3);
     flagButtons.append(ui->flag4);
 
-    flagScores.append(ui->flag1Score);
-    flagScores.append(ui->flag2Score);
-    flagScores.append(ui->flag3Score);
-    flagScores.append(ui->flag4Score);
-//    QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
-//    int images = 0;
-//    while (it.hasNext()) {
-//        QString i = it.next();
-//        QStringList flag = i.split(":/Flags/");
-//        QTextStream(stdout) << flag[1] << Qt::endl;
-//     //   images += 1;
-//    }
-   // QTextStream(stdout) << images << Qt::endl;
-
-
     for(int i = 0; i < flagButtons.size(); i++){
         flagSelected.append(false);
         flagCorrect.append(false);

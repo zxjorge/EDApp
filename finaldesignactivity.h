@@ -20,7 +20,15 @@ class FinalDesignActivity : public QWidget
     Q_OBJECT
 
 public:
+    /**
+     * @brief FinalDesignActivity
+     * @param parent
+     */
     explicit FinalDesignActivity(MainWindow *parent = nullptr);
+
+    /**
+     * @brief FinalDesignActivity::~FinalDesignActivity
+     */
     ~FinalDesignActivity();
 
 private:

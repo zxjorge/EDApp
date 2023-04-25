@@ -130,9 +130,7 @@ void KeepSimpleLesson::NextClicked(){
             mainWindow
             ));
     }
-
 }
-
 
 void KeepSimpleLesson::BackClicked(){
     if(player->isPlaying()){
@@ -141,7 +139,6 @@ void KeepSimpleLesson::BackClicked(){
 
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
-
 }
 
 
