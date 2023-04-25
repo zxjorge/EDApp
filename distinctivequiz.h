@@ -3,6 +3,7 @@
 
 #include <QStackedWidget>
 #include "mainwindow.h"
+#include "qlabel.h"
 #include "qpushbutton.h"
 
 namespace Ui {
@@ -20,13 +21,16 @@ public:
 private:
     Ui::DistinctiveQuiz *ui;
     QVector<QPushButton*> flagButtons;
+    QVector<QLabel*> flagScores;
     QVector<bool> flagSelected;
     QVector<bool> flagCorrect;
+
     bool answerStage = true;
     int correct = 0;
     int incorrect = 0;
     int missedCorrect = 0;
     int questions = 0;
+    int score = 0;
     void setUpButtons(QVector<QString> symbolList, QString display1, QString display2);
 
     void changeButtonSelectColor(int i);
