@@ -25,7 +25,8 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(254, 255, 229);</string>
+   <string notr="true">background-color: rgb(255, 219, 146);
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -51,7 +52,8 @@ qproperty-alignment: 'AlignCenter';
       <item>
        <widget class="QWidget" name="widget" native="true">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(254, 255, 229);</string>
+         <string notr="true">background-color: rgb(255, 219, 146);
+</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
