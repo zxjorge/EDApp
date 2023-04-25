@@ -6,7 +6,7 @@
 
 const int SPEED = 50;
 const int FLAG_WIDTH = 1000;
-const double SCALE = 0.2;
+const double SCALE = 0.275;
 const int FLAG_SPACING = 50;
 
 namespace Ui {
