@@ -233,7 +233,7 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
     for(int i = 0; i < flagButtons.size(); i++){
         randomFlag = "";
         if(!buttonsAssigned.contains(i)){
-
+            QIcon flagIcon;
             //Ensures that if the current category is picked, a different flag is chosen.
             //Makes sure to check for lists that have overlapping flags
             while(randomFlag == "" || symbolList.contains(randomFlag) || randomFlags.contains(randomFlag)){
@@ -247,6 +247,7 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
                 int flagPicker = rng.bounded(fileList.size());
 
                 randomFlag = fileList[flagPicker];
+                flagIcon.addFile(":/Flags/" + randomFlag);
 
 //                QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
 //                int flagCount = 0;
@@ -261,7 +262,8 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
 //                }
             }
             randomFlags.append(randomFlag);
-            QIcon flagIcon(":/Flags/" + randomFlag);
+            //QIcon flagIcon();
+
             QSize size(100,100);
             flagButtons.at(i)->setIcon(flagIcon);
             flagButtons.at(i)->setIconSize(size);
