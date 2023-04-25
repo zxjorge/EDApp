@@ -1,3 +1,8 @@
+/**
+ * Title.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses mainmenu.h header file and implements all its methods.
+ * Reviewed by: Brayden newsom
+ */
 #include "mainmenu.h"
 #include "finaldesignactivity.h"
 #include "ui_mainmenu.h"
@@ -9,11 +14,6 @@
 #include "saves.h"
 #include <QDebug>
 
-
-/**
- * @brief MainMenu::MainMenu
- * @param parent
- */
 MainMenu::MainMenu(MainWindow *parent) :
     QWidget(parent),
     ui(new Ui::MainMenu),
@@ -71,9 +71,6 @@ MainMenu::MainMenu(MainWindow *parent) :
             });
 }
 
-/**
- * @brief MainMenu::~MainMenu
- */
 MainMenu::~MainMenu()
 {
     delete ui;

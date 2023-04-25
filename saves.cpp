@@ -1,3 +1,8 @@
+/**
+ * saves.cpp made by Najmingle for A7: Sprite Editor Implementation - CS 3505 Spring 2023
+ * This cpp file uses saves.h header file and implements all its methods.
+ * Reviewed by: Brayden Newsom
+ */
 #include "saves.h"
 #include <QJsonObject>
 #include <QJsonArray>
@@ -8,7 +13,6 @@
 
 
 const QString saveFilename = "Saves.data";
-
 
 void Saves::Save(QString lessonToSave)
 {
@@ -36,7 +40,6 @@ void Saves::Save(QString lessonToSave)
     file.write(QJsonDocument(json).toJson());
     file.close();
 }
-
 
 void Saves::loadFromFile(){
     // Reads from file.
