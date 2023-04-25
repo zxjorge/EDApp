@@ -22,10 +22,21 @@ public:
     ~ColorPicker();
 
 private slots:
+    /**
+     * @brief UpdateColor Updates the color picked by the uer
+     */
     void UpdateColor();
+
+    /**
+     * @brief OnColorButtonClicked Slot that decides what happens when the color button is clicked
+     */
     void OnColorButtonClicked();
 
 signals:
+    /**
+     * @brief ColorPicked signal that is emitted with the color that was picked as the parameter
+     * @param color This is the color that was picked by the user
+     */
     void ColorPicked(QColor &color);
 
 private:
