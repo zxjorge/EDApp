@@ -11,7 +11,7 @@ KeepSimpleActivity::KeepSimpleActivity(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    saves.Save("KeepSimpleLesson","Flags.data");
+    parent->getSaves()->Save("KeepSimpleLesson");
     connect(ui->colorPaletteButton,
             &QPushButton::clicked,
             this,

@@ -31,6 +31,18 @@ BasicQuiz::BasicQuiz(
     ui->progressBar->setValue(100 * currentStreak / targetStreak);
 
 
+    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QString correctFlagName;
+
+    do {
+        correctFlagName = ":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()));
+    } while (correctFlagName == lastCorrectFlag);
+
+    QString wrongFlagName;
+
+    do {
+        wrongFlagName = ":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()));
+    } while (wrongFlagName == lastWrongFlag);
 
     connect(ui->mainMenu,
             &QPushButton::clicked,
@@ -116,7 +128,7 @@ BasicQuiz::BasicQuiz(
                 successScene = nullptr;
 
                 parent->switchScene(
-                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak)
+                    new BasicQuiz(question, correctFlags, wrongFlags, tmp, parent, 0, targetStreak, correctFlagName, wrongFlagName)
                 );
                 timer->deleteLater();
             }
@@ -132,19 +144,6 @@ BasicQuiz::BasicQuiz(
     auto onWrong2 = [=] () mutable {
         failAnimation(ui->flag2, ui->flag1);
     };
-
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
-    QString correctFlagName;
-
-    do {
-        correctFlagName = ":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()));
-    } while (correctFlagName == lastCorrectFlag);
-
-    QString wrongFlagName;
-
-    do {
-        wrongFlagName = ":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()));
-    } while (wrongFlagName == lastWrongFlag);
 
     auto onCorrect = [=] () mutable {
         currentStreak++;

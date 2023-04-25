@@ -1,6 +1,13 @@
+/**
+ * Title.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses Title.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "title.h"
+#include "mainmenu.h"
 #include "qpainter.h"
 #include "qrandom.h"
+#include "saves.h"
 #include "ui_title.h"
 #include "flagConstants.h"
 #include <QPushButton>
@@ -15,6 +22,11 @@ Title::Title(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+
+    if (parent->getSaves()->getNumberOfLessonsSaved() > 0) {
+        ui->pushButton->setText("Let's go already!");
+    }
+
     QRandomGenerator rng = QRandomGenerator::securelySeeded();
     QImage flagToAdd;
 
@@ -115,15 +127,19 @@ void Title::paintEvent(QPaintEvent*){
     }
 
 }
+
 void Title::onButtonpressed() {
-    mainWindow->switchScene(new Definition(mainWindow));
+    if (mainWindow->getSaves()->getNumberOfLessonsSaved() > 0) {
+        mainWindow->switchScene(new MainMenu(mainWindow));
+    } else {
+        mainWindow->switchScene(new Definition(mainWindow));
+    }
 }
 
 void Title::timerEvent(QTimerEvent*)
 {
     update();
 }
-
 
 Title::~Title()
 {

@@ -5,15 +5,13 @@
 
 class Saves
 {
+private:
     QJsonArray savedLessonsArray;
 public:
-    void Save(QString, QString);
-    void loadFromFile(QString);
+    void Save(QString lessonToSave);
+    void loadFromFile();
     int getNumberOfLessonsSaved();
-
-
+    const QJsonArray *getSavedLessonsArray();
 };
-
-static Saves saves = Saves();
 
 #endif // SAVES_H

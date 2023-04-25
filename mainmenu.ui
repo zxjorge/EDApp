@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>902</width>
-    <height>580</height>
+    <height>638</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -139,6 +139,33 @@ be related</string>
        </layout>
       </item>
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="keepSimpleLabel">
+          <property name="text">
+           <string>Incomplete</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="beDistinctiveLabel">
+          <property name="text">
+           <string>Incomplete</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QPushButton" name="UMSButton">
@@ -220,6 +247,33 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
        </layout>
       </item>
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="symbolismLabel">
+          <property name="text">
+           <string>Incomplete</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="colorsLabel">
+          <property name="text">
+           <string>Incomplete</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
          <widget class="QPushButton" name="DesignButton">
@@ -247,8 +301,14 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
           <property name="styleSheet">
            <string notr="true">QPushButton#DesignButton {
 	background-image: url(:/Flags/nationalFlags.jpg);
-    color: rgb(255, 255, 0);
 	 font: 600 20pt &quot;Bookman Old Style&quot;;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+QPushButton#DesignButton:disabled {
+	background-image: url(:/Flags/nationalFlags.jpg);
+	 font: 600 20pt &quot;Bookman Old Style&quot;;
+    color: rgb(180, 180, 180);
     text-align: center;
 }
 QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
@@ -257,6 +317,12 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
           </property>
           <property name="text">
            <string>Design Your Own Flag</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>1000</width>
+            <height>1000</height>
+           </size>
           </property>
          </widget>
         </item>
