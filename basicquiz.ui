@@ -21,7 +21,7 @@
     <widget class="QFrame" name="verticalFrame">
      <property name="styleSheet">
       <string notr="true">QFrame#verticalFrame {
-	border: 3px dashed white;
+	border: 5px dashed white;
 }
 </string>
      </property>
