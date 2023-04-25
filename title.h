@@ -9,6 +9,7 @@
 
 #include <QWidget>
 #include "mainwindow.h"
+#include "qtimer.h"
 #include<QPixmap>
 
 namespace Ui {
@@ -32,12 +33,6 @@ public:
      */
     ~Title();
 
-    /**
-     * @brief Title::paintEvent Randomly selects flags and paints them to display on the title page.
-     * @param Pointer to paint event
-     */
-    void paintEvent(QPaintEvent *event);
-
 private slots:
     /**
      * @brief Title::onButtonpressed Handles switching the scenes to a definiton of Vexology when the user clicks the "A what?" button
@@ -47,25 +42,7 @@ private slots:
 private:
     Ui::Title *ui;
     MainWindow *mainWindow;
-    const int numOfFlags = 4;
-    const int flagWidth = 150;
-    const int flagHeight = 75;
-    const int flagSpacing = 200;
-    int flagY;
-    const double sliderSpeed = 1;
-    QVector<QImage> flagsToDraw;
-    QVector<QImage> oldFlagsToDraw;
-    QVector<double> flagsX;
-    QVector<double> flagsResX;
-
-
-protected:
-    /**
-     * @brief Title::timerEvent Updates the painting based on QTimer
-     * @param pointer to QTimerEvent
-     */
-    void timerEvent(QTimerEvent *event);
-
+    QTimer updateTimer;
 };
 
 #endif // TITLE_H
