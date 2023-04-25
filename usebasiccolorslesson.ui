@@ -411,9 +411,7 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
-                <string>Separate dark colors with a light color, and light colors with a dark color, to help them create effective contrast. A good flag should also reproduce well in “grayscale”, that is, in black and white shades. More than four colors are hard to distinguish and make the flag unnecessarily complicated and expensive. Flag fabric comes in a relatively limited number of colors—another reason to stick to the basics.
-
-</string>
+                <string>Separate dark colors with light colors, and light colors with dark colors, to help them create an effective contrast. A good flag should also reproduce well in “grayscale,” that is, in black and white shades. More than four colors are hard to distinguish and make the flag unnecessarily complicated and expensive. Flag fabric comes in a relatively limited number of colors—another reason to stick to the basics.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

@@ -8,6 +8,8 @@
 #define KEEPSIMPLELESSON_H
 #include "mainwindow.h"
 #include <QStackedWidget>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 
 namespace Ui {
@@ -43,9 +45,12 @@ private slots:
     */
     void BackClicked();
 
+
 private:
     Ui::KeepSimpleLesson *ui;
     MainWindow *mainWindow;
+    QMediaPlayer *player;
+    QAudioOutput *audioOutput;
 
 };
 

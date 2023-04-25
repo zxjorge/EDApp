@@ -54,11 +54,28 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
     connect(ui->speak,
             &QPushButton::clicked,
             this,
-            &BeDistinctiveOrRelatedLesson::Speak1Clicked);
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/bdsr1.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
+
     connect(ui->speak2,
             &QPushButton::clicked,
             this,
-            &BeDistinctiveOrRelatedLesson::Speak2Clicked);
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/bdsr2.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
 
     connect(ui->nextButton_3,
             &QPushButton::clicked,
@@ -94,22 +111,3 @@ void BeDistinctiveOrRelatedLesson::BackClicked(){
     setCurrentIndex(prevIndex);
 }
 
-void BeDistinctiveOrRelatedLesson::Speak1Clicked(){
-    if(player->isPlaying()){
-        player->stop();
-    }
-
-    player->setSource(QUrl("qrc:/Audio/bdsr1.mp3"));
-    audioOutput->setVolume(100);
-    player->play();
-}
-
-void BeDistinctiveOrRelatedLesson::Speak2Clicked(){
-    if(player->isPlaying()){
-        player->stop();
-    }
-
-    player->setSource(QUrl("qrc:/Audio/bdsr2.mp3"));
-    audioOutput->setVolume(100);
-    player->play();
-}

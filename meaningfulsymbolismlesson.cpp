@@ -15,6 +15,9 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+    player = new QMediaPlayer(this);
+    audioOutput = new QAudioOutput(this);
+    player->setAudioOutput(audioOutput);
     connect(ui->nextButton,
             &QPushButton::clicked,
             this,
@@ -65,6 +68,31 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
             &MeaningfulSymbolismLesson::ResetQuiz,
             dynamic_cast<MeaningfulSymbolismActivity*>(widget(3)),
             &MeaningfulSymbolismActivity::Reset);
+    connect(ui->speak1,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/ms1.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
+
+    connect(ui->speak2,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/ms2.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
 
 }
 
@@ -75,6 +103,9 @@ MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson()
 
 
 void MeaningfulSymbolismLesson::NextClicked(){
+    if(player->isPlaying()){
+        player->stop();
+    }
 
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {
@@ -91,6 +122,10 @@ void MeaningfulSymbolismLesson::CaptureScore(int score){
 }
 
 void MeaningfulSymbolismLesson::BackClicked(){
+    if(player->isPlaying()){
+        player->stop();
+    }
+
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
 }

@@ -8,6 +8,8 @@
 #define USEBASICCOLORSLESSON_H
 #include "mainwindow.h"
 #include <QStackedWidget>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 namespace Ui {
 class UseBasicColorsLesson;
@@ -44,6 +46,8 @@ private slots:
 private:
     Ui::UseBasicColorsLesson *ui;
     MainWindow *mainWindow;
+    QMediaPlayer *player;
+    QAudioOutput *audioOutput;
 };
 
 #endif // USEBASICCOLORSLESSON_H

@@ -8,6 +8,8 @@
 #define MEANINGFULSYMBOLISMLESSON_H
 #include "mainmenu.h"
 #include <QStackedWidget>
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 namespace Ui {
 class MeaningfulSymbolismLesson;
@@ -40,13 +42,22 @@ private slots:
      * @brief MeaningfulSymbolismLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
      */
     void BackClicked();
+    /**
+     * @brief CaptureScore
+     * @param score
+     */
     void CaptureScore(int score);
+    /**
+     * @brief Restart
+     */
     void Restart();
 
 
 private:
     Ui::MeaningfulSymbolismLesson *ui;
     MainWindow *mainWindow;
+    QMediaPlayer *player;
+    QAudioOutput *audioOutput;
 };
 
 #endif // MEANINGFULSYMBOLISMLESSON_H

@@ -277,6 +277,11 @@
     <qresource prefix="/Audio">
         <file>bdsr1.mp3</file>
         <file>bdsr2.mp3</file>
+        <file>ks1.mp3</file>
+        <file>ks2.mp3</file>
+        <file>ks3.mp3</file>
+        <file>ms1.mp3</file>
+        <file>ms2.mp3</file>
         <file>bc1.mp3</file>
         <file>bc2.mp3</file>
     </qresource>

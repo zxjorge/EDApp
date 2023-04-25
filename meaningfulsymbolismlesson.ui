@@ -124,7 +124,7 @@ color: rgb(0, 0, 0);</string>
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
-                <string>When creating a flag, the flag’s images, colors, or patterns should relate to what it symbolizes. Symbolism can be in the form of the “charge” or main graphic element, in the colors used, or sometimes even in the shapes or layout of the parts of the flag. Usually a single primary symbol is best—avoid those that are less likely to be representative or unique. Colors often carry meanings: red for blood or sacrifice, white for purity, blue for water or sky.</string>
+                <string>When creating a flag, the flag’s image, colors, or patterns should relate to what it symbolizes. Symbolism can be in the form of the “charge” or main graphic element, in the colors used, or sometimes even in the shapes or layout of the parts of the flag. Usually a single primary symbol is best—avoid those that are less likely to be representative or unique. Colors often carry meanings: red for blood or sacrifice, white for purity, blue for water or sky.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

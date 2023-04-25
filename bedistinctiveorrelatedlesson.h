@@ -43,17 +43,6 @@ private slots:
      */
     void BackClicked();
 
-    /**
-     * @brief Speak1Clicked Slot that handles what happens when the speak button is clicked on the first slide
-     */
-    void Speak1Clicked();
-
-    /**
-     * @brief Speak2Clicked Slot that handles wht happens when the speak button is clicked on the second slide
-     */
-    void Speak2Clicked();
-
-
 
 private:
     Ui::BeDistinctiveOrRelatedLesson *ui;

@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>1</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -335,13 +335,12 @@ color: rgb(0, 0, 0);</string>
            <widget class="QPushButton" name="nextButton">
             <property name="minimumSize">
              <size>
-              <width>75</width>
-              <height>0</height>
+              <width>100</width>
+              <height>40</height>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
+             <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
             </property>
