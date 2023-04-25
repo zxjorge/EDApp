@@ -32,7 +32,7 @@ private:
     QVector<QLabel*> flagScores;
     QVector<bool> flagSelected;
     QVector<bool> flagCorrect;
-
+    const int targetScore = 15;
     bool answerStage = true;
     int correct = 0;
     int incorrect = 0;
@@ -84,10 +84,7 @@ private slots:
 
     void on_next_clicked();
     void setUpQuestion();
-
-
     void on_hintButton_clicked();
-    void on_ColorCodeButton_clicked();
 };
 
 #endif // DISTINCTIVEQUIZ_H
