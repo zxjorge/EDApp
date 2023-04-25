@@ -76,7 +76,7 @@ BasicQuiz::BasicQuiz(
         bodyDef.position.Set(wrongFlag->x() / SCALE, wrongFlag->y() / SCALE);
         int horizontalSpeed;
 
-        if (wrongFlag->x() > width() / 2) {
+        if (wrongFlag->x() > ui->verticalFrame->width() / 2) {
             horizontalSpeed = HORIZONTAL_SPEED;
         } else {
             horizontalSpeed = - HORIZONTAL_SPEED;
