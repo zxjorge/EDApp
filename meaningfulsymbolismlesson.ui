@@ -10,6 +10,11 @@
     <height>546</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>.AppleSystemUIFont</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>StackedWidget</string>
   </property>

@@ -26,6 +26,10 @@ UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &UseBasicColorsLesson::NextClicked);
+    connect(ui->nextButton_3,
+            &QPushButton::clicked,
+            this,
+            &UseBasicColorsLesson::NextClicked);
     connect(ui->backButton,
             &QPushButton::clicked,
             this,

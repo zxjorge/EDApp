@@ -30,6 +30,10 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &BeDistinctiveOrRelatedLesson::NextClicked);
+    connect(ui->nextButton_3,
+            &QPushButton::clicked,
+            this,
+            &BeDistinctiveOrRelatedLesson::NextClicked);
     connect(ui->backButton,
             &QPushButton::clicked,
             this,
@@ -56,7 +60,7 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             this,
             &BeDistinctiveOrRelatedLesson::Speak2Clicked);
 
-    connect(ui->nextButton_2,
+    connect(ui->nextButton_3,
             &QPushButton::clicked,
             this,
             [this] {

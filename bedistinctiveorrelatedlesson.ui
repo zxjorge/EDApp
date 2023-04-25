@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>968</width>
+    <width>988</width>
     <height>602</height>
    </rect>
   </property>
@@ -676,6 +676,93 @@ border: 1px solid black;</string>
        </layout>
       </item>
      </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="page_3">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 219, 146);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_12">
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>220</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_21">
+      <property name="font">
+       <font>
+        <family>Bookman Old Style</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Congrats on finishing this lesson!!</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_22">
+      <property name="font">
+       <font>
+        <family>Bookman Old Style</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>In the next activity, you will be asked to select all the flags that are related to the given flag.
+Don't forget to use a hint if you get stuck. Good luck!</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>220</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nextButton_3">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-decoration: underline; 
+font: 9pt &quot;Arial Narrow&quot;;
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

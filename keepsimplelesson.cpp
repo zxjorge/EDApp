@@ -30,6 +30,10 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &KeepSimpleLesson::NextClicked);
+    connect(ui->nextButton_4,
+            &QPushButton::clicked,
+            this,
+            &KeepSimpleLesson::NextClicked);
 
     connect(ui->backButton,
             &QPushButton::clicked,
