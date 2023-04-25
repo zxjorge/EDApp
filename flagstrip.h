@@ -4,6 +4,11 @@
 #include <QWidget>
 #include <QElapsedTimer>
 
+const int SPEED = 50;
+const int FLAG_WIDTH = 1000;
+const double SCALE = 0.2;
+const int FLAG_SPACING = 50;
+
 namespace Ui {
 class FlagStrip;
 }
@@ -17,6 +22,7 @@ public:
     ~FlagStrip();
 
     void setTimeOffset(int offset);
+    void setFlags(QVector<QPixmap> flags);
     void paintEvent(QPaintEvent *event) override;
 
 private:

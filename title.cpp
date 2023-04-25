@@ -5,12 +5,13 @@
  */
 #include "title.h"
 #include "mainmenu.h"
+#include "qdiriterator.h"
 #include "saves.h"
 #include "ui_title.h"
 #include <QPushButton>
 #include "definition.h"
 #include <QPixmap>
-#include<QTimer>
+#include <QTimer>
 
 
 Title::Title(MainWindow *parent) :
@@ -31,13 +32,26 @@ Title::Title(MainWindow *parent) :
         ui->pushButton->setText("Let's go already!");
     }
 
-
     connect(ui->pushButton,
             &QPushButton::pressed,
             this,
             &Title::onButtonpressed);
 
     ui->flagStrip2->setTimeOffset(500);
+
+    QVector<QPixmap> flags;
+    QDirIterator it(":/Flags/");
+    while (it.hasNext()) {
+        QString flagName = it.next();
+        // Skip nationalFlags.jpg
+        if (flagName.contains("national")) {
+            continue;
+        }
+        flags.append(QPixmap(flagName).scaledToWidth(FLAG_WIDTH * SCALE));
+    }
+
+    ui->flagStrip1->setFlags(flags);
+    ui->flagStrip2->setFlags(flags);
 }
 
 void Title::onButtonpressed() {
