@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>0</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -69,18 +69,14 @@ color: rgb(0, 0, 0);</string>
             <property name="minimumSize">
              <size>
               <width>75</width>
-              <height>0</height>
+              <height>75</height>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border: 1px solid black;
-text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;
- </string>
+             <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -407,14 +403,17 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QPushButton" name="mainMenu_2">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;
-border: 1px solid black;</string>
+             <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
             </property>
             <property name="text">
-             <string>Back to Main Menu</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -434,7 +433,7 @@ border: 1px solid black;</string>
              <item>
               <widget class="QLabel" name="label_5">
                <property name="styleSheet">
-                <string notr="true">font: 300 18pt &quot;Bookman Old Style&quot;;
+                <string notr="true">font: 300 17pt &quot;Bookman Old Style&quot;;
 color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
