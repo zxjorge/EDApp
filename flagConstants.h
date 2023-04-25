@@ -8,6 +8,7 @@
 #define FLAGCONSTANTS_H
 #include <QVector>
 #include <QString>
+#include <unordered_map>
 
 const QVector<QString> BASIC_COLOR_FLAGS = {"bw.png", "fr.png", "bg.png", "be.png", "al.png", "bv.png", "dk.png", "tt.png", "ws.png", "wf.png"};
 const QVector<QString> COMPLEX_COLOR_FLAGS = {"er.png", "ec.png", "km.png", "za.png", "sc.png", "dm.png", "mz.png", "zm.png", "ke.png", "pe.png" };
