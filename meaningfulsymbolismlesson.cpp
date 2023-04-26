@@ -93,7 +93,7 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
                 audioOutput->setVolume(100);
                 player->play();
             });
-
+    setCurrentIndex(0);
 }
 
 MeaningfulSymbolismLesson::~MeaningfulSymbolismLesson()

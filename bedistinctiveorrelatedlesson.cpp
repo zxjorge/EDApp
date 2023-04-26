@@ -83,6 +83,7 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new DistinctiveQuiz(mainWindow));
             });
+    setCurrentIndex(0);
 }
 
 BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson()

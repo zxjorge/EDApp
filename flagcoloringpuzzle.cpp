@@ -57,7 +57,9 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
 
     QRandomGenerator *rng = QRandomGenerator::global();
 
-    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
+    QImage background = QImage(1000, 750, QImage::Format_RGB32);
+    background.fill(Qt::white);
+    ui->flag->addLayer(background, Qt::white, true);
     ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng->bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
 
     QVector<QVector<QString>> cornerTemplates = CORNER_FLAG_TEMPLATES;
