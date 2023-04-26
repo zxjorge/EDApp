@@ -1,3 +1,8 @@
+/**
+ * FlagColoringPuzzle.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses FlagColoringPuzzle.h header file and implements all its methods.
+ * Reviewed by: Brayden Newsom
+ */
 #include "flagcoloringpuzzle.h"
 #include "ui_flagcoloringpuzzle.h"
 #include "mainmenu.h"

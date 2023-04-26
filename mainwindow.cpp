@@ -1,3 +1,8 @@
+/**
+ * MainWindow.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses MainWindow.h header file and implements all its methods.
+ * Reviewed by: Najman Husaini
+ */
 #include "mainwindow.h"
 #include "saves.h"
 #include "ui_mainwindow.h"

@@ -1,3 +1,8 @@
+/**
+ * FinalDesignActivity.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses FinalDesignActivity.h header file and implements all its methods.
+ * Reviewed by: George Benyeogor
+ */
 #include "finaldesignactivity.h"
 #include "mainmenu.h"
 #include "ui_finaldesignactivity.h"
