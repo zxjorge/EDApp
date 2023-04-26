@@ -162,7 +162,6 @@ HEADERS += \
     username.h
 
 FORMS += \
-    Username.ui \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
@@ -182,7 +181,8 @@ FORMS += \
     playergreeting.ui \
     title.ui \
     usebasiccolorslesson.ui \
-    spritecanvas.ui
+    spritecanvas.ui \
+    username.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
