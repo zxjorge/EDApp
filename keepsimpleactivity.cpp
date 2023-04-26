@@ -42,7 +42,9 @@ KeepSimpleActivity::KeepSimpleActivity(MainWindow *parent) :
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
 
-    ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
+    QImage background = QImage(1000, 750, QImage::Format_RGB32);
+    background.fill(Qt::white);
+    ui->flag->addLayer(background, Qt::white, true);
     ui->flag->setAutoFill(false);
 
     connect(ui->flag,

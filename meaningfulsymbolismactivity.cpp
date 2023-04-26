@@ -70,7 +70,7 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
     connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::CheckAnswer);
 
     // Connect the clicked() signal of each button to a slot
-    connect(ui->ans1, &QPushButton::clicked, [=]() {
+    connect(ui->ans1, &QPushButton::clicked, this, [=]() {
         if (lastClickedButton && lastClickedButton != ui->ans1) {
             lastClickedButton->setStyleSheet(""); // Revert color of previous button
         }
@@ -80,7 +80,7 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
         ui->ans1->setStyleSheet("background-color: blue;"); // Set background color to blue
     });
 
-    connect(ui->ans2, &QPushButton::clicked, [=]() {
+    connect(ui->ans2, &QPushButton::clicked, this, [=]() {
         if (lastClickedButton && lastClickedButton != ui->ans2) {
             lastClickedButton->setStyleSheet(""); // Revert color of previous button
         }
@@ -90,7 +90,7 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
         ui->ans2->setStyleSheet("background-color: blue;"); // Set background color to blue
     });
 
-    connect(ui->ans3, &QPushButton::clicked, [=]() {
+    connect(ui->ans3, &QPushButton::clicked, this, [=]() {
         if (lastClickedButton && lastClickedButton != ui->ans3) {
             lastClickedButton->setStyleSheet(""); // Revert color of previous button
         }
@@ -100,7 +100,7 @@ MeaningfulSymbolismActivity::MeaningfulSymbolismActivity(MainWindow *parent) :
         ui->ans3->setStyleSheet("background-color: blue;"); // Set background color to blue
     });
 
-    connect(ui->ans4, &QPushButton::clicked, [=]() {
+    connect(ui->ans4, &QPushButton::clicked, this, [=]() {
         if (lastClickedButton && lastClickedButton != ui->ans4) {
             lastClickedButton->setStyleSheet(""); // Revert color of previous button
         }
@@ -217,6 +217,7 @@ void MeaningfulSymbolismActivity::CheckAnswer(){
     ui->ans4->blockSignals(true);
 
     ui->CheckNext->setText("Next Question");
+    ui->progressBar->setValue(100 * correctAns / maxGames);
     connect(ui->CheckNext, &QPushButton::clicked, this, &MeaningfulSymbolismActivity::NextQuestion);
 }
 
