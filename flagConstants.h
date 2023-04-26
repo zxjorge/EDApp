@@ -24,14 +24,15 @@ const QVector<QString> ISLAM_FLAGS = {"af.png", "az.png", "pk.png", "my.png", "t
 const QVector<QString> UNION_JACK_FLAGS = {"au.png", "nz.png", "tv.png", "fj.png", "vg.png", "gb-nir.png","fk.png","ck.png","bm.png","nu.png","gs.png","io.png", "ky.png","ai.png"};
 
 const QVector<QVector<QString>> CORNER_FLAG_TEMPLATES = {
-    {"triangleTopLeft.png"},
+    {"triangleTopLeft.png", "flowerTopLeft.png", "tree-top-left.png"},
     {"circleMiddleTop.png"},
-    {"triangleTopRight.png"},
-    {"treeMiddleLeft.png"},
+    {"triangleTopRight.png", "treeTopRight.png"},
+    {"treeMiddleLeft.png", "flowerMiddleLeft.png"},
     {"flowerMiddleRight.png", "treeMiddleRight.png"},
-    {"pentagonBottomLeft.png"},
+    {"pentagonBottomLeft.png", "triangleBottomLeft"},
     {"circleMiddleBottom.png"},
-    {"pentagonBottomRight.png"},
+    {"pentagonBottomRight.png", "treeBottomRight.png"},
+
 };
 const QVector<QString> CENTER_FLAG_TEMPLATES = {"circleMiddle.png", "flowerMiddle.png", "polygonMiddle.png", "tigerMiddle.png", "triangleMiddle.png", "weirdShapeMiddle.png"};
 
