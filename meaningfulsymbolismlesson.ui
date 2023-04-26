@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>988</width>
-    <height>546</height>
+    <height>568</height>
    </rect>
   </property>
   <property name="font">
@@ -22,7 +22,7 @@
    <enum>Qt::RightToLeft</enum>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -212,7 +212,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/md.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/md.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -254,7 +254,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/lk.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/lk.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -296,7 +296,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/my.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/my.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -518,7 +518,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/es.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/es.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -554,7 +554,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/cy.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/cy.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -590,7 +590,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/vu.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/vu.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -853,6 +853,8 @@ border: 1px solid black;</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

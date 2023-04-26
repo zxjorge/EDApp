@@ -79,6 +79,14 @@ public:
      */
     void addLayer(QImage img, QColor color = Qt::black, bool untrack = false);
 
+    /**
+     * @brief getScale Gets the scale of the flag
+     */
+    double getScale();
+
+    void setAutoFill(bool value);
+
+
 signals:
     /**
      * @brief correctColorCount Emitted when the right number of colors has been used (for the colors lesson)
@@ -88,6 +96,8 @@ signals:
      * @brief incorrectColorCount Emitted when the wrong number of colors has been used (for the colors lesson)
      */
     void incorrectColorCount();
+
+    void clicked(QPoint position);
 
 public slots:
     /**
@@ -110,17 +120,19 @@ private:
     QColor currentColor;
     QVector<Action> actions;
     QVector<UndoneAction> undoneActions;
+    bool autoFill = true;
 
     void paintEvent(QPaintEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     /**
-     * @brief getScaledMousePoint Returns the mouse coordinates relative to the widget
-     */
-    QPoint getScaledMousePoint(QMouseEvent* event);
-    /**
      * @brief getColorCount Get the number of distinct colors in use
      */
     int getColorCount();
+
+    /**
+     * @brief getScaledMousePoint Returns the mouse coordinates relative to the widget
+     */
+    QPoint getScaledMousePoint(QMouseEvent* event);
 };
 
 #endif // FILLABLEFLAG_H

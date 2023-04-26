@@ -5,6 +5,7 @@
  */
 #include "title.h"
 #include "mainmenu.h"
+#include "playergreeting.h"
 #include "qdiriterator.h"
 #include "saves.h"
 #include "ui_title.h"
@@ -56,11 +57,11 @@ Title::Title(MainWindow *parent) :
 }
 
 void Title::onButtonpressed() {
-    if (mainWindow->getSaves()->getNumberOfLessonsSaved() > 0) {
-        mainWindow->switchScene(new MainMenu(mainWindow));
-    } else {
+    if(mainWindow->getSaves()->getUsername()!= "")
+        mainWindow->switchScene(new PlayerGreeting(mainWindow));
+    else{
         mainWindow->switchScene(new Definition(mainWindow));
-    }
+        }
 }
 
 Title::~Title()

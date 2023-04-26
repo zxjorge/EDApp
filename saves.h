@@ -21,7 +21,7 @@ public:
      * @brief Saves::Save Adds the completed lesson to the QJsonArray of already completed lessons
      * @param lessonToSave lesson that has been completed and is ready to save
      */
-    void Save(QString lessonToSave);
+    void Save(QString lessonToSave, QString username);
 
     /**
      * @brief Saves::loadFromFile Reads the saved file and stores all savedLessons into the savedLessonsArray
@@ -34,9 +34,8 @@ public:
      */
     int getNumberOfLessonsSaved();
 
-    void savePlayerName(QString username);
-
     QString getUsername();
+    void setUsername(QString username);
 
     /**
      * @brief Saves::getSavedLessonsArray Returns the array of saved lessons

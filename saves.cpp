@@ -14,24 +14,7 @@
 
 const QString saveFilename = "Saves.data";
 
-void Saves::savePlayerName(QString name){
-    QJsonObject json = QJsonObject();
-    username = name;
-    // Add the saved lessons array to the root object
-    json["username"] = username;
-
-    // Save the updated JSON document to the file
-    QFile file(saveFilename);
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        qDebug() << "Failed to write to save file!";
-        return;
-    }
-    file.write(QJsonDocument(json).toJson());
-    file.close();
-}
-
-
-void Saves::Save(QString lessonToSave)
+void Saves::Save(QString lessonToSave, QString username)
 {
     if (savedLessonsArray.contains(lessonToSave)) {
         return;
@@ -39,7 +22,10 @@ void Saves::Save(QString lessonToSave)
     // Get the root object of the JSON document
     QJsonObject json = QJsonObject();
 
-    // Get the saved lessons array from the root object (if it exists)
+    this->username = username;
+    // Add the saved lessons array to the root object
+    json["username"] = username;
+
 
     // Append the new lesson to the saved lessons array
     if(!savedLessonsArray.contains(lessonToSave))
@@ -83,6 +69,10 @@ void Saves::loadFromFile(){
 
 int Saves::getNumberOfLessonsSaved(){
     return savedLessonsArray.size();
+}
+
+void Saves::setUsername(QString name){
+    username = name;
 }
 
 QString Saves::getUsername(){

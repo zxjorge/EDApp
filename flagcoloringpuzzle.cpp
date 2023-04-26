@@ -17,7 +17,7 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    parent->getSaves()->Save("UseBasicColorsLesson");
+    parent->getSaves()->Save("UseBasicColorsLesson", mainWindow->getSaves()->getUsername());
     connect(ui->colorPaletteButton,
             &QPushButton::clicked,
             this,
