@@ -26,6 +26,7 @@ Title::Title(MainWindow *parent) :
             [this] {
                 update();
             });
+    updateTimer.setTimerType(Qt::PreciseTimer);
     updateTimer.start(16);
 
     if (parent->getSaves()->getNumberOfLessonsSaved() > 0) {
@@ -47,7 +48,7 @@ Title::Title(MainWindow *parent) :
         if (flagName.contains("national")) {
             continue;
         }
-        flags.append(QPixmap(flagName).scaledToWidth(FLAG_WIDTH * SCALE));
+        flags.append(QPixmap(flagName).scaledToWidth(FLAG_WIDTH * SCALE, Qt::SmoothTransformation));
     }
 
     ui->flagStrip1->setFlags(flags);

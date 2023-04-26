@@ -14,6 +14,23 @@
 
 const QString saveFilename = "Saves.data";
 
+void Saves::savePlayerName(QString name){
+    QJsonObject json = QJsonObject();
+    username = name;
+    // Add the saved lessons array to the root object
+    json["username"] = username;
+
+    // Save the updated JSON document to the file
+    QFile file(saveFilename);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qDebug() << "Failed to write to save file!";
+        return;
+    }
+    file.write(QJsonDocument(json).toJson());
+    file.close();
+}
+
+
 void Saves::Save(QString lessonToSave)
 {
     if (savedLessonsArray.contains(lessonToSave)) {
@@ -50,16 +67,26 @@ void Saves::loadFromFile(){
     QJsonObject json;
     QTextStream stream( &file );
     json = QJsonDocument::fromJson(stream.readAll().toLocal8Bit()).object();
-    if(json.count()!=1 || !json.keys().contains("saved_lessons")){
+    // add back json.count()!=1
+    /*if(json.keys().contains("saved_lessons")){
         qDebug() << "Error loading saved progress.";
         return;
     } else {
+        username = json["username"].toString();
         savedLessonsArray = json["saved_lessons"].toArray();
     }
+    */
+
+    username = json["username"].toString();
+    savedLessonsArray = json["saved_lessons"].toArray();
 }
 
 int Saves::getNumberOfLessonsSaved(){
     return savedLessonsArray.size();
+}
+
+QString Saves::getUsername(){
+    return username;
 }
 
 const QJsonArray *Saves::getSavedLessonsArray() {

@@ -13,7 +13,9 @@ private:
     /**
      * @brief savedLessonsArray QJsonArray that stores saved lessons.
      */
-    QJsonArray savedLessonsArray;
+    QJsonArray savedLessonsArray;\
+    QString username = "";
+
 public:
     /**
      * @brief Saves::Save Adds the completed lesson to the QJsonArray of already completed lessons
@@ -32,11 +34,17 @@ public:
      */
     int getNumberOfLessonsSaved();
 
+    void savePlayerName(QString username);
+
+    QString getUsername();
+
     /**
      * @brief Saves::getSavedLessonsArray Returns the array of saved lessons
      * @return QJsonArray of savedLessons
      */
     const QJsonArray *getSavedLessonsArray();
+
+
 };
 
 #endif // SAVES_H

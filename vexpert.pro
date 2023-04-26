@@ -78,10 +78,12 @@ SOURCES += \
     mainwindow.cpp \
     meaningfulsymbolismactivity.cpp \
     meaningfulsymbolismlesson.cpp \
+    playergreeting.cpp \
     saves.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
     spritecanvas.cpp \
+    username.cpp
     flagconstants.cpp
 
 VPATH += box2d/src/
@@ -151,13 +153,16 @@ HEADERS += \
     mainwindow.h \
     meaningfulsymbolismactivity.h \
     meaningfulsymbolismlesson.h \
+    playergreeting.h \
     saves.h \
     title.h \
     usebasiccolorslesson.h \
     flagconstants.h \
-    spritecanvas.h
+    spritecanvas.h \
+    username.h
 
 FORMS += \
+    Username.ui \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
@@ -174,6 +179,7 @@ FORMS += \
     mainwindow.ui \
     meaningfulsymbolismactivity.ui \
     meaningfulsymbolismlesson.ui \
+    playergreeting.ui \
     title.ui \
     usebasiccolorslesson.ui \
     spritecanvas.ui
