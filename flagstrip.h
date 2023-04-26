@@ -27,7 +27,16 @@ public:
     explicit FlagStrip(QWidget *parent = nullptr);
     ~FlagStrip();
 
+    /**
+     * @brief setTimeOffset set the timer offset
+     * @param offset This is the offset time
+     */
     void setTimeOffset(int offset);
+
+    /**
+     * @brief setFlags sets the flags to be displayed on the strip
+     * @param flags These are the flags to be displayed
+     */
     void setFlags(QVector<QPixmap> flags);
     void paintEvent(QPaintEvent *event) override;
 
