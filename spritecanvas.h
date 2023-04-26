@@ -3,7 +3,7 @@
  * Repurposed for A8
  * This header file will be used by spritecanvas.cpp and has methods, signals, and slots to handle
  * the logic and data for the spritecanvas, which is where the user would draw on the sprite editor UI.
- * Reviewed by: Brayden Newsom
+ * Reviewed by: Arkein Singh
  */
 #ifndef SPRITECANVAS_H
 #define SPRITECANVAS_H

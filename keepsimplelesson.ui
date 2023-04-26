@@ -222,7 +222,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/vn.png</pixmap>
+                    <pixmap>:/Flags/vn.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -261,7 +261,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/bd.png</pixmap>
+                    <pixmap>:/Flags/bd.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -300,7 +300,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/in.png</pixmap>
+                    <pixmap>:/Flags/in.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -333,10 +333,16 @@ text-decoration: underline;</string>
           </item>
           <item>
            <widget class="QPushButton" name="nextButton">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+             <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
             </property>
             <property name="text">
              <string>Next</string>
@@ -535,7 +541,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/gm.png</pixmap>
+                    <pixmap>:/Flags/gm.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -568,7 +574,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/mc.png</pixmap>
+                    <pixmap>:/Flags/mc.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -601,7 +607,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/gb-eng.png</pixmap>
+                    <pixmap>:/Flags/gb-eng.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -623,10 +629,16 @@ text-decoration: underline;</string>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QPushButton" name="backButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+           <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
           </property>
           <property name="text">
            <string>Back</string>
@@ -648,10 +660,16 @@ background-color: transparent;</string>
         </item>
         <item>
          <widget class="QPushButton" name="nextButton_2">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+           <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
           </property>
           <property name="text">
            <string>Next</string>
@@ -849,7 +867,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/bh.png</pixmap>
+                    <pixmap>:/Flags/bh.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -888,7 +906,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/bb.png</pixmap>
+                    <pixmap>:/Flags/bb.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -927,7 +945,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/jm.png</pixmap>
+                    <pixmap>:/Flags/jm.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -947,10 +965,16 @@ text-decoration: underline;</string>
          <layout class="QHBoxLayout" name="horizontalLayout_10">
           <item>
            <widget class="QPushButton" name="backButton_2">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+             <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
             </property>
             <property name="text">
              <string>Back</string>
@@ -972,10 +996,16 @@ background-color: transparent;</string>
           </item>
           <item>
            <widget class="QPushButton" name="nextButton_3">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+             <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
             </property>
             <property name="text">
              <string>Next</string>
@@ -1049,6 +1079,12 @@ background-color: transparent;</string>
     </item>
     <item>
      <widget class="QPushButton" name="nextButton_4">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>100</width>
@@ -1059,9 +1095,9 @@ background-color: transparent;</string>
        <enum>Qt::RightToLeft</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
+       <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
       </property>
       <property name="text">
        <string>Next</string>
@@ -1071,8 +1107,6 @@ background-color: transparent;</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

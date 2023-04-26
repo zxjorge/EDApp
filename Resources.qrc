@@ -254,7 +254,6 @@
         <file>va.png</file>
         <file>vc.png</file>
         <file>ve.png</file>
-        <file>nationalFlags.jpg</file>
     </qresource>
     <qresource prefix="/FlagTemplates">
         <file>circleMiddle.png</file>
@@ -277,11 +276,25 @@
     <qresource prefix="/Audio">
         <file>bdsr1.mp3</file>
         <file>bdsr2.mp3</file>
+        <file>ks1.mp3</file>
+        <file>ks2.mp3</file>
+        <file>ks3.mp3</file>
+        <file>ms1.mp3</file>
+        <file>ms2.mp3</file>
         <file>bc1.mp3</file>
         <file>bc2.mp3</file>
     </qresource>
     <qresource prefix="/Icons">
         <file>Speaker_Icon.svg.png</file>
         <file>home-menu-icon-21.jpg</file>
+        <file>check.png</file>
+        <file>banner.jpg</file>
+        <file>bannerbw.jpg</file>
+    </qresource>
+    <qresource prefix="/vexbot">
+        <file>vexbotCheer.png</file>
+        <file>vexbotSad.png</file>
+        <file>vexbotSerious.png</file>
+        <file>vexbotThink.png</file>
     </qresource>
 </RCC>

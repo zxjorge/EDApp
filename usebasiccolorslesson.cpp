@@ -18,6 +18,9 @@ UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+    player = new QMediaPlayer(this);
+    audioOutput = new QAudioOutput(this);
+    player->setAudioOutput(audioOutput);
     connect(ui->nextButton,
             &QPushButton::clicked,
             this,
@@ -46,6 +49,31 @@ UseBasicColorsLesson::UseBasicColorsLesson(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+    connect(ui->speak1,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/bc1.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
+
+    connect(ui->speak2,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                if(player->isPlaying()){
+                    player->stop();
+                }
+
+                player->setSource(QUrl("qrc:/Audio/bc2.mp3"));
+                audioOutput->setVolume(100);
+                player->play();
+            });
 }
 
 
@@ -54,8 +82,10 @@ UseBasicColorsLesson::~UseBasicColorsLesson()
     delete ui;
 }
 
-
 void UseBasicColorsLesson::NextClicked(){
+    if(player->isPlaying()){
+        player->stop();
+    }
 
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {
@@ -71,8 +101,11 @@ void UseBasicColorsLesson::NextClicked(){
     }
 }
 
-
 void UseBasicColorsLesson::BackClicked(){
+    if(player->isPlaying()){
+        player->stop();
+    }
+
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
 }

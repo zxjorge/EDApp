@@ -7,11 +7,13 @@
 #include "finaldesignactivity.h"
 #include "ui_mainmenu.h"
 #include <QPushButton>
+#include <QPixmap>
 #include "bedistinctiveorrelatedlesson.h"
 #include "keepsimplelesson.h"
 #include "meaningfulsymbolismlesson.h"
 #include "usebasiccolorslesson.h"
 #include "saves.h"
+#include <QLabel>
 #include <QDebug>
 
 MainMenu::MainMenu(MainWindow *parent) :
@@ -22,17 +24,41 @@ MainMenu::MainMenu(MainWindow *parent) :
 
     ui->setupUi(this);
     int lessonsCompleted = parent->getSaves()->getNumberOfLessonsSaved();
-    if(lessonsCompleted == 2){
+    if(lessonsCompleted == 4){
         ui->DesignButton->setEnabled(true);
+        ui->DesignButton->setStyleSheet("color: rgb(67, 200, 200);"
+                                        "border-image: url(:/Icons/banner.jpg);");
     }
 
     const QJsonArray* completeLessons = parent->getSaves()->getSavedLessonsArray();
 
     if (completeLessons->contains("KeepSimpleLesson")) {
-        ui->keepSimpleLabel->setText("Complete");
+        QLabel * pLabel = new QLabel(ui->KISButton);
+        QPixmap pixmap(":/Icons/check.png");
+        pLabel->setPixmap(pixmap);
+        pLabel->setAttribute(Qt::WA_TranslucentBackground);
+        pLabel->show();
     }
     if (completeLessons->contains("UseBasicColorsLesson")) {
-        ui->colorsLabel->setText("Complete");
+        QLabel * pLabel = new QLabel(ui->U23Button);
+        QPixmap pixmap(":/Icons/check.png");
+        pLabel->setPixmap(pixmap);
+        pLabel->setAttribute(Qt::WA_TranslucentBackground);
+        pLabel->show();
+    }
+    if (completeLessons->contains("MeaningfulSymbolismLesson")) {
+        QLabel * pLabel = new QLabel(ui->UMSButton);
+        QPixmap pixmap(":/Icons/check.png");
+        pLabel->setPixmap(pixmap);
+        pLabel->setAttribute(Qt::WA_TranslucentBackground);
+        pLabel->show();
+    }
+    if (completeLessons->contains("BeDistinctiveOrRelatedLesson")) {
+        QLabel * pLabel = new QLabel(ui->BDRButton);
+        QPixmap pixmap(":/Icons/check.png");
+        pLabel->setPixmap(pixmap);
+        pLabel->setAttribute(Qt::WA_TranslucentBackground);
+        pLabel->show();
     }
 
     connect(ui->BDRButton,

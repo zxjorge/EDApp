@@ -1,39 +1,40 @@
 #include "distinctivequiz.h"
+#include "qdir.h"
 #include "qrandom.h"
 #include "ui_distinctivequiz.h"
 #include "flagConstants.h"
-#include "qdiriterator.h"
+#include "mainmenu.h"
+
 DistinctiveQuiz::DistinctiveQuiz(MainWindow *parent) :
     QStackedWidget(parent),
     ui(new Ui::DistinctiveQuiz)
 {
     ui->setupUi(this);
-  //  ui->flag1->setStyleSheet("border-image: url(:/Flags/gh.png)");
 
-
+    answerStage = true;
+    correct = 0;
+    incorrect = 0;
+    missedCorrect = 0;
+    questions = 0;
+    score = 0;
+    ui->progressBar->setValue(0);
+    ui->progressBar->setStyleSheet("text-align:center");
     ui->hint->setVisible(false);
     ui->selectChoice->setVisible(false);
-    ui->colorCode->setText("Blue: Selected\nGreen: Correct Selection\nRed: Incorrect Selection\nYellow: Missed Correct Selection");
-
+    ui->hintButton->setStyleSheet("background-color:light gray");
+    ui->next->setStyleSheet("background-color:light gray");
     updateStatLabels();
 
-    ui->colorCode->setVisible(false);
+   // ui->displayFlag1->setAlignment(Qt::AlignRight);
     flagButtons.append(ui->flag1);
     flagButtons.append(ui->flag2);
     flagButtons.append(ui->flag3);
     flagButtons.append(ui->flag4);
 
-
-//    QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
-//    int images = 0;
-//    while (it.hasNext()) {
-//        QString i = it.next();
-//        QStringList flag = i.split(":/Flags/");
-//        QTextStream(stdout) << flag[1] << Qt::endl;
-//     //   images += 1;
-//    }
-   // QTextStream(stdout) << images << Qt::endl;
-
+    flagScores.append(ui->flag1Score);
+    flagScores.append(ui->flag2Score);
+    flagScores.append(ui->flag3Score);
+    flagScores.append(ui->flag4Score);
 
     for(int i = 0; i < flagButtons.size(); i++){
         flagSelected.append(false);
@@ -62,6 +63,13 @@ DistinctiveQuiz::DistinctiveQuiz(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &DistinctiveQuiz::flag4Clicked);
+
+    connect(ui->menuButton,
+            &QPushButton::clicked,
+            this,
+            [=] {
+                parent->switchScene(new MainMenu(parent));
+            });
 
 }
 
@@ -103,31 +111,55 @@ void DistinctiveQuiz::on_next_clicked()
         if(!flagSelected.contains(true)){
             ui->selectChoice->setVisible(true);
         }else{
+            int scoreChange = ui->progressBar->value();
             for(int i = 0; i < flagButtons.size(); i++){
                 if(flagSelected.at(i)){
                     if(flagCorrect.at(i)){
                         flagButtons.at(i)->setStyleSheet("background-color:rgb(0,255,0)");
+                        flagScores.at(i)->setText("    +" + QString::number(100/targetScore) + "%");
+                        scoreChange += 100/targetScore;
                         correct += 1;
+                        score += 1;
                     }
                     else{
                        flagButtons.at(i)->setStyleSheet("background-color:rgb(255,0,0)");
+                       flagScores.at(i)->setText("    -" + QString::number(100/targetScore) + "%");
+                       scoreChange -= 100/targetScore;
                        incorrect += 1;
+                       if(score > 0)
+                            score -= 1;
                     }
                 }
                 else if(flagCorrect.at(i)){
                      flagButtons.at(i)->setStyleSheet("background-color:rgb(255,255,0)");
+                     flagScores.at(i)->setText("    +0%");
                      missedCorrect += 1;
                 }
             }
+
             answerStage = false;
-            ui->next->setText("Next Question");
+            if(score >= targetScore){
+                ui->progressBar->setValue(100);
+                ui->next->setText("Complete Quiz");
+            }
+            else{
+                ui->next->setText("Next Question");
+                ui->progressBar->setValue(scoreChange);
+            }
             ui->selectChoice->setVisible(false);
             questions += 1;
             updateStatLabels();
         }
     }else if (!answerStage){
-        setUpQuestion();
-        ui->next->setText("Check Answers");
+        if(correct >= targetScore){
+            setCurrentIndex(1);
+        }else{
+            for(QLabel* scoreLabel : flagScores){
+                scoreLabel -> setText("");
+            }
+            setUpQuestion();
+            ui->next->setText("Check Answers");
+        }
     }
 }
 
@@ -236,10 +268,8 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
             QIcon flagIcon;
             //Ensures that if the current category is picked, a different flag is chosen.
             //Makes sure to check for lists that have overlapping flags
-            while(randomFlag == "" || symbolList.contains(randomFlag) || randomFlags.contains(randomFlag)){
-
-              //  QVector<QString> filePaths;
-
+            while(randomFlag == "" || symbolList.contains(randomFlag) || randomFlags.contains(randomFlag) || flagIcon.isNull()){
+                flagIcon = QIcon();
                 QDir dir(":/Flags");
                 // Retrieve the list of files in the resource folder
                 QStringList fileList = dir.entryList(QDir::Files);
@@ -249,17 +279,6 @@ void DistinctiveQuiz::setUpButtons(QVector<QString> symbolList,QString display1,
                 randomFlag = fileList[flagPicker];
                 flagIcon.addFile(":/Flags/" + randomFlag);
 
-//                QDirIterator it(":/Flags/", QDirIterator::Subdirectories);
-//                int flagCount = 0;
-//                while (it.hasNext()) {
-//                    if(flagCount == flagPicker){
-//                        QString filePath = it.next();
-//                        QStringList flag = filePath.split(":/Flags/");
-//                        randomFlag = flag[1];
-//                        break;
-//                    }
-//                    flagCount += 1;
-//                }
             }
             randomFlags.append(randomFlag);
             //QIcon flagIcon();
@@ -285,17 +304,6 @@ void DistinctiveQuiz::on_hintButton_clicked()
 }
 
 
-void DistinctiveQuiz::on_ColorCodeButton_clicked()
-{
-    if(ui->colorCode->isVisible()){
-        ui->colorCode->setVisible(false);
-        ui->ColorCodeButton->setText("Show Color Code Information");
-    }else{
-        ui->colorCode->setVisible(true);
-        ui->ColorCodeButton->setText("Hide Color Code Information");
-    }
-}
-
 void DistinctiveQuiz::updateStatLabels(){
     QString statText = "Completed Questions: " + QString::number(questions);
     ui->totalQuestions->setText(statText);
@@ -306,6 +314,6 @@ void DistinctiveQuiz::updateStatLabels(){
     statText = "Total Incorrect: " + QString::number(incorrect);
     ui->totalIncorrect->setText(statText);
 
-    statText = "Total Missed Correct: " + QString::number(missedCorrect);
+    statText = "Total Missed: " + QString::number(missedCorrect);
     ui->totalMissedCorrect->setText(statText);
 }

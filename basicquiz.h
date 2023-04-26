@@ -41,6 +41,9 @@ public:
         QString lastWrongFlag = ""
     );
 
+    /**
+     * @brief BasicQuiz::~BasicQuiz
+     */
     ~BasicQuiz();
 
 private:

@@ -69,6 +69,7 @@ SOURCES += \
     fillableflag.cpp \
     finaldesignactivity.cpp \
     flagcoloringpuzzle.cpp \
+    flagconstants.cpp \
     flagstrip.cpp \
     keepsimpleactivity.cpp \
     keepsimplelesson.cpp \
@@ -83,6 +84,7 @@ SOURCES += \
     usebasiccolorslesson.cpp \
     spritecanvas.cpp \
     username.cpp
+    flagconstants.cpp
 
 VPATH += box2d/src/
 

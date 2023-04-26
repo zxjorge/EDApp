@@ -2,7 +2,7 @@
  * title.h made by NajMingle for A8-An-Educational-App - CS 3505 Spring 2023
  * This header file will be used by title.cpp and has methods, signals, and slots to display the title screen.
  * This class handles the UI aspects, logic, and data for the title screen.
- * Reviewed by: Arkein Singh
+ * Reviewed by: Najman Husaini
  */
 #ifndef TITLE_H
 #define TITLE_H

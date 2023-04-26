@@ -19,7 +19,7 @@
    <string>StackedWidget</string>
   </property>
   <property name="currentIndex">
-   <number>1</number>
+   <number>0</number>
   </property>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
@@ -208,7 +208,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/au.png</pixmap>
+                    <pixmap>:/Flags/au.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -247,7 +247,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/nz.png</pixmap>
+                    <pixmap>:/Flags/nz.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -286,7 +286,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/fj.png</pixmap>
+                    <pixmap>:/Flags/fj.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -335,13 +335,12 @@ color: rgb(0, 0, 0);</string>
            <widget class="QPushButton" name="nextButton">
             <property name="minimumSize">
              <size>
-              <width>75</width>
-              <height>0</height>
+              <width>100</width>
+              <height>40</height>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
+             <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
             </property>
@@ -405,8 +404,8 @@ color: rgb(0, 0, 0);</string>
            <widget class="QPushButton" name="mainMenu_2">
             <property name="minimumSize">
              <size>
-              <width>50</width>
-              <height>50</height>
+              <width>75</width>
+              <height>75</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -521,7 +520,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/mv.png</pixmap>
+                    <pixmap>:/Flags/mv.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -560,7 +559,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/tr.png</pixmap>
+                    <pixmap>:/Flags/tr.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -599,7 +598,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/pk.png</pixmap>
+                    <pixmap>:/Flags/pk.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -635,9 +634,14 @@ color: rgb(0, 0, 0);</string>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QPushButton" name="backButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
+           <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
           </property>
@@ -661,9 +665,14 @@ border: 1px solid black;</string>
         </item>
         <item>
          <widget class="QPushButton" name="nextButton_2">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
           <property name="styleSheet">
-           <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
+           <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
           </property>
@@ -737,37 +746,61 @@ Don't forget to use a hint if you get stuck. Good luck!</string>
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="nextButton_3">
-      <property name="maximumSize">
-       <size>
-        <width>80</width>
-        <height>16777215</height>
-       </size>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <property name="bottomMargin">
+       <number>0</number>
       </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">text-decoration: underline; 
-font: 9pt &quot;Arial Narrow&quot;;
-background-color: transparent;</string>
-      </property>
-      <property name="text">
-       <string>Next</string>
-      </property>
-     </widget>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextButton_3">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>80</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
+        </property>
+        <property name="text">
+         <string>Next</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
