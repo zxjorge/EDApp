@@ -27,6 +27,11 @@ private:
     Ui::KeepSimpleActivity *ui;
     DrawUtils drawUtils;
     MainWindow *mainWindow;
+    QImage selectedSymbol;
+
+    void setSelectedSymbol(QString path);
+    void resizeEvent(QResizeEvent *event) override;
+    void updateCursor();
 };
 
 #endif // KEEPSIMPLEACTIVITY_H

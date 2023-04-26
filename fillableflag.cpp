@@ -78,11 +78,15 @@ void FillableFlag::paintEvent(QPaintEvent*) {
     }
 }
 
+double FillableFlag::getScale() {
+    return (double)width() / layers.at(0).width();
+}
+
 QPoint FillableFlag::getScaledMousePoint(QMouseEvent* event) {
     QPointF point = event->position();
     point.rx() = point.x();
     point.ry() = point.y();
-    point /= (float)width() / layers.at(0).width();
+    point /= getScale();
 
     // 0.5 offset to pixel centers instead of corners
     point.rx() = point.x() - 0.5;
@@ -97,8 +101,12 @@ QPoint FillableFlag::getScaledMousePoint(QMouseEvent* event) {
  */
 void FillableFlag::mousePressEvent(QMouseEvent *event)
 {
-    fillAtPoint(getScaledMousePoint(event));
-    update();
+    QPoint pos = getScaledMousePoint(event);
+    if (autoFill) {
+        fillAtPoint(pos);
+        update();
+    }
+    emit clicked(pos);
 }
 
 QColor FillableFlag::getCurrentColor() {
@@ -173,4 +181,8 @@ void FillableFlag::redo() {
         layerColors[action.layerIndex] = action.oldColor;
     }
     update();
+}
+
+void FillableFlag::setAutoFill(bool value) {
+    autoFill = value;
 }

@@ -162,6 +162,7 @@ HEADERS += \
     username.h
 
 FORMS += \
+    username.ui \
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \

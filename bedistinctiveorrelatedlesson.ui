@@ -208,7 +208,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/au.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/au.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -247,7 +247,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/nz.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/nz.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -286,7 +286,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/fj.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/fj.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -520,7 +520,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/mv.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/mv.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -559,7 +559,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/tr.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/tr.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -598,7 +598,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/pk.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/pk.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -691,116 +691,102 @@ border: 1px solid black;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 219, 146);</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_12">
+   <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
-     <spacer name="verticalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
+     <widget class="QFrame" name="verticalFrame">
+      <property name="styleSheet">
+       <string notr="true">QFrame#verticalFrame {
+    border: 4px dashed white;
+}</string>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>220</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_21">
-      <property name="font">
-       <font>
-        <family>Bookman Old Style</family>
-        <pointsize>30</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Congrats on finishing this lesson!!</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_22">
-      <property name="font">
-       <font>
-        <family>Bookman Old Style</family>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>In the next activity, you will be asked to select all the flags that are related to the given flag.
-Don't forget to use a hint if you get stuck. Good luck!</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>220</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <spacer name="horizontalSpacer_5">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="nextButton_3">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>40</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>80</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="baseSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>293</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Bookman Old Style</family>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Congrats on finishing this lesson!!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Bookman Old Style</family>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>In the next activity, you will be asked to select which flag(s) are either distinct or related to the flags displayed. Good luck!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>293</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nextButton_3">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
-        </property>
-        <property name="text">
-         <string>Next</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+         </property>
+         <property name="text">
+          <string>Next</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
