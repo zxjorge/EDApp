@@ -36,7 +36,9 @@ void FlagStrip::paintEvent(QPaintEvent*) {
             flagIndex = flags.length() - flagIndex;
         }
         flagIndex %= flags.length();
-        painter.drawPixmap(leftmostX + i * flagWidthSpaced, 0, flags.at(flagIndex));
+        const QPixmap &flag = flags.at(flagIndex);
+        int y = (height() - flag.height()) / 2;
+        painter.drawPixmap(leftmostX + i * flagWidthSpaced, y, flag);
     }
 }
 
