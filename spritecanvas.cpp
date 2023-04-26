@@ -113,24 +113,24 @@ void SpriteCanvas::onToolChanged() {
     QCursor brushCursor;
 
     switch (drawUtils->getSelectedToolType()) {
-    case ToolType::BRUSH: {
-        QPixmap brushPixmap(":/Icons/brush_icon.png");
-        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 8, scaledBrushPixmap.height()/1.1);
-        break;
-    }
-    case ToolType::FILL: {
-        QPixmap brushPixmap(":/Icons/filltool_icon.png");
-        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width()/8, scaledBrushPixmap.height()/1.1);
-        break;
-    }
-    case ToolType::ERASER: {
-        QPixmap brushPixmap(":/Icons/erase_icon.png");
-        QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-        brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 6, scaledBrushPixmap.height() / 1.2);
-        break;
-    }
+        case ToolType::BRUSH: {
+            QPixmap brushPixmap(":/Icons/brush_icon.png");
+            QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 8, scaledBrushPixmap.height()/1.1);
+            break;
+        }
+        case ToolType::FILL: {
+            QPixmap brushPixmap(":/Icons/filltool_icon.png");
+            QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width()/8, scaledBrushPixmap.height()/1.1);
+            break;
+        }
+        case ToolType::ERASER: {
+            QPixmap brushPixmap(":/Icons/erase_icon.png");
+            QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+            brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 6, scaledBrushPixmap.height() / 1.2);
+            break;
+        }
     }
     setCursor(brushCursor);
 }
