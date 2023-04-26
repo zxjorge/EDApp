@@ -37,17 +37,17 @@ BasicQuiz::BasicQuiz(
     ui->progressBar->setValue(100 * currentStreak / targetStreak);
 
 
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QRandomGenerator *rng = QRandomGenerator::global();
     QString correctFlagName;
 
     do {
-        correctFlagName = ":/Flags/" + correctFlags.at(rng.bounded(correctFlags.length()));
+        correctFlagName = ":/Flags/" + correctFlags.at(rng->bounded(correctFlags.length()));
     } while (correctFlagName == lastCorrectFlag);
 
     QString wrongFlagName;
 
     do {
-        wrongFlagName = ":/Flags/" + wrongFlags.at(rng.bounded(wrongFlags.length()));
+        wrongFlagName = ":/Flags/" + wrongFlags.at(rng->bounded(wrongFlags.length()));
     } while (wrongFlagName == lastWrongFlag);
 
     connect(ui->mainMenu,
@@ -166,7 +166,7 @@ BasicQuiz::BasicQuiz(
         }
     };
 
-    if (rng.bounded(2) == 0) {
+    if (rng->bounded(2) == 0) {
         // flag1 is the right answer
         ui->flag1->setIcon(QIcon(correctFlagName));
         ui->flag1Name->setText(FLAG_NAMES.at(extractCountryCode(correctFlagName)));

@@ -55,17 +55,17 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
             ui->flag,
             &FillableFlag::redo);
 
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QRandomGenerator *rng = QRandomGenerator::global();
 
     ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
-    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
+    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng->bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
 
     QVector<QVector<QString>> cornerTemplates = CORNER_FLAG_TEMPLATES;
 
     for (int i = 1; i < 5; i++) {
-        int cornerIndex = rng.bounded(cornerTemplates.length());
+        int cornerIndex = rng->bounded(cornerTemplates.length());
         const QVector<QString> &templates = cornerTemplates.at(cornerIndex);
-        QString selected = templates.at(rng.bounded(templates.length()));
+        QString selected = templates.at(rng->bounded(templates.length()));
         cornerTemplates.remove(cornerIndex);
 
         ui->flag->addLayer(
