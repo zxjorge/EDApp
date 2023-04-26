@@ -13,13 +13,13 @@
 const QVector<QString> BASIC_COLOR_FLAGS = {"bw.png", "fr.png", "bg.png", "be.png", "al.png", "bv.png", "dk.png", "tt.png", "ws.png", "wf.png"};
 const QVector<QString> COMPLEX_COLOR_FLAGS = {"er.png", "ec.png", "km.png", "za.png", "sc.png", "dm.png", "mz.png", "zm.png", "ke.png", "pe.png" };
 
-const QVector<QString> SIMPLE_FLAGS = {"cl.png", "vn.png", "gm.png", "mc.png", "af.png", "at.png", "gb-eng.png", "cz.png", "mv.png", "so.png"};
+const QVector<QString> SIMPLE_FLAGS = {"cl.png", "vn.png", "gm.png", "mc.png", "at.png", "gb-eng.png", "cz.png", "mv.png", "so.png"};
 const QVector<QString> MEANINGFUL_FLAGS = {"cy.png", "md.png", "lk.png", "pk.png", "es.png", "af.png", "ua.png", "vu.png", "mx.png", "my.png"};
 
 const QVector<QString> NO_LETTER_OR_SEAL_FLAGS = {"am.png", "cn.png", "bf.bng", "ax.png", "nr.png", "mr.png", "sl.png", "vn.png", "to.png", "gh.png"};
 const QVector<QString> LETTERED_FLAGS = {"sx.png", "sm.png", "gt.png", "gu.png", "vg.png", "bz.png"};
 
-const QVector<QString> CHRISTIANITY_FLAGS = {"nz.png", "dm.png", "no.png", "se.png", "ax.png","dk.png","to.png", "gb-eng.png","is.png","ws.png","au.png","cc.png","fj.png","gr.png","do.png","ch.png","tk.png","fi.png","cx.png","mt.png"};
+const QVector<QString> CHRISTIANITY_FLAGS = {"nz.png", "dm.png", "no.png", "se.png", "ax.png","dk.png","to.png", "gb-eng.png","is.png","ws.png","au.png","fj.png","gr.png","do.png","ch.png","tk.png","fi.png","cx.png","mt.png"};
 const QVector<QString> ISLAM_FLAGS = {"af.png", "az.png", "pk.png", "my.png", "tr.png", "km.png", "mr.png","sa.png","cc.png","ly.png","tn.png","eh.png","tm.png","sg.png"};
 const QVector<QString> UNION_JACK_FLAGS = {"au.png", "nz.png", "tv.png", "fj.png", "vg.png", "gb-nir.png","fk.png","ck.png","bm.png","nu.png","gs.png","io.png", "ky.png","ai.png"};
 
