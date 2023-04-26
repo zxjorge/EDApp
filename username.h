@@ -18,10 +18,6 @@ class Username : public QWidget
     Q_OBJECT
 
 public:
-    /**
-     * @brief Username::Username Constructor for username
-     * @param parent Widget that is used to help handle memory and resources
-     */
     explicit Username(MainWindow *parent = nullptr);
     ~Username();
 

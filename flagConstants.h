@@ -70,6 +70,12 @@ const std::unordered_map<QString, QString> FLAG_NAMES = {
     {"vg", "Virgin Islands, British"}, {"vi", "Virgin Islands, U.S."}, {"vn", "Viet Nam"}, {"vu", "Vanuatu"}, {"wf", "Wallis and Futuna"}, {"ws", "Samoa"}, {"ye", "Yemen"}, {"za", "South Africa"},
     {"zm", "Zambia"}, {"zw", "Zimbabwe"}};
 
+
+/**
+ * @brief extractCountryCode Extracts countries 2 letter code.
+ * @param name of country.
+ * @return
+ */
 QString extractCountryCode(const QString &name);
 
 #endif // FLAGCONSTANTS_H

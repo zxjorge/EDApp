@@ -21,16 +21,7 @@ class KeepSimpleLesson : public QStackedWidget
     Q_OBJECT
 
 public:
-
-    /**
-     * @brief KeepSimpleLesson::KeepSimpleLesson Constructor for KeepSimpleLesson
-     * @param parent widget that is used to help handle memory and resources.
-     */
     explicit KeepSimpleLesson(MainWindow *parent = nullptr);
-
-    /**
-     * @brief KeepSimpleLesson::~KeepSimpleLesson destructor for KeepSimpleLesson
-     */
     ~KeepSimpleLesson();
 
 private slots:

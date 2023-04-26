@@ -19,10 +19,6 @@ class PlayerGreeting : public QWidget
     Q_OBJECT
 
 public:
-    /**
-     * @brief PlayerGreeting::PlayerGreeting Contructor for playergreeting.
-     * @param parent
-     */
     explicit PlayerGreeting(MainWindow *parent = nullptr);
     ~PlayerGreeting();
 

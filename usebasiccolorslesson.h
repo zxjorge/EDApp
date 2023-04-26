@@ -20,16 +20,7 @@ class UseBasicColorsLesson : public QStackedWidget
     Q_OBJECT
 
 public:
-
-    /**
-     * @brief UseBasicColorsLesson::UseBasicColorsLesson Constructor for UseBasicColorsLesson
-     * @param parent widget that is used to help handle memory and resources.
-     */
     explicit UseBasicColorsLesson(MainWindow *parent = nullptr);
-
-    /**
-     * @brief UseBasicColorsLesson::~UseBasicColorsLesson Destructor for UseBasicColorsLesson
-     */
     ~UseBasicColorsLesson();
 
 private slots:

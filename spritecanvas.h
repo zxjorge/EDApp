@@ -19,23 +19,12 @@ namespace Ui {
 class SpriteCanvas;
 }
 
-/**
- * @brief The SpriteCanvas widget on which drawing occurs
- */
 class SpriteCanvas : public QWidget
 {
     Q_OBJECT
 
 public:
-    /**
-     * @brief SpriteCanvas::SpriteCanvas constructor for spriteCanvas
-     * @param parent
-     */
     explicit SpriteCanvas(QWidget *parent = nullptr);
-
-    /**
-     * @brief SpriteCanvas::~SpriteCanvas destructor for spriteCanvas.
-     */
     ~SpriteCanvas();
 
     /**

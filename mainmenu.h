@@ -19,15 +19,7 @@ class MainMenu : public QWidget
     Q_OBJECT
 
 public:
-    /**
-     * @brief MainMenu::MainMenu Sets up the layout of the main menu. Connects menu buttons so scene will switch after being clicked.
-     * @param parent widget that is used to help handle memory and resources.
-     */
     explicit MainMenu(MainWindow *parent = nullptr);
-
-    /**
-     * @brief MainMenu::~MainMenu destructor of MainMenu
-     */
     ~MainMenu();
 
 public slots:
