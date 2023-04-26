@@ -33,7 +33,6 @@ void bsod() {
     *ptr = 0;
 }
 #endif
-
 Bsod::Bsod(MainWindow *parent) :
     QWidget(parent),
     ui(new Ui::Bsod),

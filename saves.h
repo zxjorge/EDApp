@@ -13,7 +13,11 @@ private:
     /**
      * @brief savedLessonsArray QJsonArray that stores saved lessons.
      */
-    QJsonArray savedLessonsArray;\
+    QJsonArray savedLessonsArray;
+
+    /**
+     * @brief username QString that is the players username
+     */
     QString username = "";
 
 public:
@@ -29,12 +33,21 @@ public:
     void loadFromFile();
 
     /**
-     * @brief getNumberOfLessonsSaved gets the number of lessons that have been completed
+     * @brief Saves::getNumberOfLessonsSaved Gets the number of lessons that have been completed
      * @return int number of saved lessons
      */
     int getNumberOfLessonsSaved();
 
+    /**
+     * @brief Saves::getUsername Gets the players username
+     * @return the player username
+     */
     QString getUsername();
+
+    /**
+     * @brief Saves::setUsername Sets the given username to the username member variable
+     * @param username players username
+     */
     void setUsername(QString username);
 
     /**

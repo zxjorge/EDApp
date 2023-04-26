@@ -18,15 +18,10 @@ PlayerGreeting::PlayerGreeting(MainWindow *parent) :
     connect(ui->pushButton,
             &QPushButton::clicked,
             this,
-            &PlayerGreeting::buttonClicked);
+            [this] {
+                mainWindow->switchScene(new MainMenu(mainWindow));
+            });
 
-}
-/**
- * @brief PlayerGreeting::buttonClicked moves scene to mainmenu once button is clicked
- */
-void PlayerGreeting::buttonClicked()
-{
-    mainWindow->switchScene(new MainMenu(mainWindow));
 }
 
 PlayerGreeting::~PlayerGreeting()
