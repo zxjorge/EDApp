@@ -1,3 +1,8 @@
+/**
+ * ColorPicker.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses ColorPicker.h header file and implements all its methods.
+ * Reviewed by: George Benyeogor
+ */
 #include "colorpicker.h"
 #include "ui_colorpicker.h"
 #include <QColor>

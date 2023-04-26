@@ -29,6 +29,7 @@ public slots:
      */
     void switchScene(QWidget *nextScene);
 
+
 private:
     Ui::MainWindow *ui;
     Saves saves;
