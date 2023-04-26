@@ -222,7 +222,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/vn.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/vn.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -261,7 +261,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/bd.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/bd.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -300,7 +300,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/in.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/in.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -541,7 +541,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/gm.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/gm.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -574,7 +574,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/mc.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/mc.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -607,7 +607,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/gb-eng.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/gb-eng.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -867,7 +867,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/bh.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/bh.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -906,7 +906,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/bb.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/bb.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -945,7 +945,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>:/Flags/jm.png</pixmap>
+                    <pixmap resource="Resources.qrc">:/Flags/jm.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -1026,87 +1026,100 @@ border: 1px solid black;</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_7">
     <item>
-     <spacer name="verticalSpacer_3">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>293</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Bookman Old Style</family>
-        <pointsize>30</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Congrats on finishing this lesson!!</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <family>Bookman Old Style</family>
-        <pointsize>15</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>In the next activity, you will be asked to select the the simpler flag. Good luck!</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <spacer name="verticalSpacer_4">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>293</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QPushButton" name="nextButton_4">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>40</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>100</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
+     <widget class="QFrame" name="verticalFrame">
       <property name="styleSheet">
-       <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+       <string notr="true">QFrame#verticalFrame {
+	border: 4px dashed white;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>293</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Bookman Old Style</family>
+           <pointsize>30</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Congrats on finishing this lesson!!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Bookman Old Style</family>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>In the next activity, you will be asked to select the the simpler flag. Good luck!</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>293</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nextButton_4">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
-      </property>
-      <property name="text">
-       <string>Next</string>
-      </property>
+         </property>
+         <property name="text">
+          <string>Next</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
