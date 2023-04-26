@@ -104,6 +104,7 @@ KeepSimpleLesson::KeepSimpleLesson(MainWindow *parent) :
                 audioOutput->setVolume(100);
                 player->play();
             });
+    setCurrentIndex(0);
 }
 
 
