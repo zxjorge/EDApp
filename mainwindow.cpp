@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    saves.loadFromFile();
+    saves.loadFromFile();    
     setCentralWidget(new Title(this));
 }
 
@@ -27,6 +27,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 /**
  * @brief MainWindow::startButtonClicked

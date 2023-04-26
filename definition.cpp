@@ -1,8 +1,10 @@
 #include "definition.h"
+#include "playergreeting.h"
 #include "ui_definition.h"
 #include "bsod.h"
 #include <QPushButton>
 #include "mainmenu.h"
+#include "username.h"
 
 Definition::Definition(MainWindow *parent) :
     QWidget(parent),
@@ -21,8 +23,6 @@ Definition::Definition(MainWindow *parent) :
             &QPushButton::clicked,
             this,
             &Definition::OkClicked);
-
-
 }
 
 Definition::~Definition()
@@ -32,6 +32,10 @@ Definition::~Definition()
 
 void Definition::OkClicked()
 {
-    mainWindow->switchScene(new MainMenu(mainWindow));
+    if(mainWindow->getSaves()->getUsername() != "")
+        mainWindow->switchScene(new PlayerGreeting(mainWindow));
+    else{
+        mainWindow->switchScene(new Username(mainWindow));
+    }
 }
 
