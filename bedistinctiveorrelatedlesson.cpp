@@ -85,12 +85,10 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             });
 }
 
-
 BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson()
 {
     delete ui;
 }
-
 
 void BeDistinctiveOrRelatedLesson::NextClicked(){
     if(player->isPlaying()){
@@ -101,7 +99,6 @@ void BeDistinctiveOrRelatedLesson::NextClicked(){
         setCurrentIndex(nextIndex);
     }
 }
-
 
 void BeDistinctiveOrRelatedLesson::BackClicked(){
     if(player->isPlaying()){

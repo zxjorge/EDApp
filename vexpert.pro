@@ -81,7 +81,8 @@ SOURCES += \
     saves.cpp \
     title.cpp \
     usebasiccolorslesson.cpp \
-    spritecanvas.cpp
+    spritecanvas.cpp \
+    flagconstants.cpp
 
 VPATH += box2d/src/
 

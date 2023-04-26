@@ -254,7 +254,6 @@
         <file>va.png</file>
         <file>vc.png</file>
         <file>ve.png</file>
-        <file>nationalFlags.jpg</file>
     </qresource>
     <qresource prefix="/FlagTemplates">
         <file>circleMiddle.png</file>
@@ -288,6 +287,9 @@
     <qresource prefix="/Icons">
         <file>Speaker_Icon.svg.png</file>
         <file>home-menu-icon-21.jpg</file>
+        <file>check.png</file>
+        <file>banner.jpg</file>
+        <file>bannerbw.jpg</file>
     </qresource>
     <qresource prefix="/vexbot">
         <file>vexbotCheer.png</file>

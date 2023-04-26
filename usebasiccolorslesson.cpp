@@ -82,7 +82,6 @@ UseBasicColorsLesson::~UseBasicColorsLesson()
     delete ui;
 }
 
-
 void UseBasicColorsLesson::NextClicked(){
     if(player->isPlaying()){
         player->stop();
@@ -101,7 +100,6 @@ void UseBasicColorsLesson::NextClicked(){
         ));
     }
 }
-
 
 void UseBasicColorsLesson::BackClicked(){
     if(player->isPlaying()){
