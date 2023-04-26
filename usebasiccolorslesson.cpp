@@ -1,7 +1,7 @@
 /**
  * UseBasicColorsLesson.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
  * This cpp file uses UseBasicColorsLesson.h header file and implements all its methods.
- * Reviewed by: Sahil Karki
+ * Reviewed by: George Benyeogor
  */
 #include "usebasiccolorslesson.h"
 #include "basicquiz.h"

@@ -1,3 +1,8 @@
+/**
+ * DistinctiveQuiz.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses DistinctiveQuiz.h header file and implements all its methods.
+ * Reviewed by: Arkein Singh
+ */
 #include "distinctivequiz.h"
 #include "qdir.h"
 #include "qrandom.h"

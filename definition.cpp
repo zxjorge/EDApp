@@ -1,3 +1,8 @@
+/**
+ * Definition.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses Definition.h header file and implements all its methods.
+ * Reviewed by: Brayden Newsom
+ */
 #include "definition.h"
 #include "ui_definition.h"
 #include "bsod.h"

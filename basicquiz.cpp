@@ -1,3 +1,8 @@
+/**
+ * BasicQuiz.cpp made by Najmingle for A8-An-Educational-App - CS 3505 Spring 2023
+ * This cpp file uses BasicQuiz.h header file and implements all its methods.
+ * Reviewed by: Sahil Karki
+ */
 #include "basicquiz.h"
 #include "flagconstants.h"
 #include "mainmenu.h"
