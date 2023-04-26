@@ -29,8 +29,17 @@ private:
     MainWindow *mainWindow;
     QImage selectedSymbol;
 
+    /**
+     * @brief setSelectedSymbol sets the selected symbol and updates the cursor
+     * @param path path to the symbol
+     */
     void setSelectedSymbol(QString path);
+
     void resizeEvent(QResizeEvent *event) override;
+
+    /**
+     * @brief updateCursor updates the cursor
+     */
     void updateCursor();
 };
 
