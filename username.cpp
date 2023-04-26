@@ -12,6 +12,7 @@ Username::Username(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
+    ui->warningLabel->hide();
 
     connect(ui->pushButton,
             &QPushButton::clicked,
@@ -22,8 +23,13 @@ Username::Username(MainWindow *parent) :
 
 void Username::doneClicked()
 {
+    if(ui->lineEdit->text() != ""){
     mainWindow->getSaves()->setUsername(ui->lineEdit->text());
     mainWindow->switchScene(new PlayerGreeting(mainWindow));
+    }
+    else{
+        ui->warningLabel->show();
+    }
 
 }
 
