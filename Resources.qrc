@@ -255,24 +255,6 @@
         <file>vc.png</file>
         <file>ve.png</file>
     </qresource>
-    <qresource prefix="/FlagTemplates">
-        <file>circleMiddle.png</file>
-        <file>Flag Border.png</file>
-        <file>flowerMiddle.png</file>
-        <file>polygonMiddle.png</file>
-        <file>tigerMiddle.png</file>
-        <file>triangleMiddle.png</file>
-        <file>weirdShapeMiddle.png</file>
-        <file>pentagonBottomLeft.png</file>
-        <file>pentagonBottomRight.png</file>
-        <file>treeMiddleLeft.png</file>
-        <file>triangleTopLeft.png</file>
-        <file>triangleTopRight.png</file>
-        <file>circleMiddleBottom.png</file>
-        <file>circleMiddleTop.png</file>
-        <file>treeMiddleRight.png</file>
-        <file>flowerMiddleRight.png</file>
-    </qresource>
     <qresource prefix="/Audio">
         <file>bdsr1.mp3</file>
         <file>bdsr2.mp3</file>
@@ -300,5 +282,22 @@
         <file>vexbotSad.png</file>
         <file>vexbotSerious.png</file>
         <file>vexbotThink.png</file>
+    </qresource>
+    <qresource prefix="/FlagTemplates">
+        <file>circleMiddleBottom.png</file>
+        <file>circleMiddleTop.png</file>
+        <file>flowerMiddleLeft.png</file>
+        <file>flowerMiddleRight.png</file>
+        <file>flowerTopLeft.png</file>
+        <file>pentagonBottomLeft.png</file>
+        <file>pentagonBottomRight.png</file>
+        <file>tree-top-left.png</file>
+        <file>treeBottomRight.png</file>
+        <file>treeMiddleLeft.png</file>
+        <file>treeMiddleRight.png</file>
+        <file>treeTopRight.png</file>
+        <file>triangleBottomLeft.png</file>
+        <file>triangleTopLeft.png</file>
+        <file>triangleTopRight.png</file>
     </qresource>
 </RCC>
