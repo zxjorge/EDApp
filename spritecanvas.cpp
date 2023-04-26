@@ -12,7 +12,7 @@
 SpriteCanvas::SpriteCanvas(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SpriteCanvas),
-    sprite(QImage(1000, 500, QImage::Format_ARGB32)),
+    sprite(QImage(1000, 500, QImage::Format_RGB32)),
     drawUtils(nullptr)
 {
     sprite.fill(Qt::white);

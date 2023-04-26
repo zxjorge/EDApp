@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>411</width>
+    <width>439</width>
     <height>720</height>
    </rect>
   </property>
@@ -168,7 +168,7 @@
               </property>
               <property name="icon">
                <iconset resource="Resources.qrc">
-                <normaloff>:/FlagTemplates/treeMiddleLeft.png</normaloff>:/FlagTemplates/treeMiddleLeft.png</iconset>
+                <normaloff>:/FlagTemplates/circleMiddle.png</normaloff>:/FlagTemplates/circleMiddle.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -188,32 +188,12 @@
               </property>
               <property name="icon">
                <iconset resource="Resources.qrc">
-                <normaloff>:/FlagTemplates/flowerMiddleRight.png</normaloff>:/FlagTemplates/flowerMiddleRight.png</iconset>
+                <normaloff>:/Icons/cursor.png</normaloff>:/Icons/cursor.png</iconset>
               </property>
               <property name="iconSize">
                <size>
-                <width>100</width>
-                <height>100</height>
-               </size>
-              </property>
-              <property name="flat">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="choice8">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="icon">
-               <iconset resource="Resources.qrc">
-                <normaloff>:/FlagTemplates/treeMiddleRight.png</normaloff>:/FlagTemplates/treeMiddleRight.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>100</width>
-                <height>100</height>
+                <width>60</width>
+                <height>60</height>
                </size>
               </property>
               <property name="flat">
