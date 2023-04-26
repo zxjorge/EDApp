@@ -21,16 +21,7 @@ class Title : public QWidget
     Q_OBJECT
 
 public:
-    /**
-     * @brief Title::Title Constructor for Title
-     * @param parent widget that is used to help handle memory and resources
-     */
     explicit Title(MainWindow *parent = nullptr);
-
-    /**
-     * @brief Title::Title Constructor for Title
-     * @param parent widget that is used to help handle memory and resources
-     */
     ~Title();
 
 private slots:
