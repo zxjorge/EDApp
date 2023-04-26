@@ -57,22 +57,70 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QPushButton" name="brushButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/Icons/brush_icon.png);</string>
+            </property>
             <property name="text">
-             <string>Brush</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="fillButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/Icons/filltool_icon.png);</string>
+            </property>
             <property name="text">
-             <string>Fill</string>
+             <string/>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="eraserButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>55</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/Icons/erase_icon.png);</string>
+            </property>
             <property name="text">
-             <string>Eraser</string>
+             <string/>
             </property>
            </widget>
           </item>

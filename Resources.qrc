@@ -290,6 +290,9 @@
         <file>check.png</file>
         <file>banner.jpg</file>
         <file>bannerbw.jpg</file>
+        <file>erase_icon.png</file>
+        <file>filltool_icon.png</file>
+        <file>brush_icon.png</file>
     </qresource>
     <qresource prefix="/vexbot">
         <file>vexbotCheer.png</file>

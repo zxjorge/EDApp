@@ -27,6 +27,10 @@ SpriteCanvas::~SpriteCanvas()
 void SpriteCanvas::setDrawUtils(DrawUtils* drawUtils) {
     this->drawUtils = drawUtils;
     onToolChanged();
+    connect(drawUtils,
+        &DrawUtils::toolUpdated,
+        this,
+        &SpriteCanvas::onToolChanged);
 }
 
 void SpriteCanvas::paintEvent(QPaintEvent*) {
@@ -110,19 +114,19 @@ void SpriteCanvas::onToolChanged() {
 
     switch (drawUtils->getSelectedToolType()) {
     case ToolType::BRUSH: {
-        QPixmap brushPixmap(":/icons/brush_icon.png");
+        QPixmap brushPixmap(":/Icons/brush_icon.png");
         QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 8, scaledBrushPixmap.height()/1.1);
         break;
     }
     case ToolType::FILL: {
-        QPixmap brushPixmap(":/icons/filltool_icon.png");
+        QPixmap brushPixmap(":/Icons/filltool_icon.png");
         QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width()/8, scaledBrushPixmap.height()/1.1);
         break;
     }
     case ToolType::ERASER: {
-        QPixmap brushPixmap(":/icons/erase_icon.png");
+        QPixmap brushPixmap(":/Icons/erase_icon.png");
         QPixmap scaledBrushPixmap = brushPixmap.scaled(45, 45, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         brushCursor = QCursor(scaledBrushPixmap, scaledBrushPixmap.width() / 6, scaledBrushPixmap.height() / 1.2);
         break;
