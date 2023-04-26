@@ -26,8 +26,6 @@ private:
     Ui::Username *ui;
     MainWindow *mainWindow;
     Saves saves;
-    bool firstTime = true;
 };
 
 #endif // USERNAME_H
-
