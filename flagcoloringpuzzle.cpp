@@ -17,7 +17,7 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
     mainWindow(parent)
 {
     ui->setupUi(this);
-    parent->getSaves()->Save("UseBasicColorsLesson");
+    parent->getSaves()->Save("UseBasicColorsLesson", mainWindow->getSaves()->getUsername());
     connect(ui->colorPaletteButton,
             &QPushButton::clicked,
             this,
@@ -55,23 +55,19 @@ FlagColoringPuzzle::FlagColoringPuzzle(MainWindow *parent) :
             ui->flag,
             &FillableFlag::redo);
 
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QRandomGenerator *rng = QRandomGenerator::global();
 
     ui->flag->addLayer(QImage(":/FlagTemplates/Flag Border.png"), Qt::white, true);
-    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng.bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
+    ui->flag->addLayer(QImage(":/FlagTemplates/" + CENTER_FLAG_TEMPLATES[rng->bounded(CENTER_FLAG_TEMPLATES.length())]), Qt::black, true);
 
-    QSet<QString> seen;
+    QVector<QVector<QString>> cornerTemplates = CORNER_FLAG_TEMPLATES;
 
     for (int i = 1; i < 5; i++) {
-        QString selected;
+        int cornerIndex = rng->bounded(cornerTemplates.length());
+        const QVector<QString> &templates = cornerTemplates.at(cornerIndex);
+        QString selected = templates.at(rng->bounded(templates.length()));
+        cornerTemplates.remove(cornerIndex);
 
-        do {
-            int index = rng.bounded(CORNER_FLAG_TEMPLATES.length());
-            selected = CORNER_FLAG_TEMPLATES[index];
-        }
-        while (seen.contains(selected));
-
-        seen.insert(selected);
         ui->flag->addLayer(
             QImage(":/FlagTemplates/" + selected),
             QColor(255 * i / 5, 255 * i / 5, 255 * i / 5),

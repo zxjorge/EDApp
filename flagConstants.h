@@ -23,7 +23,16 @@ const QVector<QString> CHRISTIANITY_FLAGS = {"nz.png", "dm.png", "no.png", "se.p
 const QVector<QString> ISLAM_FLAGS = {"af.png", "az.png", "pk.png", "my.png", "tr.png", "km.png", "mr.png","sa.png","cc.png","ly.png","tn.png","eh.png","tm.png","sg.png"};
 const QVector<QString> UNION_JACK_FLAGS = {"au.png", "nz.png", "tv.png", "fj.png", "vg.png", "gb-nir.png","fk.png","ck.png","bm.png","nu.png","gs.png","io.png", "ky.png","ai.png"};
 
-const QVector<QString> CORNER_FLAG_TEMPLATES = {"circleMiddleBottom.png", "circleMiddleTop.png", "flowerMiddleRight.png", "pentagonBottomLeft.png", "pentagonBottomRight.png", "treeMiddleLeft.png", "treeMiddleRight.png", "triangleTopLeft.png", "triangleTopRight.png"};
+const QVector<QVector<QString>> CORNER_FLAG_TEMPLATES = {
+    {"triangleTopLeft.png"},
+    {"circleMiddleTop.png"},
+    {"triangleTopRight.png"},
+    {"treeMiddleLeft.png"},
+    {"flowerMiddleRight.png", "treeMiddleRight.png"},
+    {"pentagonBottomLeft.png"},
+    {"circleMiddleBottom.png"},
+    {"pentagonBottomRight.png"},
+};
 const QVector<QString> CENTER_FLAG_TEMPLATES = {"circleMiddle.png", "flowerMiddle.png", "polygonMiddle.png", "tigerMiddle.png", "triangleMiddle.png", "weirdShapeMiddle.png"};
 
 const std::unordered_map<QString, QString> FLAG_NAMES = {

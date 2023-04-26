@@ -54,8 +54,8 @@ void FlagStrip::setTimeOffset(int timeOffset) {
 void FlagStrip::setFlags(QVector<QPixmap> flags) {
     this->flags = flags;
 
-    QRandomGenerator rng = QRandomGenerator::securelySeeded();
+    QRandomGenerator* rng = QRandomGenerator::global();
     for (int i = 0; i < flags.length(); i++) {
-        flags.swapItemsAt(rng.bounded(flags.length()), rng.bounded(flags.length()));
+        flags.swapItemsAt(rng->bounded(flags.length()), rng->bounded(flags.length()));
     }
 }

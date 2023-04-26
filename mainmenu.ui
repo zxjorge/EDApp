@@ -125,24 +125,29 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
                <height>150</height>
               </size>
              </property>
+             <property name="font">
+              <font>
+               <family>Bookman Old Style</family>
+               <pointsize>15</pointsize>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
              <property name="styleSheet">
               <string notr="true">QPushButton#BDRButton {
-	border-image: url(:/Flags/gh.png);
-    font: bold 25pt Arial;
+	border-image: url(:/Flags/gb.png);
+    font: bold 20pt Arial;
 	color: rgb(255, 255, 255);
     text-align: center;
-	 font: 600 20pt &quot;Bookman Old Style&quot;;
+	 font: 600 14.5pt &quot;Bookman Old Style&quot;;
 }
-
 QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
 	border-color:  rgb(85, 255, 0);
 }
 </string>
              </property>
              <property name="text">
-              <string>Be distinctive
- or 
-be related</string>
+              <string>Be distinctive or related</string>
              </property>
             </widget>
            </item>
@@ -234,7 +239,7 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
            <item>
             <widget class="QPushButton" name="DesignButton">
              <property name="enabled">
-              <bool>true</bool>
+              <bool>false</bool>
              </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
