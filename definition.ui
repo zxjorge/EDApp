@@ -30,8 +30,15 @@
        <widget class="QLabel" name="label">
         <property name="font">
          <font>
-          <pointsize>27</pointsize>
+          <family>Bookman Old Style</family>
+          <pointsize>25</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 25pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vexillology is the study of the design of flags!&lt;/p&gt;&lt;p&gt;Finish this short course and you will become an excellent&lt;/p&gt;&lt;p&gt;VEXILLOGRAPHER&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -66,8 +73,15 @@
          <widget class="QPushButton" name="no">
           <property name="font">
            <font>
-            <pointsize>18</pointsize>
+            <family>Bookman Old Style</family>
+            <pointsize>20</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
           </property>
           <property name="text">
            <string>I'd rather crash right now</string>
@@ -81,8 +95,15 @@
          <widget class="QPushButton" name="ok">
           <property name="font">
            <font>
-            <pointsize>18</pointsize>
+            <family>Bookman Old Style</family>
+            <pointsize>20</pointsize>
+            <italic>false</italic>
+            <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
           </property>
           <property name="text">
            <string>Okay...</string>
