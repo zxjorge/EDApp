@@ -6,7 +6,7 @@
 #include "bsod.h"
 #include "ui_bsod.h"
 #include <QTimer>
-#include "mainmenu.h"
+#include "username.h"
 
 #ifdef _WIN32
 #include <iostream>
@@ -67,7 +67,7 @@ Bsod::Bsod(MainWindow *parent) :
 }
 
 void Bsod::onSceneEnd() {
-    mainWindow->switchScene(new MainMenu(mainWindow));
+    mainWindow->switchScene(new Username(mainWindow));
 }
 
 Bsod::~Bsod()
