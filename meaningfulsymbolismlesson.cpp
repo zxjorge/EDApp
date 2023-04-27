@@ -115,7 +115,7 @@ void MeaningfulSymbolismLesson::NextClicked(){
 }
 
 void MeaningfulSymbolismLesson::CaptureScore(int score){
-    ui->score->setText("Congrats [user name] you got " + QString::number(score) + " out of 5 correct.");
+    ui->score->setText("Congrats " + mainWindow->getSaves()->getUsername() + " you got " + QString::number(score) + " out of 5 correct.");
     mainWindow->getSaves()->Save("MeaningfulSymbolismLesson", mainWindow->getSaves()->getUsername());
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {

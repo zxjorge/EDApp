@@ -160,6 +160,11 @@ void FillableFlag::undo() {
         undoneActions.append(UndoneAction(layerColors[action.layerIndex], action.layerIndex));
         layerColors[action.layerIndex] = action.oldColor;
     }
+    if (getColorCount() <= MAX_COLOR_COUNT) {
+        emit correctColorCount();
+    } else {
+        emit incorrectColorCount();
+    }
 
     update();
 }
@@ -179,6 +184,11 @@ void FillableFlag::redo() {
     } else {
         actions.append(Action(layerColors[action.layerIndex], action.layerIndex));
         layerColors[action.layerIndex] = action.oldColor;
+    }
+    if (getColorCount() <= MAX_COLOR_COUNT) {
+        emit correctColorCount();
+    } else {
+        emit incorrectColorCount();
     }
     update();
 }

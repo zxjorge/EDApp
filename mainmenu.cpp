@@ -27,7 +27,9 @@ MainMenu::MainMenu(MainWindow *parent) :
     if(lessonsCompleted == 4){
         ui->DesignButton->setEnabled(true);
         ui->DesignButton->setStyleSheet("color: rgb(67, 200, 200);"
-                                        "border-image: url(:/Icons/banner.jpg);");
+                                        "border-image: url(:/Icons/banner.jpg);"
+                                        "font: 600 40pt \"Bookman Old Style\";"
+                                        "text-align: center;");
     }
 
     const QJsonArray* completeLessons = parent->getSaves()->getSavedLessonsArray();
