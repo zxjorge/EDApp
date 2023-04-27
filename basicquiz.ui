@@ -77,8 +77,15 @@
         </property>
         <property name="font">
          <font>
+          <family>Bookman Old Style</family>
           <pointsize>36</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 500 36pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
          <string>TextLabel</string>
@@ -99,6 +106,10 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 300 9pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>TextLabel</string>
@@ -154,6 +165,10 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 300 9pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>TextLabel</string>
