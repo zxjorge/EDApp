@@ -50,13 +50,13 @@ private:
     QVector<QLabel*> flagScores;
     QVector<bool> flagSelected;
     QVector<bool> flagCorrect;
-    const int targetScore = 15;
+    const int targetScore = 5;
     bool answerStage = true;
-    int correct = 0;
-    int incorrect = 0;
-    int missedCorrect = 0;
-    int questions = 0;
-    int score = 0;
+    int correct;
+    int incorrect;
+    int missedCorrect;
+    int questions;
+    int score;
 
 
     /**

@@ -90,12 +90,12 @@ color: rgb(0, 0, 0);</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>100</width>
+          <width>200</width>
           <height>16777215</height>
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+         <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;
 background-color: transparent;
 border: 1px solid black;</string>
         </property>
@@ -324,7 +324,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/au.png</pixmap>
+                    <pixmap>:/Flags/au.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -363,7 +363,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/nz.png</pixmap>
+                    <pixmap>:/Flags/nz.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -402,7 +402,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/fj.png</pixmap>
+                    <pixmap>:/Flags/fj.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -636,7 +636,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/mv.png</pixmap>
+                    <pixmap>:/Flags/mv.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -675,7 +675,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/tr.png</pixmap>
+                    <pixmap>:/Flags/tr.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -714,7 +714,7 @@ text-decoration: underline;</string>
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap resource="Resources.qrc">:/Flags/pk.png</pixmap>
+                    <pixmap>:/Flags/pk.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -910,8 +910,6 @@ border: 1px solid black;</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

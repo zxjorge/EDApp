@@ -10,7 +10,6 @@
 #include <QUrl>
 #include <QString>
 #include <QAudioOutput>
-#include "distinctivequiz.h"
 #include "mainmenu.h"
 
 
