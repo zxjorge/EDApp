@@ -45,6 +45,10 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">font: 300 8pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Congratulations!&lt;/p&gt;&lt;p&gt;Now use what you have learned to design a simple flag!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -63,7 +67,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/weirdShapeMiddle.png</normaloff>:/FlagTemplates/weirdShapeMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -83,7 +87,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/flowerMiddle.png</normaloff>:/FlagTemplates/flowerMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -103,7 +107,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/triangleMiddle.png</normaloff>:/FlagTemplates/triangleMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -123,7 +127,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/tigerMiddle.png</normaloff>:/FlagTemplates/tigerMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -147,7 +151,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/polygonMiddle.png</normaloff>:/FlagTemplates/polygonMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -167,7 +171,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/FlagTemplates/circleMiddle.png</normaloff>:/FlagTemplates/circleMiddle.png</iconset>
               </property>
               <property name="iconSize">
@@ -187,7 +191,7 @@
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="Resources.qrc">
+               <iconset>
                 <normaloff>:/Icons/cursor.png</normaloff>:/Icons/cursor.png</iconset>
               </property>
               <property name="iconSize">
@@ -283,8 +287,6 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="Resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

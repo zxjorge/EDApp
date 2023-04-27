@@ -38,7 +38,8 @@
         </property>
         <property name="styleSheet">
          <string notr="true">font: 600 25pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+</string>
         </property>
         <property name="text">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vexillology is the study of the design of flags!&lt;/p&gt;&lt;p&gt;Finish this short course and you will become an excellent&lt;/p&gt;&lt;p&gt;VEXILLOGRAPHER&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -71,17 +72,25 @@ color: rgb(0, 0, 0);</string>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QPushButton" name="no">
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Bookman Old Style</family>
             <pointsize>20</pointsize>
             <italic>false</italic>
-            <bold>true</bold>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
+           <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);
+background-color: transparent;
+border: 1px solid rgb(0, 0, 0);</string>
           </property>
           <property name="text">
            <string>I'd rather crash right now</string>
@@ -93,17 +102,25 @@ color: rgb(0, 0, 0);</string>
         </item>
         <item>
          <widget class="QPushButton" name="ok">
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="font">
            <font>
             <family>Bookman Old Style</family>
             <pointsize>20</pointsize>
             <italic>false</italic>
-            <bold>true</bold>
+            <bold>false</bold>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 600 20pt &quot;Bookman Old Style&quot;;
-color: rgb(0, 0, 0);</string>
+           <string notr="true">font: 500 20pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);
+background-color: transparent;
+border: 1px solid rgb(0, 0, 0);</string>
           </property>
           <property name="text">
            <string>Okay...</string>

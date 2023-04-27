@@ -65,7 +65,6 @@ SOURCES += \
     basicquiz.cpp \
     bsod.cpp \
     definition.cpp \
-    distinctivequiz.cpp \
     drawutils.cpp \
     fillableflag.cpp \
     finaldesignactivity.cpp \
@@ -142,7 +141,6 @@ HEADERS += \
     basicquiz.h \
     bsod.h \
     definition.h \
-    distinctivequiz.h \
     drawutils.h \
     fillableflag.h \
     finaldesignactivity.h \
@@ -169,7 +167,6 @@ FORMS += \
     basicquiz.ui \
     bsod.ui \
     definition.ui \
-    distinctivequiz.ui \
     fillableflag.ui \
     finaldesignactivity.ui \
     flagcoloringpuzzle.ui \

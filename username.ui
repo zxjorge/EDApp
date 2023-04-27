@@ -50,7 +50,25 @@ color: rgb(0, 0, 0);</string>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>500</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 300 12pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);
+border: 1px solid black;</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QLabel" name="warningLabel">

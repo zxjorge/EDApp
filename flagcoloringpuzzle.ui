@@ -46,6 +46,10 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">font: 300 8pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+          </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Congratulations!&lt;/p&gt;&lt;p&gt;Now use what you have learned to design this flag!&lt;/p&gt;&lt;p&gt;Remember to use at most 3 colors!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
@@ -58,6 +62,11 @@
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QPushButton" name="undo">
+            <property name="styleSheet">
+             <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
+            </property>
             <property name="text">
              <string>Undo</string>
             </property>
@@ -65,6 +74,11 @@
           </item>
           <item>
            <widget class="QPushButton" name="redo">
+            <property name="styleSheet">
+             <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
+            </property>
             <property name="text">
              <string>Redo</string>
             </property>
@@ -92,6 +106,17 @@
          <widget class="QPushButton" name="doneButton">
           <property name="enabled">
            <bool>false</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 300 10pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
           </property>
           <property name="text">
            <string>You have too many colors!</string>
