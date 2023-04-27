@@ -5,8 +5,10 @@
  */
 #include "bedistinctiveorrelatedlesson.h"
 #include "ui_bedistinctiveorrelatedlesson.h"
+#include "bedistinctiveorrelatedactivity.h"
 #include <QPushButton>
 #include <QUrl>
+#include <QString>
 #include <QAudioOutput>
 #include "distinctivequiz.h"
 #include "mainmenu.h"
@@ -50,6 +52,12 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
             [this] {
                 mainWindow->switchScene(new MainMenu(mainWindow));
             });
+    connect(ui->mainMenu_3,
+            &QPushButton::clicked,
+            this,
+            [this] {
+                mainWindow->switchScene(new MainMenu(mainWindow));
+            });
 
     connect(ui->speak,
             &QPushButton::clicked,
@@ -71,7 +79,6 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
                 if(player->isPlaying()){
                     player->stop();
                 }
-
                 player->setSource(QUrl("qrc:/Audio/bdsr2.mp3"));
                 audioOutput->setVolume(100);
                 player->play();
@@ -80,10 +87,24 @@ BeDistinctiveOrRelatedLesson::BeDistinctiveOrRelatedLesson(MainWindow *parent) :
     connect(ui->nextButton_3,
             &QPushButton::clicked,
             this,
-            [this] {
-                mainWindow->switchScene(new DistinctiveQuiz(mainWindow));
-            });
-    setCurrentIndex(0);
+            &BeDistinctiveOrRelatedLesson::NextClicked);
+
+    connect(dynamic_cast<BeDistinctiveOrRelatedActivity*>(widget(4)),
+            &BeDistinctiveOrRelatedActivity::SendActivityDetails,
+            this,
+            &BeDistinctiveOrRelatedLesson::CaptureDetails);
+
+    connect(this,
+            &BeDistinctiveOrRelatedLesson::ResetQuiz,
+            dynamic_cast<BeDistinctiveOrRelatedActivity*>(widget(4)),
+            &BeDistinctiveOrRelatedActivity::Reset);
+
+    connect(ui->restart,
+            &QPushButton::clicked,
+            this,
+            &BeDistinctiveOrRelatedLesson::Restart);
+
+    setCurrentIndex(1);
 }
 
 BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson()
@@ -95,11 +116,13 @@ void BeDistinctiveOrRelatedLesson::NextClicked(){
     if(player->isPlaying()){
         player->stop();
     }
+
     int nextIndex = currentIndex() + 1;
     if (nextIndex < count()) {
         setCurrentIndex(nextIndex);
     }
 }
+
 
 void BeDistinctiveOrRelatedLesson::BackClicked(){
     if(player->isPlaying()){
@@ -107,5 +130,24 @@ void BeDistinctiveOrRelatedLesson::BackClicked(){
     }
     int prevIndex = currentIndex() - 1;
     setCurrentIndex(prevIndex);
+}
+
+void BeDistinctiveOrRelatedLesson::CaptureDetails(int questions, int correct, int incorrect, int missedCorrect){
+    ui->congrats->setText("Congrats " + mainWindow->getSaves()->getUsername());
+    QString statText = "Completed Questions: " + QString::number(questions);
+    ui->CQLabel->setText(statText);
+    statText = "Total Correct: " + QString::number(correct);
+    ui->TCLabel->setText(statText);
+    statText = "Total Incorrect: " + QString::number(incorrect);
+    ui->TILabel->setText(statText);
+    statText = "Total Missed: " + QString::number(missedCorrect);
+    ui->TMLabel->setText(statText);
+    mainWindow->getSaves()->Save("BeDistinctiveOrRelatedLesson", mainWindow->getSaves()->getUsername());
+    setCurrentIndex(0);
+}
+
+void BeDistinctiveOrRelatedLesson::Restart(){
+    emit ResetQuiz();
+    setCurrentIndex(1);
 }
 

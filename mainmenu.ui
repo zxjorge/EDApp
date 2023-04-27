@@ -58,6 +58,12 @@ qproperty-alignment: 'AlignCenter';
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
            <item>
             <widget class="QPushButton" name="KISButton">
              <property name="sizePolicy">
@@ -155,6 +161,12 @@ QPushButton#DesignButton:pressed, QPushButton#DesignButton:checked {
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetNoConstraint</enum>
+           </property>
            <item>
             <widget class="QPushButton" name="UMSButton">
              <property name="sizePolicy">

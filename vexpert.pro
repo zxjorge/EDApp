@@ -60,6 +60,7 @@ SOURCES += \
     Box2D/Dynamics/b2World.cpp \
     Box2D/Dynamics/b2WorldCallbacks.cpp \
     Box2D/Rope/b2Rope.cpp \
+    bedistinctiveorrelatedactivity.cpp \
     bedistinctiveorrelatedlesson.cpp \
     basicquiz.cpp \
     bsod.cpp \
@@ -136,6 +137,7 @@ HEADERS += \
     Box2D/Dynamics/b2World.h \
     Box2D/Dynamics/b2WorldCallbacks.h \
     Box2D/Rope/b2Rope.h \
+    bedistinctiveorrelatedactivity.h \
     bedistinctiveorrelatedlesson.h \
     basicquiz.h \
     bsod.h \
@@ -162,6 +164,7 @@ HEADERS += \
 
 FORMS += \
     username.ui \
+    bedistinctiveorrelatedactivity.ui\
     bedistinctiveorrelatedlesson.ui \
     basicquiz.ui \
     bsod.ui \
@@ -180,8 +183,7 @@ FORMS += \
     playergreeting.ui \
     title.ui \
     usebasiccolorslesson.ui \
-    spritecanvas.ui \
-    username.ui
+    spritecanvas.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

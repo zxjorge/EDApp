@@ -68,6 +68,7 @@ MeaningfulSymbolismLesson::MeaningfulSymbolismLesson(MainWindow *parent) :
             &MeaningfulSymbolismLesson::ResetQuiz,
             dynamic_cast<MeaningfulSymbolismActivity*>(widget(3)),
             &MeaningfulSymbolismActivity::Reset);
+
     connect(ui->speak1,
             &QPushButton::clicked,
             this,

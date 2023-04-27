@@ -12,6 +12,7 @@
 #include <QAudioOutput>
 
 
+
 namespace Ui {
 class BeDistinctiveOrRelatedLesson;
 }
@@ -31,6 +32,8 @@ public:
     * @brief BeDistinctiveOrRelatedLesson::~BeDistinctiveOrRelatedLesson destructor for BeDistinctiveOrRelatedLesson
     */
     ~BeDistinctiveOrRelatedLesson();
+signals:
+    void ResetQuiz();
 
 private slots:
     /**
@@ -42,6 +45,20 @@ private slots:
      * @brief BeDistinctiveOrRelatedLesson::BackClicked Slot that handles what happens when the back button is clicked in the UI
      */
     void BackClicked();
+
+    /**
+     * @brief CaptureDetails
+     * @param questions
+     * @param correct
+     * @param incorrect
+     * @param missedCorrect
+     */
+    void CaptureDetails(int questions, int correct, int incorrect, int missedCorrect);
+
+    /**
+     * @brief BeDistinctiveOrRelatedLesson::Restart
+     */
+    void Restart();
 
 
 private:

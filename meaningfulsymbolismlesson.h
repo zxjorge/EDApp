@@ -36,6 +36,9 @@ signals:
     void ResetQuiz();
 
 private slots:
+    /**
+     * @brief NextClicked
+     */
     void NextClicked();
 
     /**

@@ -6,7 +6,6 @@
 #include "meaningfulsymbolismactivity.h"
 #include "ui_meaningfulsymbolismactivity.h"
 #include <QRandomGenerator>
-#include <QDebug>
 
 /**
  * @brief MeaningfulSymbolismActivity::MeaningfulSymbolismActivity

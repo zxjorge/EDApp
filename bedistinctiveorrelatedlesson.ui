@@ -21,6 +21,122 @@
   <property name="currentIndex">
    <number>0</number>
   </property>
+  <widget class="QWidget" name="page_5">
+   <layout class="QVBoxLayout" name="verticalLayout_12">
+    <item>
+     <widget class="QLabel" name="congrats">
+      <property name="styleSheet">
+       <string notr="true">font: 500 30pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="CQLabel">
+      <property name="styleSheet">
+       <string notr="true">font: 300 17pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="TCLabel">
+      <property name="styleSheet">
+       <string notr="true">font: 300 17pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="TILabel">
+      <property name="styleSheet">
+       <string notr="true">font: 300 17pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="TMLabel">
+      <property name="styleSheet">
+       <string notr="true">font: 300 17pt &quot;Bookman Old Style&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QPushButton" name="restart">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 300 14pt &quot;Bookman Old Style&quot;;
+background-color: transparent;
+border: 1px solid black;</string>
+        </property>
+        <property name="text">
+         <string>Take this Lesson again</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mainMenu_3">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/Icons/home-menu-icon-21.jpg);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
   <widget class="QWidget" name="page">
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 219, 146);</string>
@@ -618,7 +734,7 @@ text-decoration: underline;</string>
 color: rgb(0, 0, 0);</string>
              </property>
              <property name="text">
-              <string>Because these countries have a majority muslim population, they have a crescent moon intheir flag.</string>
+              <string>Because these countries have a majority muslim population, they have a crescent moon in their flag.</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -784,7 +900,16 @@ border: 1px solid black;</string>
     </item>
    </layout>
   </widget>
+  <widget class="BeDistinctiveOrRelatedActivity" name="page_4"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BeDistinctiveOrRelatedActivity</class>
+   <extends>QWidget</extends>
+   <header location="global">bedistinctiveorrelatedactivity.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Resources.qrc"/>
  </resources>
